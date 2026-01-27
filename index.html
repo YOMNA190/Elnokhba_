@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>النخبة للتشطيبات | لياسة وترميم فاخر بالرياض</title>
+    <title>النخبة للتشطيبات | لياسة - ترميم - قص خرسانة بالليزر - فتحات كور</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,19 +11,20 @@
     <style>
         /* ===== CSS Variables ===== */
         :root {
-            --primary-color: #d4a574;
-            --secondary-color: #b88c5c;
-            --dark-color: #1a1a1a;
-            --light-color: #f5f5f5;
-            --text-color: #333;
-            --border-radius: 20px;
-            --section-padding: 80px 0;
-            --transition: all 0.3s ease;
-            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --primary: #c19a5b;
+            --primary-dark: #a87c3b;
+            --primary-light: #e8d2b0;
+            --dark: #1a1a1a;
+            --light: #f8f5f0;
+            --gray: #666;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(193, 154, 91, 0.15);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* ===== Reset & Base Styles ===== */
+        /* ===== Reset & Base ===== */
         * {
             margin: 0;
             padding: 0;
@@ -32,13 +33,14 @@
 
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
             font-family: 'Cairo', sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: #fff;
+            color: var(--dark);
+            line-height: 1.7;
+            background: var(--white);
             overflow-x: hidden;
         }
 
@@ -48,13 +50,19 @@
             padding: 0 20px;
         }
 
+        section {
+            padding: 80px 0;
+        }
+
+        /* ===== Typography ===== */
         .section-title {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 60px;
-            color: var(--dark-color);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
             position: relative;
-            padding-bottom: 20px;
+            padding-bottom: 1.5rem;
         }
 
         .section-title::after {
@@ -64,126 +72,139 @@
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            border-radius: 2px;
         }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--dark-color);
-            padding: 18px 45px;
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        /* ===== Buttons ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 1rem 2rem;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 1.1rem;
+            text-decoration: none;
             transition: var(--transition);
-            border: 2px solid var(--primary-color);
-            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            border: 2px solid transparent;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-button:hover {
-            background-color: transparent;
-            color: var(--primary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            box-shadow: 0 10px 25px rgba(193, 154, 91, 0.3);
         }
 
-        /* ===== Floating Action Buttons - معدل بحجم أكبر ===== */
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(193, 154, 91, 0.4);
+            border-color: var(--primary);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ===== Floating Buttons ===== */
         .floating-buttons {
             position: fixed;
-            left: 40px;
-            bottom: 40px;
+            left: 25px;
+            bottom: 25px;
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .floating-button {
-            width: 80px;
-            height: 80px;
+        .floating-btn {
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            color: white;
+            font-size: 1.3rem;
+            color: var(--white);
             text-decoration: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             transition: var(--transition);
             position: relative;
-            animation: pulse 2s infinite;
         }
 
-        .floating-button.phone {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .floating-btn.phone {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
         }
 
-        .floating-button.whatsapp {
+        .floating-btn.whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
         }
 
-        .floating-button:hover {
-            transform: translateY(-8px) scale(1.15);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            animation: none;
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
         }
 
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(212, 165, 116, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(212, 165, 116, 0);
-            }
-        }
-
-        .floating-button::after {
+        .floating-btn::after {
             content: attr(data-tooltip);
             position: absolute;
-            left: 90px;
+            left: 65px;
             top: 50%;
             transform: translateY(-50%);
-            background-color: var(--dark-color);
-            color: white;
-            padding: 10px 20px;
+            background: var(--dark);
+            color: var(--white);
+            padding: 8px 15px;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 0.9rem;
             white-space: nowrap;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
             pointer-events: none;
-            z-index: 1001;
         }
 
-        .floating-button:hover::after {
+        .floating-btn:hover::after {
             opacity: 1;
             visibility: visible;
-            left: 95px;
+            left: 70px;
         }
 
-        /* ===== Navigation Bar ===== */
+        /* ===== Navigation ===== */
         .navbar {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 15px 0;
+            background: var(--dark);
+            padding: 1rem 0;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 999;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
 
         .navbar.scrolled {
-            padding: 10px 0;
-            background-color: rgba(26, 26, 26, 0.95);
+            padding: 0.8rem 0;
+            background: rgba(26, 26, 26, 0.95);
             backdrop-filter: blur(10px);
         }
 
@@ -194,174 +215,124 @@
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 1.8rem;
             font-weight: 900;
-            color: var(--primary-color);
+            color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            gap: 8px;
         }
 
-        .logo::before {
-            content: "👑";
-            font-size: 26px;
+        .logo i {
+            font-size: 1.5rem;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 2rem;
             margin: 0;
             padding: 0;
         }
 
         .nav-links a {
-            color: white;
+            color: var(--white);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
             transition: var(--transition);
-            padding: 8px 15px;
-            border-radius: 6px;
             position: relative;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
-            background-color: rgba(212, 165, 116, 0.15);
+            color: var(--primary);
+            background: rgba(193, 154, 91, 0.1);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%) scaleX(0);
-            width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 80%;
-            transform: translateX(-50%) scaleX(1);
+        .nav-links a.active {
+            color: var(--primary);
+            background: rgba(193, 154, 91, 0.15);
         }
 
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: white;
-            font-size: 28px;
+            color: var(--white);
+            font-size: 1.5rem;
             cursor: pointer;
         }
 
-        /* ===== Hero Section ===== */
+        /* ===== Hero ===== */
         .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 180px 0 120px;
+            text-align: center;
             position: relative;
-            height: 100vh;
-            min-height: 600px;
             overflow: hidden;
-            margin-top: 60px;
         }
 
         .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
             position: relative;
-            width: 100%;
-            height: 100%;
+            z-index: 2;
         }
 
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.6);
-            animation: zoomIn 20s ease-in-out infinite alternate;
-        }
-
-        @keyframes zoomIn {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 40px;
-        }
-
-        .hero-overlay h1 {
-            font-size: 56px;
-            font-weight: 900;
-            margin-bottom: 25px;
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
-            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
-            animation: fadeInUp 1s ease-out;
-            background: linear-gradient(45deg, var(--primary-color), #f5e6d3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        .hero-overlay p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            max-width: 700px;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease-out 0.3s both;
-            font-weight: 500;
+        .hero h1 span {
+            color: var(--primary);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.8;
         }
 
-        /* ===== Services Section ===== */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== Services ===== */
         .services {
-            padding: var(--section-padding);
-            background-color: var(--light-color);
+            background: var(--light);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
-            background: white;
-            padding: 45px 35px;
-            border-radius: var(--border-radius);
-            text-align: center;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            text-align: center;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(212, 165, 116, 0.2);
+            border: 1px solid rgba(193, 154, 91, 0.1);
         }
 
         .service-card::before {
@@ -370,713 +341,470 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
         }
 
         .service-card:hover {
-            transform: translateY(-15px);
+            transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
         }
 
         .service-icon {
-            font-size: 60px;
-            margin-bottom: 25px;
-            color: var(--primary-color);
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--white);
         }
 
         .service-card h3 {
-            font-size: 26px;
-            margin-bottom: 20px;
-            color: var(--dark-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
         }
 
         .service-card p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.8;
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
-        /* ===== Portfolio Section ===== */
+        /* ===== Specialized Services ===== */
+        .specialized-services {
+            background: var(--white);
+        }
+
+        .specialized-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .specialized-card {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            border-right: 5px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .specialized-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .specialized-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .specialized-header h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .specialized-list {
+            list-style: none;
+        }
+
+        .specialized-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .specialized-list li:last-child {
+            border-bottom: none;
+        }
+
+        .specialized-list li i {
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* ===== Portfolio ===== */
         .portfolio {
-            padding: var(--section-padding);
-            background-color: white;
+            background: var(--light);
         }
 
-        .gallery-grid {
+        .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 1.5rem;
         }
 
-        .gallery-item {
+        .portfolio-item {
+            background: var(--primary);
+            border-radius: var(--radius);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.2rem;
             position: relative;
             overflow: hidden;
-            border-radius: var(--border-radius);
-            aspect-ratio: 4/3;
-            cursor: pointer;
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
-        .gallery-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(212, 165, 116, 0.2), rgba(26, 26, 26, 0.3));
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 1;
+        .portfolio-item:nth-child(odd) {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
         }
 
-        .gallery-item::after {
-            content: '👁️ عرض الصورة';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 2;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
-            border-radius: 30px;
+        .portfolio-item:nth-child(even) {
+            background: linear-gradient(135deg, var(--primary-dark), #8a6c3a);
         }
 
-        .gallery-item:hover::before,
-        .gallery-item:hover::after {
-            opacity: 1;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.15);
-        }
-
-        /* ===== Location Section ===== */
-        .location {
-            padding: var(--section-padding);
-            background-color: var(--light-color);
-        }
-
-        .location-subtitle {
-            text-align: center;
-            font-size: 19px;
-            color: #666;
-            margin-bottom: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-            font-weight: 500;
+        /* ===== Areas ===== */
+        .areas {
+            background: var(--white);
         }
 
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
 
         .area-card {
-            background: white;
-            padding: 35px 30px;
-            border-radius: var(--border-radius);
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--radius);
             text-align: center;
-            box-shadow: var(--shadow);
             transition: var(--transition);
             border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
         }
 
         .area-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
         }
 
         .area-icon {
-            font-size: 46px;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
         }
 
         .area-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--dark-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
         }
 
         .area-card p {
-            color: #666;
-            font-size: 15px;
-            line-height: 1.7;
+            color: var(--gray);
+            font-size: 0.95rem;
         }
 
-        /* ===== Testimonials Section - تصميم كريتيف ===== */
+        /* ===== Testimonials ===== */
         .testimonials {
-            padding: var(--section-padding);
-            background: linear-gradient(135deg, #f9f5f0 0%, #f0e6d8 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonials::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background-color: rgba(212, 165, 116, 0.1);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .testimonials::after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            left: -150px;
-            width: 400px;
-            height: 400px;
-            background-color: rgba(212, 165, 116, 0.1);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .testimonials .container {
-            position: relative;
-            z-index: 1;
+            background: linear-gradient(135deg, var(--light) 0%, #f0e9dd 100%);
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 40px;
+            gap: 2rem;
         }
 
         .testimonial-card {
-            background: white;
-            padding: 40px 35px 35px 35px;
-            border-radius: var(--border-radius);
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
             position: relative;
-            transition: var(--transition);
-            border: none;
-            overflow: hidden;
-            z-index: 1;
         }
 
         .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        }
-
-        .testimonial-card::after {
             content: '"';
             position: absolute;
             top: 10px;
-            right: 30px;
-            font-size: 120px;
-            color: var(--primary-color);
-            opacity: 0.1;
-            font-family: serif;
-            line-height: 1;
-            font-weight: bold;
-            z-index: -1;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-10px) rotate(1deg);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-
-        .testimonial-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonial-content p {
-            font-size: 17px;
-            line-height: 1.9;
-            margin-bottom: 30px;
-            color: #555;
-            font-style: italic;
-            position: relative;
-            padding-right: 20px;
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding-top: 25px;
-            border-top: 2px solid rgba(212, 165, 116, 0.2);
-        }
-
-        .client-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 800;
-            font-size: 24px;
-            flex-shrink: 0;
-            box-shadow: 0 8px 20px rgba(212, 165, 116, 0.4);
-            border: 3px solid white;
-        }
-
-        .client-details h4 {
-            font-size: 22px;
-            color: var(--dark-color);
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .client-details p {
-            font-size: 15px;
-            color: var(--primary-color);
-            margin: 0;
-            font-weight: 700;
-            background-color: rgba(212, 165, 116, 0.15);
-            padding: 8px 18px;
-            border-radius: 30px;
-            display: inline-block;
-            border: 1px solid rgba(212, 165, 116, 0.3);
-        }
-
-        /* ===== Contact Section ===== */
-        .contact {
-            padding: var(--section-padding);
-            background: linear-gradient(135deg, var(--dark-color) 0%, #2a2a2a 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(212,165,116,0.1)" stroke-width="2" fill="none"/><path d="M0,70 Q25,60 50,70 T100,70" stroke="rgba(212,165,116,0.1)" stroke-width="2" fill="none"/><path d="M0,30 Q25,20 50,30 T100,30" stroke="rgba(212,165,116,0.1)" stroke-width="2" fill="none"/></svg>');
+            right: 20px;
+            font-size: 5rem;
+            color: var(--primary-light);
             opacity: 0.3;
-            z-index: 0;
+            font-family: Georgia, serif;
         }
 
-        .contact .container {
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 2rem;
             position: relative;
             z-index: 1;
         }
 
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(193, 154, 91, 0.2);
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: rgba(193, 154, 91, 0.1);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* ===== Contact ===== */
+        .contact {
+            background: var(--dark);
+            color: var(--white);
+        }
+
         .contact .section-title {
-            color: var(--primary-color);
+            color: var(--white);
         }
 
         .contact .section-title::after {
-            background-color: var(--primary-color);
+            background: var(--primary);
+        }
+
+        .contact .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .contact-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
 
         .contact-info h3 {
-            font-size: 32px;
-            margin-bottom: 25px;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
         }
 
-        .contact-description {
-            font-size: 18px;
+        .contact-info p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: 30px;
-            opacity: 0.95;
-            font-weight: 500;
-        }
-
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .contact-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 22px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 20px;
-            transition: var(--transition);
-            border: 2px solid transparent;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .phone-button {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--dark-color);
-        }
-
-        .phone-button:hover {
-            background: transparent;
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(212, 165, 116, 0.4);
-        }
-
-        .whatsapp-button {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: white;
-        }
-
-        .whatsapp-button:hover {
-            background: transparent;
-            color: #25D366;
-            border-color: #25D366;
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
-        }
-
-        .button-icon {
-            font-size: 26px;
+            margin-bottom: 2rem;
         }
 
         .contact-details {
-            background-color: rgba(255, 255, 255, 0.08);
-            padding: 40px 35px;
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-details h4 {
-            font-size: 26px;
-            margin-bottom: 25px;
-            color: var(--primary-color);
-            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 25px;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-item:last-child {
-            border-bottom: none;
             margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
-        .contact-item .icon {
-            font-size: 28px;
-            color: var(--primary-color);
-            min-width: 40px;
-            text-align: center;
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(193, 154, 91, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--primary);
+            flex-shrink: 0;
         }
 
-        .contact-item a {
-            color: white;
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--white);
+        }
+
+        .contact-text a,
+        .contact-text p {
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
             transition: var(--transition);
-            display: block;
         }
 
-        .contact-item a:hover {
-            color: var(--primary-color);
-            transform: translateX(5px);
-        }
-
-        .contact-item p {
-            margin: 5px 0 0;
-            font-size: 15px;
-            opacity: 0.9;
+        .contact-text a:hover {
+            color: var(--primary);
         }
 
         /* ===== Footer ===== */
         .footer {
-            background-color: var(--dark-color);
-            color: white;
+            background: #111;
+            color: var(--white);
+            padding: 4rem 0 2rem;
             text-align: center;
-            padding: 50px 0 40px;
-            border-top: 5px solid var(--primary-color);
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.05) 0%, transparent 50%);
-        }
-
-        .footer .container {
-            position: relative;
-            z-index: 1;
         }
 
         .footer-logo {
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: 900;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: var(--primary);
+            margin-bottom: 1rem;
         }
 
         .footer p {
-            margin: 12px 0;
-            font-size: 16px;
-            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .footer-contact {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 25px 0;
+            gap: 2rem;
+            margin: 2rem 0;
             flex-wrap: wrap;
         }
 
         .footer-contact a {
-            color: var(--primary-color);
+            color: var(--primary);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
+            font-weight: 600;
+            font-size: 1.1rem;
             transition: var(--transition);
         }
 
         .footer-contact a:hover {
-            color: white;
-            transform: translateY(-3px);
+            color: var(--white);
         }
 
-        /* ===== Responsive Design ===== */
-        @media (max-width: 1200px) {
-            .floating-buttons {
-                left: 30px;
-                bottom: 30px;
-            }
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
 
+        /* ===== Responsive ===== */
         @media (max-width: 992px) {
-            .hero-overlay h1 {
-                font-size: 48px;
+            .hero h1 {
+                font-size: 2.8rem;
             }
             
-            .hero-overlay p {
-                font-size: 20px;
-            }
-            
-            .contact-content {
-                gap: 40px;
-            }
-            
-            .floating-buttons {
-                left: 25px;
-                bottom: 25px;
-            }
-            
-            .floating-button {
-                width: 70px;
-                height: 70px;
-                font-size: 28px;
-            }
-            
-            .floating-button::after {
-                left: 80px;
-                font-size: 14px;
-                padding: 8px 15px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 12px 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                flex-direction: column;
-                background-color: var(--dark-color);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-                padding: 25px 0;
-                gap: 0;
-                z-index: 998;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links li {
-                margin: 18px 0;
-            }
-
-            .hero {
-                height: 85vh;
-                min-height: 500px;
-                margin-top: 70px;
-            }
-
-            .hero-overlay h1 {
-                font-size: 36px;
-            }
-
-            .hero-overlay p {
-                font-size: 18px;
-                padding: 0 20px;
-            }
-
             .section-title {
-                font-size: 32px;
-                margin-bottom: 45px;
-            }
-
-            .services-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .areas-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .cta-button,
-            .contact-button {
-                padding: 18px 40px;
-                font-size: 18px;
-            }
-            
-            .service-card,
-            .testimonial-card,
-            .area-card {
-                padding: 35px 25px;
+                font-size: 2.2rem;
             }
             
             .floating-buttons {
                 left: 20px;
                 bottom: 20px;
             }
-            
-            .floating-button {
-                width: 65px;
-                height: 65px;
-                font-size: 26px;
-            }
-            
-            .floating-button::after {
-                display: none;
-            }
-            
-            .client-info {
-                flex-direction: column;
-                text-align: center;
-                gap: 18px;
-            }
-            
-            .client-avatar {
-                width: 65px;
-                height: 65px;
-                font-size: 22px;
-            }
         }
 
-        @media (max-width: 576px) {
-            .hero-overlay h1 {
-                font-size: 32px;
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.8rem 0;
             }
-
-            .hero-overlay p {
-                font-size: 16px;
+            
+            .mobile-menu-btn {
+                display: block;
             }
-
-            .cta-button {
-                padding: 16px 35px;
-                font-size: 16px;
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                background: var(--dark);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transition: var(--transition);
             }
-
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .hero {
+                padding: 150px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
             .section-title {
-                font-size: 28px;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-buttons {
-                gap: 20px;
-            }
-            
-            .contact-button {
-                padding: 20px 30px;
-                font-size: 17px;
-            }
-            
-            .button-icon {
-                font-size: 22px;
+                font-size: 2rem;
             }
             
             .floating-buttons {
@@ -1084,82 +812,91 @@
                 bottom: 15px;
             }
             
-            .floating-button {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
             
-            .footer-contact {
-                flex-direction: column;
-                gap: 15px;
+            .floating-btn::after {
+                display: none;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 480px) {
-            .hero-overlay h1 {
-                font-size: 28px;
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
             }
-
-            .hero-overlay p {
-                font-size: 15px;
-            }
-
-            .cta-button {
-                padding: 14px 30px;
-                font-size: 15px;
-            }
-
+            
             .section-title {
-                font-size: 26px;
+                font-size: 1.8rem;
             }
             
+            .service-card,
+            .specialized-card,
             .testimonial-card {
-                padding: 30px 25px 25px 25px;
+                padding: 2rem;
             }
             
-            .testimonial-content p {
-                font-size: 16px;
+            .portfolio-grid,
+            .areas-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Floating Action Buttons -->
+    <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="tel:+966542906096" class="floating-button phone" data-tooltip="اتصل الآن">
+        <a href="tel:+966542906096" class="floating-btn phone" data-tooltip="اتصل الآن">
             <i class="fas fa-phone"></i>
         </a>
-        <a href="https://wa.me/966542906096" target="_blank" class="floating-button whatsapp" data-tooltip="واتساب">
+        <a href="https://wa.me/966542906096" target="_blank" class="floating-btn whatsapp" data-tooltip="واتساب">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">النخبة للتشطيبات</a>
+            <a href="#" class="logo">
+                <i class="fas fa-crown"></i>
+                النخبة للتشطيبات
+            </a>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#portfolio">معرض الأعمال</a></li>
-                <li><a href="#location">المناطق التي نغطيها</a></li>
+                <li><a href="#services" class="active">خدماتنا</a></li>
+                <li><a href="#specialized">خدمات متخصصة</a></li>
+                <li><a href="#portfolio">أعمالنا</a></li>
+                <li><a href="#areas">مناطقنا</a></li>
                 <li><a href="#testimonials">آراء العملاء</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <img src="assets/hero.jpeg" alt="أعمال لياسة فاخرة" class="hero-image">
-            <div class="hero-overlay">
-                <h1>التميز في التشطيبات الفاخرة <br> عبر جميع أحياء الرياض</h1>
-                <p>نغطي كافة مناطق الرياض بأعمال اللياسة والترميم والتشطيبات الفاخرة، نصل إليكم أينما كنتم في العاصمة</p>
-                <a href="#contact" class="cta-button">اطلب عرض سعر مجاني</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>التميز في <span>التشطيبات الفاخرة</span><br>قص الخرسانة بالليزر وفتحات الكور</h1>
+                <p>نغطي كافة مناطق الرياض بأعمال اللياسة والترميم والتشطيبات الفاخرة، قص الخرسانة بالليزر الدقيق، وفتحات الكور المهنية بأعلى معايير الجودة</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        طلب عرض سعر مجاني
+                    </a>
+                    <a href="tel:+966542906096" class="btn btn-whatsapp">
+                        <i class="fas fa-phone-alt"></i>
+                        اتصل الآن: 0542906096
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1168,198 +905,187 @@
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">خدماتنا المتخصصة</h2>
+            <p class="section-subtitle">نقدم مجموعة متكاملة من خدمات التشطيبات والبناء بأعلى معايير الجودة والدقة</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🏛️</div>
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
                     <h3>لياسة القصور والفلل</h3>
-                    <p>تنفيذ أعمال اللياسة للمشاريع السكنية الفاخرة بدقة عالية وتفاصيل استثنائية.</p>
+                    <p>تنفيذ أعمال اللياسة للمشاريع السكنية الفاخرة بدقة عالية وتفاصيل استثنائية تضمن الجمال والمتانة.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3>الترميم وإعادة التأهيل</h3>
-                    <p>إعادة تأهيل المباني القديمة وحلول ترميم مبتكرة تحافظ على الجمالية والقوة.</p>
+                    <p>إعادة تأهيل المباني القديمة وحلول ترميم مبتكرة تحافظ على الجمالية والقوة والهوية المعمارية.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>المشاريع التجارية الراقية</h3>
-                    <p>تنفيذ أعمال التشطيبات الداخلية والخارجية للمعارض والمطاعم والمكاتب الفاخرة.</p>
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>المشاريع التجارية</h3>
+                    <p>تنفيذ أعمال التشطيبات الداخلية والخارجية للمعارض والمطاعم والمكاتب الفاخرة بمعايير عالمية.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>قص الخرسانة بالليزر</h3>
+                    <p>أحدث تقنيات قص الخرسانة بالليزر بدقة ميكرومترية وسرعة في التنفيذ دون إزعاج أو اهتزازات.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-digging"></i>
+                    </div>
+                    <h3>فتحات الكور والأعمدة</h3>
+                    <p>تنفيذ فتحات كور دقيقة للأعمدة والجدران بأحدث المعدات والتقنيات للحصول على نتائج مثالية.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>الاستشارات الهندسية</h3>
+                    <p>تقديم استشارات هندسية متخصصة وخطط تنفيذ دقيقة تضمن نجاح مشروعك من البداية للنهاية.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Specialized Services -->
+    <section id="specialized" class="specialized-services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتقدمة</h2>
+            <p class="section-subtitle">نتميز بخدمات متخصصة تستخدم أحدث التقنيات والمعدات للحصول على أفضل النتائج</p>
+            <div class="specialized-grid">
+                <div class="specialized-card">
+                    <div class="specialized-header">
+                        <div class="specialized-icon">
+                            <i class="fas fa-laser"></i>
+                        </div>
+                        <h3>قص الخرسانة بالليزر</h3>
+                    </div>
+                    <ul class="specialized-list">
+                        <li><i class="fas fa-check-circle"></i> قص خرسانة بالليزر لأعمال التوسعة والهدم الموجه</li>
+                        <li><i class="fas fa-check-circle"></i> فتح فتحات للأبواب والنوافذ الجديدة بدقة عالية</li>
+                        <li><i class="fas fa-check-circle"></i> قص الأعمدة الخرسانية والجدران الحاملة</li>
+                        <li><i class="fas fa-check-circle"></i> أعمال القص للمرائب والمواقف والمساحات الكبيرة</li>
+                        <li><i class="fas fa-check-circle"></i> قص الخرسانة المسلحة بجميع السماكات</li>
+                        <li><i class="fas fa-check-circle"></i> أعمال قص خرسانة بدون إزعاج أو اهتزازات للمباني المجاورة</li>
+                    </ul>
+                </div>
+                <div class="specialized-card">
+                    <div class="specialized-header">
+                        <div class="specialized-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <h3>فتحات الكور المتخصصة</h3>
+                    </div>
+                    <ul class="specialized-list">
+                        <li><i class="fas fa-check-circle"></i> فتحات كور للأعمدة الخرسانية والجدران</li>
+                        <li><i class="fas fa-check-circle"></i> فتحات التمديدات الكهربائية والسباكة بدقة متناهية</li>
+                        <li><i class="fas fa-check-circle"></i> فتحات أنظمة التكييف المركزي والتهوية</li>
+                        <li><i class="fas fa-check-circle"></i> فتحات الكور للجدران الحاملة والهيكلية</li>
+                        <li><i class="fas fa-check-circle"></i> فتحات صرف صحي وتمديدات المياه الرئيسية</li>
+                        <li><i class="fas fa-check-circle"></i> توسيع الفتحات القديمة وتعديلها حسب المتطلبات الجديدة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="section-title">معرض أعمالنا</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/webp_1" alt="مشروع تشطيب فاخر">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/763de998285165b55108b748dd406a3.jpg" alt="تشطيبات داخلية حديثة">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/Afterbe for .webp" alt="تصميم داخلي عصري">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery_1.webp" alt="تشطيبات خارجية">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery_2.jpg" alt="لياسة فاخرة">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery_3.jpg" alt="فيلا حديثة">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery_4.jpg" alt="تشطيبات معاصرة">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery_5.webp" alt="تصميم خارجي">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/gallery_6.jpg" alt="مشروع ترميم">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/istockphoto-1208971310-612x612-1.jpg" alt="تشطيبات حديثة">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/Mgrm_TL6TJGMJMSIMzNFj webp" alt="تصميم فاخر">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/Modern-Classic-Villa-Facades-MamlakatAizuhur.com_webp" alt="واجهات فيلات">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/png.(1)" alt="تشطيبات متكاملة">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/png.1" alt="تصميم داخلي">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/jpg ترميم صباح الشرقية" alt="ترميم مباني">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/jpg ترميم معازل قيمية" alt="ترميم منازل">
-                </div>
+            <p class="section-subtitle">بعض من مشاريعنا الناجحة في مختلف أنحاء الرياض</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">قص خرسانة بالليزر</div>
+                <div class="portfolio-item">فتحات كور متخصصة</div>
+                <div class="portfolio-item">تشطيب فلل فاخرة</div>
+                <div class="portfolio-item">ترميم مباني تاريخية</div>
+                <div class="portfolio-item">مشاريع تجارية راقية</div>
+                <div class="portfolio-item">لياسة قصور</div>
+                <div class="portfolio-item">تشطيبات داخلية</div>
+                <div class="portfolio-item">أعمال التوسعة</div>
             </div>
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section id="location" class="location">
+    <!-- Areas -->
+    <section id="areas" class="areas">
         <div class="container">
             <h2 class="section-title">نغطي جميع أحياء الرياض</h2>
-            <p class="location-subtitle">نعمل في جميع مناطق الرياض الرئيسية والفرعية، ونسعى لتقديم خدماتنا في كل حي من أحياء العاصمة بأعلى معايير الجودة</p>
-            
+            <p class="section-subtitle">نسعى لتقديم خدماتنا في كل حي من أحياء العاصمة بأعلى معايير الجودة والاحترافية</p>
             <div class="areas-grid">
                 <div class="area-card">
                     <div class="area-icon">🏘️</div>
-                    <h3>الشمالية</h3>
-                    <p>الملز، العليا، العريجاء، النخيل، المرسلات</p>
+                    <h3>المنطقة الشمالية</h3>
+                    <p>الملز، العليا، العريجاء، النخيل، المرسلات، حي الإسكان</p>
                 </div>
                 <div class="area-card">
                     <div class="area-icon">🏙️</div>
-                    <h3>الوسطى</h3>
-                    <p>الربوة، الملز، البطحاء، الفوطة، المنصورة</p>
+                    <h3>المنطقة الوسطى</h3>
+                    <p>الربوة، الملز، البطحاء، الفوطة، المنصورة، منفوحة</p>
                 </div>
                 <div class="area-card">
                     <div class="area-icon">🏡</div>
-                    <h3>الغربية</h3>
-                    <p>النسيم، الشفا، طيبة، المصيف، البديعة</p>
+                    <h3>المنطقة الغربية</h3>
+                    <p>النسيم، الشفا، طيبة، المصيف، البديعة، المنار</p>
                 </div>
                 <div class="area-card">
                     <div class="area-icon">🏛️</div>
-                    <h3>الشرقية</h3>
-                    <p>اليرموك، النظيم، العدام، حي الإسكان</p>
+                    <h3>المنطقة الشرقية</h3>
+                    <p>اليرموك، النظيم، العدام، النهضة، الرمال، الروضة</p>
                 </div>
                 <div class="area-card">
                     <div class="area-icon">🏰</div>
-                    <h3>الجنوبية</h3>
-                    <p>الشفا، طيبة، الخزامى، الشعلة، المصيف</p>
+                    <h3>المنطقة الجنوبية</h3>
+                    <p>الشفا، طيبة، الخزامى، الشعلة، المصيف، غرناطة</p>
                 </div>
                 <div class="area-card">
                     <div class="area-icon">🎯</div>
                     <h3>الأحياء الفاخرة</h3>
-                    <p>اليرموك، النرجس، الربيع، الصحافة، الحمراء</p>
+                    <p>النرجس، الربيع، الصحافة، الحمراء، الياسمين، الملقا</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">آراء عملائنا من مختلف أحياء الرياض</h2>
+            <h2 class="section-title">آراء عملائنا</h2>
+            <p class="section-subtitle">رأي عملائنا هو دليل نجاحنا وسبب فخرنا بالخدمات التي نقدمها</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"الله يعطيهم العافية، شغلهم مرتب ونظيف. سووا لي تشطيب الفيلا في النرجس وما قصر، كل التفاصيل كانت مضبوطة والوقت محترم."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">أ</div>
-                            <div class="client-details">
-                                <h4>أحمد السليمان</h4>
-                                <p>حي النرجس - الرياض</p>
-                            </div>
+                    <p class="testimonial-text">"الله يعطيهم العافية، شغلهم مرتب ونظيف. سووا لي قص خرسانة بالليزر للفيلا في النرجس وما قصر، الدقة كانت ممتازة والوقت محترم. أنصح فيهم كل اللي يبي شغل متقن."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">أ</div>
+                        <div class="author-info">
+                            <h4>أحمد السليمان</h4>
+                            <p>حي النرجس - الرياض</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"من زمان وأنا أدور على فريق شغله متقن، الحمدلله لقيت النخبة. سووا ترميم للبيت القديم في البطحاء وأعادوه أحسن من الأول."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">ف</div>
-                            <div class="client-details">
-                                <h4>فهد الرشيد</h4>
-                                <p>حي البطحاء - الرياض</p>
-                            </div>
+                    <p class="testimonial-text">"من زمان وأنا أدور على فريق شغله متقن، الحمدلله لقيت النخبة. سووا لي فتحات كور للتكييف في البطحاء والشغل كان دقيق ونظيف. التواصل كان ممتاز من أول ما بدينا لين ما خلصنا."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ف</div>
+                        <div class="author-info">
+                            <h4>فهد الرشيد</h4>
+                            <p>حي البطحاء - الرياض</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"الشغل نظيف والتزام بالمواعيد نادر تلاقيه. في الربيع سووا لي لياسة القصر والنتيجة كانت تخطي التوقعات. أنصح فيهم الجميع."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">ن</div>
-                            <div class="client-details">
-                                <h4>ناصر الشمري</h4>
-                                <p>حي الربيع - الرياض</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"أنا من سكان الياسمين، جربت كثير شركات تشطيبات لكن النخبة مختلفين. الدقة في العمل والاهتمام بالتفاصيل الصغيرة ممتاز."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">ل</div>
-                            <div class="client-details">
-                                <h4>لولوة العتيبي</h4>
-                                <p>حي الياسمين - الرياض</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"فِي حي الصحافة عندي شقة، النخبة سووا لي تشطيب كامل في وقت قياسي والشغل أنيق ومرتب. الأسعار مناسبة للجودة اللي يقدمونها."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">خ</div>
-                            <div class="client-details">
-                                <h4>خالد المطيري</h4>
-                                <p>حي الصحافة - الرياض</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"في العليا سووا لي تشطيب مكتبي، ما توقعت النتيجة بتكون بهالجمال. المهنية والتواصل المستمر مع العملاء شيء مميز عندهم."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">م</div>
-                            <div class="client-details">
-                                <h4>محمد القحطاني</h4>
-                                <p>حي العليا - الرياض</p>
-                            </div>
+                    <p class="testimonial-text">"في الربيع سووا لي لياسة القصر والنتيجة كانت تخطي التوقعات. الدقة في العمل والاهتمام بالتفاصيل الصغيرة شيء مميز. الشغل نظيف والتزام بالمواعيد نادر تلاقيه."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ن</div>
+                        <div class="author-info">
+                            <h4>ناصر الشمري</h4>
+                            <p>حي الربيع - الرياض</p>
                         </div>
                     </div>
                 </div>
@@ -1367,64 +1093,60 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">تواصل معنا الآن</h2>
+            <p class="section-subtitle">نحن جاهزون للرد على استفساراتكم وتقديم عروض أسعار مجانية لمشروعك</p>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>اتصل بنا مباشرة</h3>
-                    <p class="contact-description">
-                        نحن جاهزون للرد على استفساراتكم وتقديم عروض أسعار مجانية. 
-                        اتصل بنا الآن للحصول على استشارة مجانية وتقييم لمشروعك.
-                    </p>
-                    
-                    <div class="contact-buttons">
-                        <a href="tel:+966542906096" class="contact-button phone-button">
-                            <i class="fas fa-phone button-icon"></i>
-                            اتصل بنا الآن: 0542906096
-                        </a>
-                        
-                        <a href="https://wa.me/966542906096" target="_blank" class="contact-button whatsapp-button">
-                            <i class="fab fa-whatsapp button-icon"></i>
-                            تواصل عبر واتساب
-                        </a>
-                    </div>
+                    <p>نقدم استشارة مجانية وتقييم دقيق لمشروعك. تحدث مع خبرائنا الآن للحصول على أفضل الحلول المناسبة لمتطلباتك.</p>
+                    <a href="tel:+966542906096" class="btn btn-primary" style="margin-bottom: 1rem;">
+                        <i class="fas fa-phone"></i>
+                        اتصل الآن: 0542906096
+                    </a>
+                    <a href="https://wa.me/966542906096" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        تواصل عبر واتساب
+                    </a>
                 </div>
-                
                 <div class="contact-details">
-                    <h4>معلومات التواصل</h4>
                     <div class="contact-item">
-                        <span class="icon">📱</span>
-                        <div>
-                            <p>الهاتف والواتساب</p>
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>الهاتف والواتساب</h4>
                             <a href="tel:+966542906096">+966 54 290 6096</a>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <span class="icon">💬</span>
-                        <div>
-                            <p>الواتساب مباشر</p>
-                            <a href="https://wa.me/966542906096" target="_blank">
-                                اضغط للتواصل فوراً
-                            </a>
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>الواتساب المباشر</h4>
+                            <a href="https://wa.me/966542906096" target="_blank">اضغط للتواصل فوراً</a>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <span class="icon">📍</span>
-                        <div>
-                            <p>الموقع الجغرافي</p>
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>الموقع الجغرافي</h4>
                             <p>الرياض - نغطي جميع الأحياء</p>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <span class="icon">⏰</span>
-                        <div>
-                            <p>ساعات العمل</p>
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>ساعات العمل</h4>
                             <p>الأحد - الخميس: 8 صباحاً - 10 مساءً</p>
+                            <p>الجمعة: 2 ظهراً - 10 مساءً</p>
                         </div>
                     </div>
                 </div>
@@ -1436,37 +1158,36 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">النخبة للتشطيبات</div>
-            <p>متخصصون في التشطيبات والترميم الفاخر - نغطي جميع أحياء الرياض</p>
+            <p>متخصصون في التشطيبات الفاخرة، قص الخرسانة بالليزر، فتحات الكور - نغطي جميع أحياء الرياض</p>
             <div class="footer-contact">
-                <a href="tel:+966542906096">الهاتف: +966 54 290 6096</a>
-                <a href="https://wa.me/966542906096" target="_blank">الواتساب: اضغط هنا</a>
+                <a href="tel:+966542906096">الهاتف: 0542906096</a>
+                <a href="https://wa.me/966542906096" target="_blank">الواتساب: تواصل مباشر</a>
             </div>
-            <p>نعمل في جميع أنحاء الرياض</p>
-            <p>&copy; 2024 النخبة للتشطيبات. جميع الحقوق محفوظة.</p>
+            <p class="copyright">&copy; 2024 النخبة للتشطيبات. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
+        // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
-
+        
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
         });
-
-        // Close mobile menu when clicking on a link
+        
+        // Close menu on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
-
+        
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
@@ -1476,15 +1197,13 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Smooth scrolling for anchor links
+        
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -1494,90 +1213,32 @@
                 }
             });
         });
-
-        // Track phone call clicks
-        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('تم النقر على رابط الهاتف: ' + this.href);
-            });
-        });
-
-        // Track WhatsApp clicks
-        document.querySelectorAll('a[href*="whatsapp"]').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('تم النقر على رابط الواتساب');
-            });
-        });
-
-        // Gallery image modal
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        galleryItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const imgSrc = this.querySelector('img').src;
-                const modal = document.createElement('div');
-                modal.style.cssText = `
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.95);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 2000;
-                    cursor: pointer;
-                `;
-                
-                const modalImg = document.createElement('img');
-                modalImg.src = imgSrc;
-                modalImg.style.cssText = `
-                    max-width: 90%;
-                    max-height: 90%;
-                    object-fit: contain;
-                    border-radius: 10px;
-                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-                `;
-                
-                modal.appendChild(modalImg);
-                document.body.appendChild(modal);
-                
-                modal.addEventListener('click', () => {
-                    document.body.removeChild(modal);
-                });
-                
-                // Close modal with ESC key
-                document.addEventListener('keydown', function closeModal(e) {
-                    if (e.key === 'Escape') {
-                        document.body.removeChild(modal);
-                        document.removeEventListener('keydown', closeModal);
-                    }
-                });
-            });
-        });
-
-        // Initialize on page load
-        window.addEventListener('load', () => {
-            // Add fade-in animation to sections on scroll
-            const sections = document.querySelectorAll('section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
+        
+        // Set active nav link
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
             sections.forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(section);
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
             });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Initialize
+        window.addEventListener('load', () => {
+            console.log('موقع النخبة للتشطيبات - جاهز للاستخدام');
         });
     </script>
 </body>
