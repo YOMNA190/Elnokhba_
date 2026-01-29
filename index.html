@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precision Concrete Cutting Riyadh | قص الخرسانة بالليزر الدقيق</title>
+    <title>قص الخرسانة بالليزر الدقيق - الرياض | 0542906096</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,7 +22,7 @@
             /* الألوان الرئيسية */
             --primary-black: #000000;
             --primary-white: #FFFFFF;
-            --primary-gray: #F5F5F5;
+            --primary-gray: #F5F5F7;
             --primary-dark: #111111;
             
             /* ألوان التمييز */
@@ -30,6 +30,7 @@
             --accent-blue: #007AFF;
             --accent-green: #34C759;
             --accent-orange: #FF9500;
+            --accent-laser: #FF6B35;
             
             /* ألوان الخدمات */
             --service-1: #FF3B30;
@@ -46,15 +47,17 @@
             --spacing-xxl: 64px;
             
             /* الظلال */
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+            --shadow-sm: 0 2px 12px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 48px rgba(0,0,0,0.16);
+            --shadow-xl: 0 12px 64px rgba(0,0,0,0.2);
             
             /* الزوايا */
-            --radius-sm: 6px;
-            --radius-md: 12px;
+            --radius-sm: 8px;
+            --radius-md: 16px;
             --radius-lg: 24px;
             --radius-xl: 32px;
+            --radius-2xl: 40px;
             
             /* الانتقالات */
             --transition-fast: 0.2s ease;
@@ -78,7 +81,7 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Cairo', sans-serif;
             color: var(--primary-dark);
             background: var(--primary-white);
             line-height: 1.6;
@@ -120,16 +123,16 @@
         }
         
         .logo-icon {
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--primary-white);
-            font-weight: 800;
+            font-weight: 900;
         }
         
         .brand-text {
@@ -138,33 +141,44 @@
         }
         
         .brand-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
             color: var(--primary-black);
             letter-spacing: -0.5px;
         }
         
         .brand-tagline {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--accent-red);
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 0.5px;
         }
         
         .contact-number {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
             color: var(--primary-black);
             display: flex;
             align-items: center;
             gap: var(--spacing-sm);
+            background: var(--primary-gray);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+        
+        .contact-number:hover {
+            background: var(--accent-red);
+            color: var(--primary-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
         
         .contact-number i {
             color: var(--accent-green);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         
         /* ========================================
@@ -173,10 +187,40 @@
         
         .hero-section {
             padding: var(--spacing-xxl) 0;
-            background: var(--primary-gray);
-            margin-top: 80px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            margin-top: 100px;
             position: relative;
             overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* خلفية الفيديو */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.3);
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 1;
         }
         
         .hero-grid {
@@ -184,6 +228,8 @@
             grid-template-columns: 1fr 1fr;
             gap: var(--spacing-xxl);
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         
         .hero-content {
@@ -193,78 +239,102 @@
         
         .hero-badge {
             display: inline-block;
-            padding: var(--spacing-xs) var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-lg);
             background: var(--accent-red);
             color: var(--primary-white);
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: var(--radius-2xl);
             margin-bottom: var(--spacing-lg);
             letter-spacing: 1px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
         
         .hero-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
             line-height: 1.1;
             margin-bottom: var(--spacing-lg);
-            color: var(--primary-black);
+            color: var(--primary-white);
             letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
         
         .hero-subtitle {
-            font-size: 1.2rem;
-            color: #666;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: var(--spacing-xl);
             line-height: 1.8;
-            max-width: 500px;
+            max-width: 600px;
         }
         
-        /* أزرار الهيرو */
+        /* أزرار الهيرو الكبيرة */
         .hero-actions {
             display: flex;
-            gap: var(--spacing-md);
+            gap: var(--spacing-lg);
             margin-bottom: var(--spacing-xl);
+            flex-wrap: wrap;
         }
         
         .btn {
-            padding: var(--spacing-md) var(--spacing-xl);
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
+            padding: var(--spacing-lg) var(--spacing-xxl);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
             border: none;
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-2xl);
             cursor: pointer;
             transition: all var(--transition-base);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: var(--spacing-sm);
-            min-width: 160px;
+            gap: var(--spacing-md);
+            min-width: 220px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
         }
         
         .btn-primary {
-            background: var(--accent-red);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
             color: var(--primary-white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         .btn-primary:hover {
-            background: #e0352b;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: var(--shadow-xl);
+            background: linear-gradient(135deg, #ff4d4d, #ff8c00);
         }
         
         .btn-secondary {
-            background: var(--primary-white);
-            color: var(--primary-black);
-            border: 2px solid var(--primary-black);
+            background: linear-gradient(135deg, var(--accent-blue), #5856D6);
+            color: var(--primary-white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         .btn-secondary:hover {
-            background: var(--primary-black);
-            color: var(--primary-white);
-            transform: translateY(-2px);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: var(--shadow-xl);
+            background: linear-gradient(135deg, #2980ff, #4d4dff);
         }
         
         /* ميزات الهيرو */
@@ -272,101 +342,139 @@
             display: flex;
             flex-direction: column;
             gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
         }
         
         .feature-item {
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--transition-base);
+        }
+        
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-10px);
         }
         
         .feature-icon {
-            width: 24px;
-            height: 24px;
+            width: 40px;
+            height: 40px;
             background: var(--accent-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary-white);
-            font-size: 0.8rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
         .feature-text {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--primary-black);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-white);
         }
         
         /* قسم الاتصال في الهيرو */
         .hero-contact {
             display: flex;
             align-items: center;
-            gap: var(--spacing-lg);
+            gap: var(--spacing-xl);
             margin-top: var(--spacing-xl);
-            padding: var(--spacing-lg);
-            background: var(--primary-white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            padding: var(--spacing-xl);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-xl);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            box-shadow: var(--shadow-lg);
         }
         
         .contact-info h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-            color: var(--primary-black);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-white);
         }
         
         .contact-info p {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--accent-blue);
-            letter-spacing: 1px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-laser);
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
         }
         
-        /* الخلفية الهندسية */
-        .hero-graphic {
+        .hero-contact .btn {
+            padding: var(--spacing-md) var(--spacing-xl);
+            min-width: auto;
+            font-size: 1.1rem;
+        }
+        
+        /* الجانب الأيمن - معرض الصور */
+        .hero-gallery {
             position: relative;
             height: 600px;
-            background: linear-gradient(135deg, #FFE5E3, #E3F2FF);
             border-radius: var(--radius-xl);
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: var(--shadow-xl);
         }
         
-        .graphic-element {
-            position: absolute;
-            background: var(--accent-red);
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            width: 100%;
+            height: 100%;
+        }
+        
+        .gallery-item {
+            position: relative;
             border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-base);
         }
         
-        .graphic-1 {
-            width: 200px;
-            height: 200px;
-            top: 50px;
-            right: 50px;
-            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
-            opacity: 0.8;
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
         }
         
-        .graphic-2 {
-            width: 150px;
-            height: 150px;
-            bottom: 80px;
-            left: 80px;
-            background: linear-gradient(135deg, var(--accent-blue), #5856D6);
-            opacity: 0.8;
+        .gallery-item:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
         }
         
-        .graphic-3 {
-            width: 100px;
-            height: 100px;
-            top: 150px;
-            left: 150px;
-            background: linear-gradient(135deg, var(--accent-green), #4CD964);
-            opacity: 0.8;
+        .gallery-item:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        
+        .gallery-item:nth-child(3) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        
+        .gallery-item:nth-child(4) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.2);
         }
         
         /* ========================================
@@ -385,50 +493,60 @@
         
         .section-label {
             display: inline-block;
-            padding: var(--spacing-xs) var(--spacing-md);
-            background: var(--primary-gray);
-            color: var(--accent-red);
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-xl);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+            color: var(--primary-white);
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: var(--radius-2xl);
+            margin-bottom: var(--spacing-lg);
             letter-spacing: 1px;
+            box-shadow: var(--shadow-md);
         }
         
         .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
             color: var(--primary-black);
             margin-bottom: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
         }
         
         /* شبكة الخدمات */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-lg);
+            gap: var(--spacing-xl);
         }
         
         .service-card {
             background: var(--primary-white);
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-xl);
             overflow: hidden;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-lg);
             transition: all var(--transition-base);
             border: 1px solid #eee;
         }
         
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-xl);
         }
         
         .service-header {
-            padding: var(--spacing-xl);
+            padding: var(--spacing-xxl) var(--spacing-xl);
             position: relative;
             overflow: hidden;
-            min-height: 180px;
+            min-height: 220px;
         }
         
         /* ألوان الخدمات المختلفة */
@@ -449,84 +567,95 @@
         }
         
         .service-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            color: var(--primary-white);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .service-title {
+            font-size: 2.2rem;
+            font-weight: 900;
             color: var(--primary-white);
             margin-bottom: var(--spacing-md);
         }
         
-        .service-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-white);
-            margin-bottom: var(--spacing-sm);
-        }
-        
         .service-description {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.7;
         }
         
         .service-content {
-            padding: var(--spacing-xl);
+            padding: var(--spacing-xxl) var(--spacing-xl);
         }
         
         .service-features {
             list-style: none;
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
         }
         
         .service-features li {
-            padding: var(--spacing-xs) 0;
-            font-size: 1rem;
+            padding: var(--spacing-sm) 0;
+            font-size: 1.1rem;
             color: #666;
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
+            gap: var(--spacing-md);
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
         }
         
         .service-features li i {
             color: var(--accent-green);
-            font-size: 0.9rem;
+            font-size: 1.2rem;
         }
         
         .service-contact {
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid #eee;
+            justify-content: space-between;
+            padding-top: var(--spacing-xl);
+            border-top: 2px solid #eee;
         }
         
         .service-phone {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-black);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--accent-red);
         }
         
         .service-action {
-            padding: var(--spacing-sm) var(--spacing-lg);
-            background: var(--accent-red);
+            padding: var(--spacing-md) var(--spacing-xxl);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
             color: var(--primary-white);
             border: none;
-            border-radius: var(--radius-md);
-            font-weight: 600;
+            border-radius: var(--radius-2xl);
+            font-weight: 800;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: all var(--transition-base);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            box-shadow: var(--shadow-md);
         }
         
         .service-action:hover {
-            background: #e0352b;
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, #ff4d4d, #ff8c00);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: var(--shadow-lg);
         }
         
         /* ========================================
@@ -536,6 +665,8 @@
         .contact-section {
             padding: var(--spacing-xxl) 0;
             background: var(--primary-gray);
+            position: relative;
+            overflow: hidden;
         }
         
         .contact-container {
@@ -543,25 +674,28 @@
             grid-template-columns: 1fr 1fr;
             gap: var(--spacing-xxl);
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         
         .contact-info {
             background: var(--primary-white);
             padding: var(--spacing-xxl);
             border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-xl);
+            border: 2px solid rgba(255, 107, 53, 0.1);
         }
         
         .contact-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
             color: var(--primary-black);
             margin-bottom: var(--spacing-lg);
         }
         
         .contact-desc {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: #666;
             margin-bottom: var(--spacing-xl);
             line-height: 1.8;
@@ -570,37 +704,50 @@
         .contact-details {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-lg);
+            gap: var(--spacing-xl);
         }
         
         .detail-item {
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: var(--primary-gray);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+            border: 2px solid transparent;
+        }
+        
+        .detail-item:hover {
+            border-color: var(--accent-red);
+            transform: translateX(-10px);
+            background: var(--primary-white);
         }
         
         .detail-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--primary-gray);
-            border-radius: var(--radius-md);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            color: var(--accent-red);
+            font-size: 1.8rem;
+            color: var(--primary-white);
+            flex-shrink: 0;
         }
         
         .detail-content h4 {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.4rem;
+            font-weight: 800;
             color: var(--primary-black);
             margin-bottom: var(--spacing-xs);
         }
         
         .detail-content p {
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 1.3rem;
+            color: var(--accent-red);
+            font-weight: 700;
         }
         
         /* نموذج الاتصال */
@@ -608,63 +755,72 @@
             background: var(--primary-white);
             padding: var(--spacing-xxl);
             border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-xl);
+            border: 2px solid rgba(255, 107, 53, 0.1);
         }
         
         .form-group {
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
         }
         
         .form-label {
             display: block;
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 700;
             color: var(--primary-black);
             margin-bottom: var(--spacing-sm);
         }
         
         .form-control {
             width: 100%;
-            padding: var(--spacing-md);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            padding: var(--spacing-lg);
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
             border: 2px solid #ddd;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-lg);
             transition: all var(--transition-base);
+            background: var(--primary-gray);
         }
         
         .form-control:focus {
             outline: none;
             border-color: var(--accent-red);
+            background: var(--primary-white);
+            box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.1);
         }
         
         textarea.form-control {
-            min-height: 120px;
+            min-height: 150px;
             resize: vertical;
         }
         
         .form-submit {
             width: 100%;
-            padding: var(--spacing-md);
-            background: var(--accent-red);
+            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
             color: var(--primary-white);
             border: none;
-            border-radius: var(--radius-md);
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border-radius: var(--radius-2xl);
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
             cursor: pointer;
             transition: all var(--transition-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+            box-shadow: var(--shadow-lg);
         }
         
         .form-submit:hover {
-            background: #e0352b;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, #ff4d4d, #ff8c00);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-xl);
         }
         
         /* ========================================
-           🔋 الأزرار العائمة
+           🔋 الأزرار العائمة الكبيرة
            ======================================== */
         
         .floating-actions {
@@ -674,41 +830,85 @@
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-sm);
+            gap: var(--spacing-lg);
         }
         
         .floating-btn {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: var(--primary-white);
             text-decoration: none;
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-xl);
             transition: all var(--transition-base);
             border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .floating-btn:hover::before {
+            left: 100%;
         }
         
         .floating-btn.whatsapp {
-            background: var(--accent-green);
+            background: linear-gradient(135deg, var(--accent-green), #25D366);
         }
         
         .floating-btn.whatsapp:hover {
-            background: #2db24a;
-            transform: scale(1.1) translateY(-5px);
+            background: linear-gradient(135deg, #2db24a, #25D366);
+            transform: scale(1.15) translateY(-8px);
+            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.4);
         }
         
         .floating-btn.phone {
-            background: var(--accent-red);
+            background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
         }
         
         .floating-btn.phone:hover {
-            background: #e0352b;
-            transform: scale(1.1) translateY(-5px);
+            background: linear-gradient(135deg, #ff4d4d, #ff8c00);
+            transform: scale(1.15) translateY(-8px);
+            box-shadow: 0 20px 50px rgba(255, 59, 48, 0.4);
+        }
+        
+        /* مؤشر للازرار العائمة */
+        .floating-label {
+            position: absolute;
+            left: calc(100% + 15px);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            pointer-events: none;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .floating-btn:hover .floating-label {
+            opacity: 1;
+            visibility: visible;
+            left: calc(100% + 20px);
         }
         
         /* ========================================
@@ -733,8 +933,8 @@
         }
         
         .footer-desc {
-            font-size: 1rem;
-            color: #999;
+            font-size: 1.1rem;
+            color: #aaa;
             line-height: 1.8;
             margin-bottom: var(--spacing-lg);
         }
@@ -749,14 +949,33 @@
             display: flex;
             align-items: center;
             gap: var(--spacing-sm);
-            color: #999;
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+        
+        .footer-contact-item i {
+            color: var(--accent-laser);
+            font-size: 1.3rem;
         }
         
         .footer-links h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 800;
             margin-bottom: var(--spacing-lg);
             color: var(--primary-white);
+            position: relative;
+            padding-bottom: var(--spacing-sm);
+        }
+        
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+            border-radius: 2px;
         }
         
         .footer-links ul {
@@ -764,38 +983,59 @@
         }
         
         .footer-links li {
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
         }
         
         .footer-links a {
-            color: #999;
+            color: #aaa;
             text-decoration: none;
-            transition: color var(--transition-base);
+            transition: all var(--transition-base);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
         }
         
         .footer-links a:hover {
-            color: var(--primary-white);
+            color: var(--accent-laser);
+            transform: translateX(-10px);
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: var(--spacing-lg);
+            padding-top: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
             border-top: 1px solid #333;
-            color: #666;
-            font-size: 0.9rem;
+            color: #777;
+            font-size: 1rem;
         }
         
         /* ========================================
            📱 تصميم متجاوب
            ======================================== */
         
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
             .hero-title {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             
             .section-title {
+                font-size: 3rem;
+            }
+            
+            .contact-title {
                 font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .hero-gallery {
+                height: 500px;
             }
             
             .services-grid {
@@ -804,6 +1044,10 @@
             
             .contact-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
             }
         }
         
@@ -816,29 +1060,51 @@
                 padding: 0 var(--spacing-md);
             }
             
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-xl);
+            .hero-section {
+                margin-top: 120px;
+                min-height: auto;
             }
             
-            .hero-graphic {
-                height: 400px;
-                order: -1;
+            .hero-title {
+                font-size: 2.8rem;
             }
             
             .hero-actions {
                 flex-direction: column;
-                gap: var(--spacing-sm);
+                gap: var(--spacing-md);
             }
             
             .btn {
                 width: 100%;
+                min-width: auto;
+                padding: var(--spacing-lg) var(--spacing-xl);
             }
             
             .hero-contact {
                 flex-direction: column;
                 text-align: center;
-                gap: var(--spacing-md);
+                gap: var(--spacing-lg);
+            }
+            
+            .hero-gallery {
+                height: 400px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .service-header {
+                padding: var(--spacing-xl) var(--spacing-lg);
+                min-height: 180px;
+            }
+            
+            .service-title {
+                font-size: 1.8rem;
+            }
+            
+            .service-action {
+                padding: var(--spacing-md) var(--spacing-xl);
             }
             
             .floating-actions {
@@ -847,9 +1113,9 @@
             }
             
             .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
             }
             
             .footer-content {
@@ -862,22 +1128,29 @@
             .header-container {
                 flex-direction: column;
                 gap: var(--spacing-sm);
+                text-align: center;
+            }
+            
+            .contact-number {
+                margin-top: var(--spacing-sm);
             }
             
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .section-title {
                 font-size: 2rem;
             }
             
-            .service-header {
-                padding: var(--spacing-lg);
+            .service-content {
+                padding: var(--spacing-xl) var(--spacing-lg);
             }
             
-            .service-title {
-                font-size: 1.5rem;
+            .service-contact {
+                flex-direction: column;
+                gap: var(--spacing-lg);
+                text-align: center;
             }
             
             .contact-info,
@@ -885,9 +1158,29 @@
                 padding: var(--spacing-xl);
             }
             
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .detail-item {
+                padding: var(--spacing-md);
+            }
+            
+            .detail-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
             .floating-actions {
                 left: var(--spacing-sm);
                 bottom: var(--spacing-sm);
+            }
+            
+            .floating-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
             }
         }
         
@@ -897,13 +1190,75 @@
         
         .scroll-reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .scroll-reveal.active {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        /* تأثيرات الفيديو */
+        .video-controls {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+        
+        .video-btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            backdrop-filter: blur(10px);
+        }
+        
+        .video-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* تأثيرات خاصة للصور */
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: var(--spacing-lg);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        
+        .gallery-item:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .image-title {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .image-location {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
         }
     </style>
 </head>
@@ -912,83 +1267,135 @@
     <header class="main-header">
         <div class="container header-container">
             <div class="logo-brand">
-                <div class="logo-icon">PC</div>
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
                 <div class="brand-text">
-                    <div class="brand-title">Precision Concrete</div>
-                    <div class="brand-tagline">Cutting Riyadh</div>
+                    <div class="brand-title">قص الخرسانة الدقيق</div>
+                    <div class="brand-tagline">بالليزر - الرياض</div>
                 </div>
             </div>
             
-            <div class="contact-number">
+            <a href="tel:+966542906096" class="contact-number">
                 <i class="fas fa-phone-alt"></i>
                 <span>0542906096</span>
-            </div>
+            </a>
         </div>
     </header>
     
     <!-- 🚀 الهيرو -->
     <section class="hero-section">
+        <!-- خلفية الفيديو -->
+        <div class="video-background">
+            <video id="heroVideo" autoplay muted loop playsinline>
+                <source src="assets/2026-01-25-200212691.mp4" type="video/mp4">
+                <source src="assets/2026-01-25-200212691.mp4" type="video/webm">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <span class="hero-badge">PRECISION CONCRETE CUTTING</span>
+                    <span class="hero-badge">قص خرسانة بالليزر</span>
                     <h1 class="hero-title scroll-reveal">
-                        Precision Concrete<br>
-                        Cutting in Riyadh.<br>
-                        Fast. Reliable. Professional.
+                        قص الخرسانة بالليزر الدقيق<br>
+                        في الرياض. سريع. موثوق. احترافي.
                     </h1>
                     <p class="hero-subtitle scroll-reveal">
-                        Precision concrete cutting via Laser Precision. Expert solutions & experienced technicians for all your concrete cutting needs.
+                        قص الخرسانة الدقيق باستخدام الليزر. حلول احترافية وتقنيات متقدمة مع فريق من الفنيين ذوي الخبرة لجميع احتياجات قص الخرسانة.
                     </p>
                     
+                    <!-- أزرار الإكشن الكبيرة -->
                     <div class="hero-actions scroll-reveal">
-                        <button class="btn btn-primary">
+                        <a href="tel:+966542906096" class="btn btn-primary">
                             <i class="fas fa-phone-alt"></i>
-                            Call Now
-                        </button>
-                        <button class="btn btn-secondary">
+                            اتصل الآن
+                        </a>
+                        <a href="https://wa.me/966542906096" target="_blank" class="btn btn-secondary">
                             <i class="fab fa-whatsapp"></i>
-                            WhatsApp Quote
-                        </button>
+                            احصل على عرض سعر
+                        </a>
                     </div>
                     
                     <div class="hero-features scroll-reveal">
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-check"></i>
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <span class="feature-text">No Delay. Fast Service</span>
+                            <span class="feature-text">بدون تأخير - خدمة سريعة</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-check"></i>
+                                <i class="fas fa-shield-alt"></i>
                             </div>
-                            <span class="feature-text">Licensed & Certified</span>
+                            <span class="feature-text">مرخص ومعتمد</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class="fas fa-check"></i>
+                                <i class="fas fa-tools"></i>
                             </div>
-                            <span class="feature-text">Modern Equipment</span>
+                            <span class="feature-text">معدات حديثة</span>
                         </div>
                     </div>
                     
                     <div class="hero-contact scroll-reveal">
                         <div class="contact-info">
-                            <h3>CONTACT FOR IMMEDIATE SERVICE</h3>
-                            <p>+966 54 290 6096</p>
+                            <h3>للخدمة الفورية اتصل بنا</h3>
+                            <p>0542906096</p>
                         </div>
-                        <button class="service-action">
+                        <a href="tel:+966542906096" class="btn btn-primary" style="padding: var(--spacing-md) var(--spacing-xl);">
                             <i class="fas fa-calendar-alt"></i>
-                            Schedule Now
-                        </button>
+                            احجز موعد
+                        </a>
                     </div>
                 </div>
                 
-                <div class="hero-graphic scroll-reveal">
-                    <div class="graphic-element graphic-1"></div>
-                    <div class="graphic-element graphic-2"></div>
-                    <div class="graphic-element graphic-3"></div>
+                <!-- معرض الصور -->
+                <div class="hero-gallery scroll-reveal">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="assets/gallery_1.webp" alt="قص خرسانة بالليزر" class="gallery-image">
+                            <div class="image-overlay">
+                                <h4 class="image-title">قص جدار خرساني</h4>
+                                <p class="image-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    الرياض - حي النرجس
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery_2.jpg" alt="فتحات كور" class="gallery-image">
+                            <div class="image-overlay">
+                                <h4 class="image-title">فتحات كور للتكييف</h4>
+                                <p class="image-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    الرياض - حي العليا
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery_3.jpg" alt="فتح باب جديد" class="gallery-image">
+                            <div class="image-overlay">
+                                <h4 class="image-title">فتح باب جديد</h4>
+                                <p class="image-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    الرياض - حي الربيع
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/gallery_4.jpg" alt="توسعة تجارية" class="gallery-image">
+                            <div class="image-overlay">
+                                <h4 class="image-title">توسعة مركز تجاري</h4>
+                                <p class="image-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    الرياض - حي البطحاء
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -998,8 +1405,9 @@
     <section class="services-section">
         <div class="container">
             <div class="section-header scroll-reveal">
-                <span class="section-label">OUR SERVICES</span>
-                <h2 class="section-title">Expert Concrete Solutions</h2>
+                <span class="section-label">خدماتنا</span>
+                <h2 class="section-title">حلول خرسانية احترافية</h2>
+                <p class="section-subtitle">نقدم مجموعة متكاملة من خدمات قص الخرسانة بأحدث التقنيات وأعلى معايير الجودة</p>
             </div>
             
             <div class="services-grid">
@@ -1009,21 +1417,24 @@
                         <div class="service-icon">
                             <i class="fas fa-cut"></i>
                         </div>
-                        <h3 class="service-title">Concrete Cutting</h3>
+                        <h3 class="service-title">قص الخرسانة</h3>
                         <p class="service-description">
-                            Precision concrete cutting for walls, floors, and structures with laser-guided accuracy.
+                            قص دقيق للخرسانة للجدران والأرضيات والهياكل بدقة الليزر.
                         </p>
                     </div>
                     <div class="service-content">
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Laser-guided precision</li>
-                            <li><i class="fas fa-check"></i> Minimal vibration</li>
-                            <li><i class="fas fa-check"></i> Clean cuts every time</li>
-                            <li><i class="fas fa-check"></i> Residential & Commercial</li>
+                            <li><i class="fas fa-check"></i> دقة الليزر المتناهية</li>
+                            <li><i class="fas fa-check"></i> أقل اهتزاز ممكن</li>
+                            <li><i class="fas fa-check"></i> قص نظيف في كل مرة</li>
+                            <li><i class="fas fa-check"></i> للمشاريع السكنية والتجارية</li>
                         </ul>
                         <div class="service-contact">
                             <div class="service-phone">0542906096</div>
-                            <button class="service-action">Book Now</button>
+                            <button class="service-action">
+                                <i class="fas fa-calendar-check"></i>
+                                احجز الآن
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1034,21 +1445,24 @@
                         <div class="service-icon">
                             <i class="fas fa-expand-alt"></i>
                         </div>
-                        <h3 class="service-title">Wall Cutting</h3>
+                        <h3 class="service-title">قص الجدران</h3>
                         <p class="service-description">
-                            Professional wall cutting for doors, windows, and openings with structural integrity.
+                            قص احترافي للجدران للأبواب والنوافذ والفتحات مع الحفاظ على السلامة الإنشائية.
                         </p>
                     </div>
                     <div class="service-content">
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Structural wall cutting</li>
-                            <li><i class="fas fa-check"></i> Door & window openings</li>
-                            <li><i class="fas fa-check"></i> Load-bearing walls</li>
-                            <li><i class="fas fa-check"></i> Emergency openings</li>
+                            <li><i class="fas fa-check"></i> قص الجدران الإنشائية</li>
+                            <li><i class="fas fa-check"></i> فتحات الأبواب والنوافذ</li>
+                            <li><i class="fas fa-check"></i> الجدران الحاملة</li>
+                            <li><i class="fas fa-check"></i> فتحات الطوارئ</li>
                         </ul>
                         <div class="service-contact">
                             <div class="service-phone">0542906096</div>
-                            <button class="service-action">Book Now</button>
+                            <button class="service-action">
+                                <i class="fas fa-calendar-check"></i>
+                                احجز الآن
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1059,21 +1473,24 @@
                         <div class="service-icon">
                             <i class="fas fa-tools"></i>
                         </div>
-                        <h3 class="service-title">Core Drilling</h3>
+                        <h3 class="service-title">حفر الكور</h3>
                         <p class="service-description">
-                            Professional core drilling for HVAC, plumbing, electrical, and utility installations.
+                            حفر احترافي للتكييف والسباكة والكهرباء وتركيب المرافق.
                         </p>
                     </div>
                     <div class="service-content">
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> HVAC installations</li>
-                            <li><i class="fas fa-check"></i> Plumbing penetrations</li>
-                            <li><i class="fas fa-check"></i> Electrical conduits</li>
-                            <li><i class="fas fa-check"></i> Utility openings</li>
+                            <li><i class="fas fa-check"></i> تركيب أنظمة التكييف</li>
+                            <li><i class="fas fa-check"></i> مد الأنابيب والسباكة</li>
+                            <li><i class="fas fa-check"></i> التوصيلات الكهربائية</li>
+                            <li><i class="fas fa-check"></i> فتحات المرافق</li>
                         </ul>
                         <div class="service-contact">
                             <div class="service-phone">0542906096</div>
-                            <button class="service-action">Book Now</button>
+                            <button class="service-action">
+                                <i class="fas fa-calendar-check"></i>
+                                احجز الآن
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1084,21 +1501,24 @@
                         <div class="service-icon">
                             <i class="fas fa-bolt"></i>
                         </div>
-                        <h3 class="service-title">Laser Beam Cutting</h3>
+                        <h3 class="service-title">قص شعاع الليزر</h3>
                         <p class="service-description">
-                            Advanced laser beam cutting technology for the most challenging concrete projects.
+                            تقنية قص متقدمة بشعاع الليزر للمشاريع الخرسانية الأكثر تحدياً.
                         </p>
                     </div>
                     <div class="service-content">
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Laser precision cutting</li>
-                            <li><i class="fas fa-check"></i> Complex shapes & patterns</li>
-                            <li><i class="fas fa-check"></i> Minimal dust & debris</li>
-                            <li><i class="fas fa-check"></i> High-tech solutions</li>
+                            <li><i class="fas fa-check"></i> قص بدقة الليزر</li>
+                            <li><i class="fas fa-check"></i> أشكال وأنماط معقدة</li>
+                            <li><i class="fas fa-check"></i> أقل غبار ومخلفات</li>
+                            <li><i class="fas fa-check"></i> حلول تكنولوجية متطورة</li>
                         </ul>
                         <div class="service-contact">
                             <div class="service-phone">0542906096</div>
-                            <button class="service-action">Book Now</button>
+                            <button class="service-action">
+                                <i class="fas fa-calendar-check"></i>
+                                احجز الآن
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1110,9 +1530,9 @@
     <section class="contact-section">
         <div class="container contact-container">
             <div class="contact-info scroll-reveal">
-                <h2 class="contact-title">Get Your Project Started</h2>
+                <h2 class="contact-title">ابدأ مشروعك الآن</h2>
                 <p class="contact-desc">
-                    Contact us today for a free consultation and quote. Our team of experts is ready to help with your concrete cutting needs.
+                    اتصل بنا اليوم للحصول على استشارة مجانية وعرض سعر. فريق خبرائنا جاهز لمساعدتك في جميع احتياجات قص الخرسانة.
                 </p>
                 
                 <div class="contact-details">
@@ -1121,7 +1541,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div class="detail-content">
-                            <h4>Call Us Anytime</h4>
+                            <h4>اتصل بنا في أي وقت</h4>
                             <p>0542906096</p>
                         </div>
                     </div>
@@ -1131,8 +1551,8 @@
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="detail-content">
-                            <h4>WhatsApp</h4>
-                            <p>Instant quote via WhatsApp</p>
+                            <h4>الواتساب</h4>
+                            <p>عرض سعر فوري عبر الواتساب</p>
                         </div>
                     </div>
                     
@@ -1141,8 +1561,8 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="detail-content">
-                            <h4>24/7 Service</h4>
-                            <p>Emergency services available</p>
+                            <h4>خدمة 24/7</h4>
+                            <p>خدمات الطوارئ متاحة</p>
                         </div>
                     </div>
                 </div>
@@ -1151,47 +1571,49 @@
             <div class="contact-form scroll-reveal">
                 <form id="contactForm">
                     <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name" required>
+                        <label class="form-label">الاسم الكامل</label>
+                        <input type="text" class="form-control" placeholder="أدخل اسمك" required>
                     </div>
                     
                     <div class="form-group">
-                        <label class="form-label">Phone Number</label>
+                        <label class="form-label">رقم الهاتف</label>
                         <input type="tel" class="form-control" placeholder="0542906096" required>
                     </div>
                     
                     <div class="form-group">
-                        <label class="form-label">Service Required</label>
+                        <label class="form-label">الخدمة المطلوبة</label>
                         <select class="form-control" required>
-                            <option value="">Select a service</option>
-                            <option value="concrete-cutting">Concrete Cutting</option>
-                            <option value="wall-cutting">Wall Cutting</option>
-                            <option value="core-drilling">Core Drilling</option>
-                            <option value="laser-cutting">Laser Beam Cutting</option>
+                            <option value="">اختر الخدمة</option>
+                            <option value="concrete-cutting">قص الخرسانة</option>
+                            <option value="wall-cutting">قص الجدران</option>
+                            <option value="core-drilling">حفر الكور</option>
+                            <option value="laser-cutting">قص شعاع الليزر</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label class="form-label">Project Details</label>
-                        <textarea class="form-control" placeholder="Tell us about your project..."></textarea>
+                        <label class="form-label">تفاصيل المشروع</label>
+                        <textarea class="form-control" placeholder="أخبرنا عن مشروعك..."></textarea>
                     </div>
                     
                     <button type="submit" class="form-submit">
                         <i class="fas fa-paper-plane"></i>
-                        Send Request
+                        أرسل الطلب
                     </button>
                 </form>
             </div>
         </div>
     </section>
     
-    <!-- 🔋 الأزرار العائمة -->
+    <!-- 🔋 الأزرار العائمة الكبيرة -->
     <div class="floating-actions">
         <a href="https://wa.me/966542906096" class="floating-btn whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
+            <span class="floating-label">تواصل عبر واتساب</span>
         </a>
         <a href="tel:+966542906096" class="floating-btn phone">
             <i class="fas fa-phone-alt"></i>
+            <span class="floating-label">اتصل الآن</span>
         </a>
     </div>
     
@@ -1201,12 +1623,12 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-brand">
-                        <div class="brand-title" style="color: white; font-size: 1.8rem;">Precision Concrete</div>
-                        <div class="brand-tagline">Cutting Riyadh</div>
+                        <div class="brand-title" style="color: white; font-size: 2.2rem;">قص الخرسانة الدقيق</div>
+                        <div class="brand-tagline">بالليزر - الرياض</div>
                     </div>
                     <p class="footer-desc">
-                        Professional concrete cutting services in Riyadh with precision, speed, and reliability. 
-                        Licensed technicians with modern equipment for all your concrete cutting needs.
+                        خدمات قص الخرسانة الاحترافية في الرياض بدقة وسرعة وموثوقية. 
+                        فنيون مرخصون ومعدات حديثة لجميع احتياجات قص الخرسانة.
                     </p>
                     <div class="footer-contact">
                         <div class="footer-contact-item">
@@ -1215,34 +1637,34 @@
                         </div>
                         <div class="footer-contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Riyadh, Saudi Arabia</span>
+                            <span>الرياض، المملكة العربية السعودية</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="footer-links">
-                    <h3>Quick Links</h3>
+                    <h3>روابط سريعة</h3>
                     <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#hero"><i class="fas fa-home"></i> الرئيسية</a></li>
+                        <li><a href="#services"><i class="fas fa-tools"></i> خدماتنا</a></li>
+                        <li><a href="#gallery"><i class="fas fa-images"></i> معرض الأعمال</a></li>
+                        <li><a href="#contact"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h3>Our Services</h3>
+                    <h3>خدماتنا</h3>
                     <ul>
-                        <li><a href="#services">Concrete Cutting</a></li>
-                        <li><a href="#services">Wall Cutting</a></li>
-                        <li><a href="#services">Core Drilling</a></li>
-                        <li><a href="#services">Laser Cutting</a></li>
+                        <li><a href="#services"><i class="fas fa-cut"></i> قص الخرسانة</a></li>
+                        <li><a href="#services"><i class="fas fa-expand-alt"></i> قص الجدران</a></li>
+                        <li><a href="#services"><i class="fas fa-tools"></i> حفر الكور</a></li>
+                        <li><a href="#services"><i class="fas fa-bolt"></i> قص شعاع الليزر</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2024 Precision Concrete Cutting Riyadh. All rights reserved.</p>
+                <p>© 2024 قص الخرسانة الدقيق بالليزر - الرياض. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -1252,7 +1674,8 @@
             initScrollEffects();
             initButtons();
             initContactForm();
-            console.log('🚀 Precision Concrete Cutting - Ready!');
+            initVideoPlayer();
+            console.log('🚀 موقع قص الخرسانة الدقيق - جاهز للعمل!');
         });
         
         // تأثيرات التمرير
@@ -1282,9 +1705,9 @@
                 const currentScroll = window.pageYOffset;
                 
                 if (currentScroll > 100) {
-                    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                    header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
                 } else {
-                    header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+                    header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)';
                 }
                 
                 if (currentScroll > lastScroll && currentScroll > 200) {
@@ -1299,17 +1722,13 @@
         
         // تفعيل الأزرار
         function initButtons() {
-            // أزرار الهيرو
+            // أزرار الهيرو الرئيسية
             document.querySelectorAll('.btn-primary').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    window.location.href = 'tel:+966542906096';
-                });
-            });
-            
-            document.querySelectorAll('.btn-secondary').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const message = encodeURIComponent('Hello, I need a quote for concrete cutting services.');
-                    window.open(`https://wa.me/966542906096?text=${message}`, '_blank');
+                btn.addEventListener('click', function(e) {
+                    if (!this.getAttribute('href')) {
+                        e.preventDefault();
+                        window.location.href = 'tel:+966542906096';
+                    }
                 });
             });
             
@@ -1317,26 +1736,19 @@
             document.querySelectorAll('.service-action').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const serviceTitle = this.closest('.service-card').querySelector('.service-title').textContent;
-                    const message = encodeURIComponent(`I'm interested in ${serviceTitle} service. Please contact me.`);
+                    const message = encodeURIComponent(`أهلاً، أنا مهتم بخدمة ${serviceTitle}. يرجى التواصل معي.`);
                     window.open(`https://wa.me/966542906096?text=${message}`, '_blank');
                 });
             });
             
-            // أزرار الاتصال في الهيرو
-            document.querySelector('.hero-contact .service-action').addEventListener('click', () => {
-                const today = new Date();
-                const tomorrow = new Date(today);
-                tomorrow.setDate(tomorrow.getDate() + 1);
-                
-                const formattedDate = tomorrow.toLocaleDateString('en-US', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
+            // أزرار الواتساب
+            document.querySelectorAll('a[href*="whatsapp"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const defaultMessage = encodeURIComponent('أهلاً، أود الاستفسار عن خدمات قص الخرسانة بالليزر.');
+                    const url = this.href.includes('?') ? this.href : `${this.href}?text=${defaultMessage}`;
+                    window.open(url, '_blank');
                 });
-                
-                const message = encodeURIComponent(`I'd like to schedule a concrete cutting service for ${formattedDate}. Please contact me to confirm.`);
-                window.open(`https://wa.me/966542906096?text=${message}`, '_blank');
             });
         }
         
@@ -1358,33 +1770,61 @@
                     
                     // التحقق من البيانات
                     if (!formData.name || !formData.phone || !formData.service) {
-                        showNotification('Please fill in all required fields', 'error');
+                        showNotification('الرجاء ملء جميع الحقول المطلوبة', 'error');
+                        return;
+                    }
+                    
+                    const phoneRegex = /^(05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/;
+                    if (!phoneRegex.test(formData.phone)) {
+                        showNotification('الرجاء إدخال رقم هاتف سعودي صحيح', 'error');
                         return;
                     }
                     
                     // إعداد رسالة واتساب
                     const serviceText = {
-                        'concrete-cutting': 'Concrete Cutting',
-                        'wall-cutting': 'Wall Cutting',
-                        'core-drilling': 'Core Drilling',
-                        'laser-cutting': 'Laser Beam Cutting'
+                        'concrete-cutting': 'قص الخرسانة',
+                        'wall-cutting': 'قص الجدران',
+                        'core-drilling': 'حفر الكور',
+                        'laser-cutting': 'قص شعاع الليزر'
                     }[formData.service] || formData.service;
                     
-                    const whatsappMsg = `*🏗️ New Service Request*%0A%0A` +
-                                      `*👤 Name:* ${formData.name}%0A` +
-                                      `*📞 Phone:* ${formData.phone}%0A` +
-                                      `*🔧 Service:* ${serviceText}%0A` +
-                                      `*📝 Details:*%0A${formData.message || 'No additional details'}%0A%0A` +
-                                      `*🕐 Submitted:* ${new Date().toLocaleString('en-US')}`;
+                    const whatsappMsg = `*🏗️ طلب خدمة جديد*%0A%0A` +
+                                      `*👤 الاسم:* ${formData.name}%0A` +
+                                      `*📞 الهاتف:* ${formData.phone}%0A` +
+                                      `*🔧 الخدمة:* ${serviceText}%0A` +
+                                      `*📝 التفاصيل:*%0A${formData.message || 'لا توجد تفاصيل إضافية'}%0A%0A` +
+                                      `*🕐 وقت الإرسال:* ${new Date().toLocaleString('ar-SA')}`;
                     
                     // فتح واتساب
                     window.open(`https://wa.me/966542906096?text=${whatsappMsg}`, '_blank');
                     
                     // إظهار إشعار النجاح
-                    showNotification('✅ WhatsApp opened! Please send the message', 'success');
+                    showNotification('✅ تم فتح واتساب! يرجى إرسال الرسالة', 'success');
                     
                     // إعادة تعيين النموذج
                     setTimeout(() => form.reset(), 1000);
+                });
+            }
+        }
+        
+        // تشغيل الفيديو
+        function initVideoPlayer() {
+            const video = document.getElementById('heroVideo');
+            
+            if (video) {
+                // محاولة تشغيل الفيديو
+                video.play().catch(error => {
+                    console.log('فشل التشغيل التلقائي للفيديو:', error);
+                });
+                
+                // التحكم في الصوت عند النقر
+                video.addEventListener('click', () => {
+                    if (video.muted) {
+                        video.muted = false;
+                        video.volume = 0.3;
+                    } else {
+                        video.muted = true;
+                    }
                 });
             }
         }
@@ -1399,10 +1839,10 @@
             notification.className = `notification ${type}`;
             notification.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}" style="font-size: 20px;"></i>
-                    <span style="font-size: 14px; font-weight: 500;">${message}</span>
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}" style="font-size: 24px;"></i>
+                    <span style="font-size: 16px; font-weight: 600;">${message}</span>
                 </div>
-                <button class="notification-close" style="background: none; border: none; color: #666; cursor: pointer; font-size: 18px; padding: 4px;">
+                <button class="notification-close" style="background: none; border: none; color: white; cursor: pointer; font-size: 20px; padding: 4px;">
                     <i class="fas fa-times"></i>
                 </button>
             `;
@@ -1412,20 +1852,20 @@
                 position: fixed;
                 top: 120px;
                 right: 20px;
-                background: ${type === 'success' ? '#34C759' : '#FF3B30'};
+                background: ${type === 'success' ? 'linear-gradient(135deg, #34C759, #2DB24A)' : 'linear-gradient(135deg, #FF3B30, #E0352B)'};
                 color: white;
-                padding: 16px 20px;
-                border-radius: 12px;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+                padding: 20px 24px;
+                border-radius: 16px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                gap: 16px;
+                gap: 20px;
                 z-index: 10000;
                 animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                max-width: 400px;
+                max-width: 450px;
                 backdrop-filter: blur(10px);
-                border: 1px solid rgba(255,255,255,0.1);
+                border: 1px solid rgba(255,255,255,0.2);
             `;
             
             // إضافة أنيميشن
