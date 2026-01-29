@@ -1,153 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>النخبة | قص خرسانة بالليزر بدقة 100% في الرياض | 0542906096</title>
+    <title>النخبة | قص الخرسانة بالليزر - دقة 100% في الرياض | 0542906096</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="أفضل مقاول قص خرسانة بالليزر في الرياض. دقة 100%، خدمة 24/7، ضمان شامل. اتصل الآن: 0542906096">
-    <meta name="keywords" content="قص خرسانة بالليزر الرياض، فتحات كور، ترميم إنشائي، مقاول خرسانة">
+    <meta name="description" content="القيادة التقنية في قص الخرسانة بالليزر - دقة لا ترحم، سرعة خارقة، ضمان 12 شهرًا. الرواد في الرياض.">
+    <meta name="keywords" content="ليزر خرسانة, قص دقيق, تقطيع الخرسانة, فتحات كور, تقنيات حديثة الرياض">
     
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-    
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    
     <style>
         /* ========================================
-           🎨 MODERN DESIGN SYSTEM
+           🎨 نظام التصميم الذكي - ليزري الصنع
            ======================================== */
         
         :root {
-            /* 🎨 Primary Color Palette - Futuristic Tech */
-            --primary-50: #EFF6FF;
-            --primary-100: #DBEAFE;
-            --primary-200: #BFDBFE;
-            --primary-300: #93C5FD;
-            --primary-400: #60A5FA;
-            --primary-500: #3B82F6;
-            --primary-600: #2563EB;
-            --primary-700: #1D4ED8;
-            --primary-800: #1E40AF;
-            --primary-900: #1E3A8A;
+            /* ألوان ليزر أساسية */
+            --laser-core: #FF2E00;
+            --laser-glow: #FF6B35;
+            --laser-hot: #FF9500;
+            --laser-cold: #00D4FF;
+            --laser-precision: #00FF9D;
             
-            /* 🔥 Accent Colors - Energy & Innovation */
-            --accent-cyan: #06B6D4;
-            --accent-emerald: #10B981;
-            --accent-amber: #F59E0B;
-            --accent-rose: #F43F5E;
-            --accent-violet: #8B5CF6;
-            --accent-orange: #FF6B35;
+            /* نظام الإشعاع */
+            --glow-primary: radial-gradient(circle at center, var(--laser-glow) 0%, transparent 70%);
+            --glow-secondary: radial-gradient(circle at center, var(--laser-cold) 0%, transparent 70%);
             
-            /* 🌈 Gradient Collections */
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-sunset: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-            --gradient-ocean: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);
-            --gradient-forest: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            --gradient-royal: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
-            --gradient-cosmic: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 50%, #06B6D4 100%);
-            --gradient-fire: linear-gradient(135deg, #F43F5E 0%, #FB923C 100%);
-            --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            --gradient-dark: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+            /* ألوان الخرسانة */
+            --concrete-dark: #1A1D23;
+            --concrete-medium: #2D3138;
+            --concrete-light: #3D4249;
+            --concrete-dust: #4A4F57;
             
-            /* 🎭 Neutral Palette */
-            --gray-50: #F9FAFB;
-            --gray-100: #F3F4F6;
-            --gray-200: #E5E7EB;
-            --gray-300: #D1D5DB;
-            --gray-400: #9CA3AF;
-            --gray-500: #6B7280;
-            --gray-600: #4B5563;
-            --gray-700: #374151;
-            --gray-800: #1F2937;
-            --gray-900: #111827;
+            /* إضاءة نيون */
+            --neon-blue: #00F3FF;
+            --neon-green: #00FF9D;
+            --neon-orange: #FF9500;
+            --neon-red: #FF2E00;
             
-            --white: #FFFFFF;
-            --black: #000000;
+            /* مسافات هندسية */
+            --space-3d: 50px;
+            --depth-layer-1: 10px;
+            --depth-layer-2: 30px;
+            --depth-layer-3: 60px;
             
-            /* 📏 Spacing System (8px base) */
-            --spacing-1: 0.25rem;
-            --spacing-2: 0.5rem;
-            --spacing-3: 0.75rem;
-            --spacing-4: 1rem;
-            --spacing-5: 1.25rem;
-            --spacing-6: 1.5rem;
-            --spacing-8: 2rem;
-            --spacing-10: 2.5rem;
-            --spacing-12: 3rem;
-            --spacing-16: 4rem;
-            --spacing-20: 5rem;
-            --spacing-24: 6rem;
-            --spacing-32: 8rem;
-            
-            /* 🔤 Typography System */
-            --font-primary: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Cairo', 'Tajawal', sans-serif;
-            
-            --text-xs: 0.75rem;
-            --text-sm: 0.875rem;
-            --text-base: 1rem;
-            --text-lg: 1.125rem;
-            --text-xl: 1.25rem;
-            --text-2xl: 1.5rem;
-            --text-3xl: 1.875rem;
-            --text-4xl: 2.25rem;
-            --text-5xl: 3rem;
-            --text-6xl: 3.75rem;
-            --text-7xl: 4.5rem;
-            --text-8xl: 6rem;
-            --text-9xl: 8rem;
-            
-            /* 🎯 Border Radius */
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --radius-xl: 1rem;
-            --radius-2xl: 1.5rem;
-            --radius-3xl: 2rem;
-            --radius-full: 9999px;
-            
-            /* 🌟 Shadows - Elevation System */
-            --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-            --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.5);
-            --shadow-glow-lg: 0 0 40px rgba(59, 130, 246, 0.6);
-            
-            /* ⚡ Transitions */
-            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            
-            /* 🎪 Z-Index Scale */
-            --z-base: 1;
-            --z-dropdown: 100;
-            --z-sticky: 200;
-            --z-fixed: 300;
-            --z-modal: 400;
-            --z-popover: 500;
-            --z-tooltip: 600;
-            --z-toast: 700;
+            /* انتقالات ذكية */
+            --transition-laser: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-hologram: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --transition-energy: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
         }
         
         /* ========================================
-           🔄 RESET & BASE STYLES
+           🏗️ أساسيات ثلاثية الأبعاد
            ======================================== */
         
-        *, *::before, *::after {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -156,235 +74,121 @@
         html {
             font-size: 16px;
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background: var(--concrete-dark);
         }
         
         body {
-            font-family: var(--font-primary);
-            font-size: var(--text-base);
-            line-height: 1.7;
-            color: var(--gray-800);
-            background: var(--gray-50);
+            font-family: 'Cairo', sans-serif;
+            color: rgba(255, 255, 255, 0.95);
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, var(--concrete-dark) 0%, #15181E 100%);
             overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
         }
         
+        /* تأثير غبار الخرسانة في الخلفية */
         body::before {
             content: '';
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234a4f57' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
             z-index: -1;
-            animation: backgroundPulse 20s ease-in-out infinite;
+            animation: dustFloat 20s linear infinite;
         }
         
-        @keyframes backgroundPulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
+        @keyframes dustFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-50px, -50px) scale(1.2); }
         }
         
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            font-weight: 800;
-            line-height: 1.2;
-            color: var(--gray-900);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        h1 { font-size: clamp(var(--text-5xl), 8vw, var(--text-8xl)); letter-spacing: -0.025em; }
-        h2 { font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl)); letter-spacing: -0.02em; }
-        h3 { font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl)); }
-        h4 { font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl)); }
-        
-        p {
-            margin-bottom: var(--spacing-4);
-            line-height: 1.8;
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: all var(--transition-base);
-        }
-        
-        .container {
+        /* شعاع ليزر خلفي متحرك */
+        .laser-beam {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-6);
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--laser-glow), 
+                var(--laser-hot), 
+                var(--laser-glow), 
+                transparent);
+            box-shadow: 0 0 20px var(--laser-glow);
+            z-index: -1;
+            animation: beamScan 8s linear infinite;
         }
         
-        .section {
-            padding: var(--spacing-24) 0;
-            position: relative;
-        }
-        
-        .text-gradient {
-            background: var(--gradient-cosmic);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        @keyframes beamScan {
+            0% { transform: translateY(-100px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
         }
         
         /* ========================================
-           🎨 MODERN BUTTON SYSTEM
+           📱 تصميم الهيدر المتجاوب للجوال
            ======================================== */
         
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--spacing-3);
-            padding: var(--spacing-4) var(--spacing-8);
-            font-family: var(--font-display);
-            font-size: var(--text-lg);
-            font-weight: 700;
-            border-radius: var(--radius-full);
-            border: none;
-            cursor: pointer;
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-            isolation: isolate;
-            white-space: nowrap;
-        }
-        
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: inherit;
-            opacity: 0;
-            transition: opacity var(--transition-base);
-            z-index: -1;
-        }
-        
-        .btn:hover::before {
-            opacity: 1;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
-        }
-        
-        .btn-primary {
-            background: var(--gradient-cosmic);
-            color: var(--white);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .btn-primary:hover {
-            box-shadow: var(--shadow-xl), var(--shadow-glow);
-        }
-        
-        .btn-secondary {
-            background: var(--gradient-sunset);
-            color: var(--white);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .btn-lg {
-            padding: var(--spacing-5) var(--spacing-12);
-            font-size: var(--text-xl);
-        }
-        
-        /* ========================================
-           🧭 NAVIGATION
-           ======================================== */
-        
-        .navbar {
+        .smart-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: var(--z-fixed);
-            transition: all var(--transition-base);
+            z-index: 1000;
+            background: rgba(26, 29, 35, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .navbar-container {
+        .smart-header.scrolled {
+            padding: 0.7rem 1rem;
+            background: rgba(26, 29, 35, 0.95);
+        }
+        
+        .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: var(--spacing-6) var(--spacing-6);
-            transition: all var(--transition-base);
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .navbar.scrolled .navbar-container {
-            padding: var(--spacing-4) var(--spacing-6);
-        }
-        
-        .logo {
+        /* الشعار المصغر للجوال */
+        .compact-logo {
             display: flex;
             align-items: center;
-            gap: var(--spacing-4);
-            position: relative;
+            gap: 0.8rem;
+            z-index: 1002;
         }
         
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-cosmic);
-            border-radius: var(--radius-xl);
+        .logo-badge {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-            transition: all var(--transition-base);
+            font-size: 1.3rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+            animation: badgePulse 3s infinite;
         }
         
-        .logo-icon::before {
-            content: '';
-            position: absolute;
-            inset: -50%;
-            background: conic-gradient(
-                from 0deg,
-                transparent 0deg 90deg,
-                rgba(255, 255, 255, 0.3) 90deg 180deg,
-                transparent 180deg 270deg,
-                rgba(255, 255, 255, 0.3) 270deg 360deg
-            );
-            animation: rotate 3s linear infinite;
-        }
-        
-        @keyframes rotate {
-            to { transform: rotate(360deg); }
-        }
-        
-        .logo-icon i {
-            font-size: var(--text-3xl);
-            color: var(--white);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .navbar.scrolled .logo-icon {
-            width: 50px;
-            height: 50px;
-        }
-        
-        .navbar.scrolled .logo-icon i {
-            font-size: var(--text-2xl);
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
         
         .logo-text {
@@ -392,884 +196,872 @@
             flex-direction: column;
         }
         
-        .logo-title {
-            font-family: var(--font-display);
-            font-size: var(--text-2xl);
-            font-weight: 900;
-            background: var(--gradient-cosmic);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-            transition: font-size var(--transition-base);
+        .logo-name {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--laser-hot);
+            line-height: 1;
         }
         
-        .navbar.scrolled .logo-title {
-            font-size: var(--text-xl);
-        }
-        
-        .logo-subtitle {
-            font-size: var(--text-sm);
-            color: var(--accent-orange);
+        .logo-tag {
+            font-size: 0.7rem;
+            color: var(--laser-cold);
             font-weight: 600;
             letter-spacing: 0.5px;
         }
         
-        .nav-menu {
+        /* زر القائمة للجوال */
+        .mobile-menu-toggle {
+            background: rgba(255, 107, 53, 0.1);
+            border: 2px solid var(--laser-hot);
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: var(--spacing-10);
-        }
-        
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-8);
-            list-style: none;
-        }
-        
-        .nav-link {
-            font-weight: 600;
-            font-size: var(--text-lg);
-            color: var(--gray-700);
-            padding: var(--spacing-2) 0;
-            position: relative;
-            transition: color var(--transition-base);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: var(--gradient-sunset);
-            border-radius: var(--radius-full);
-            transition: all var(--transition-base);
-            transform: translateX(-50%);
-        }
-        
-        .nav-link:hover {
-            color: var(--primary-600);
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: var(--text-3xl);
-            color: var(--primary-600);
+            justify-content: center;
+            gap: 4px;
             cursor: pointer;
-            padding: var(--spacing-2);
-            transition: all var(--transition-base);
+            transition: all var(--transition-laser);
+            z-index: 1002;
         }
         
-        .mobile-toggle:hover {
-            color: var(--accent-orange);
+        .mobile-menu-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--laser-hot);
+            border-radius: 1px;
+            transition: all var(--transition-laser);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+        }
+        
+        .mobile-menu-toggle:hover {
+            background: rgba(255, 107, 53, 0.2);
             transform: rotate(90deg);
         }
         
-        /* ========================================
-           🚀 HERO SECTION
-           ======================================== */
-        
-        .hero {
-            min-height: 100vh;
+        /* القائمة المنزلقة */
+        .slide-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            height: 100vh;
+            background: rgba(26, 29, 35, 0.98);
+            backdrop-filter: blur(30px);
+            padding: 5rem 2rem 2rem;
+            z-index: 1001;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 2px solid rgba(255, 107, 53, 0.3);
             display: flex;
-            align-items: center;
-            padding-top: 100px;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0F2027 0%, #203A43 50%, #2C5364 100%);
+            flex-direction: column;
+            gap: 2rem;
+            overflow-y: auto;
         }
         
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            animation: particleFloat 15s ease-in-out infinite;
-        }
-        
-        @keyframes particleFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -30px) scale(1.05); }
-            66% { transform: translate(-30px, 30px) scale(0.95); }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 1000px;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-3);
-            padding: var(--spacing-3) var(--spacing-6);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: var(--radius-full);
-            color: var(--white);
-            font-weight: 600;
-            font-size: var(--text-sm);
-            margin-bottom: var(--spacing-8);
-            animation: floatBadge 3s ease-in-out infinite;
-        }
-        
-        @keyframes floatBadge {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .hero-badge i {
-            color: var(--accent-amber);
-            font-size: var(--text-lg);
-        }
-        
-        .hero-title {
-            font-size: clamp(var(--text-5xl), 10vw, var(--text-8xl));
-            color: var(--white);
-            margin-bottom: var(--spacing-8);
-            line-height: 1.1;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hero-title .highlight {
-            background: var(--gradient-sunset);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .hero-title .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        .slide-menu.active {
             right: 0;
-            height: 8px;
-            background: var(--gradient-sunset);
-            opacity: 0.3;
-            border-radius: var(--radius-full);
         }
         
-        .hero-subtitle {
-            font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.8;
-            margin-bottom: var(--spacing-12);
-            max-width: 800px;
-        }
-        
-        .hero-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-6);
-            margin-bottom: var(--spacing-12);
-        }
-        
-        .feature-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: var(--radius-2xl);
-            padding: var(--spacing-8);
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
+        .menu-overlay {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: var(--gradient-sunset);
-            transform: scaleX(0);
-            transition: transform var(--transition-base);
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
         
-        .feature-card:hover::before {
-            transform: scaleX(1);
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
         }
         
-        .feature-card:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        .menu-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient-sunset);
-            border-radius: var(--radius-xl);
+        .menu-item {
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all var(--transition-laser);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+            transition: right 0.5s ease;
+        }
+        
+        .menu-item:hover::before {
+            right: 100%;
+        }
+        
+        .menu-item:hover {
+            border-color: var(--laser-hot);
+            transform: translateX(-10px);
+        }
+        
+        .menu-text {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: var(--text-3xl);
-            color: var(--white);
-            margin-bottom: var(--spacing-4);
-            box-shadow: var(--shadow-lg);
+            font-size: 1.2rem;
+            color: white;
         }
         
-        .feature-title {
-            font-size: var(--text-xl);
-            color: var(--white);
+        /* زر الطوارئ للجوال */
+        .emergency-action {
+            background: linear-gradient(135deg, #FF2E00, #FF6B35);
+            color: white;
+            border: none;
+            padding: 1.2rem;
+            border-radius: 15px;
+            font-family: 'Cairo', sans-serif;
             font-weight: 700;
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .feature-desc {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: var(--text-base);
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        .hero-cta {
-            display: flex;
-            gap: var(--spacing-6);
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .phone-cta {
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all var(--transition-energy);
             display: flex;
             align-items: center;
-            gap: var(--spacing-5);
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: var(--spacing-5) var(--spacing-8);
-            border-radius: var(--radius-full);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            transition: all var(--transition-base);
+            justify-content: center;
+            gap: 0.8rem;
+            width: 100%;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(255, 46, 0, 0.3);
         }
         
-        .phone-cta:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: var(--accent-amber);
-            transform: scale(1.05);
+        .emergency-action::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: emergencyShine 2s infinite;
+        }
+        
+        @keyframes emergencyShine {
+            to { left: 100%; }
+        }
+        
+        .emergency-action:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 46, 0, 0.4);
+        }
+        
+        /* معلومات الاتصال في القائمة */
+        .menu-contact {
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            margin-top: auto;
+        }
+        
+        .contact-phone {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
         
         .phone-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-sunset);
-            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.3rem;
+            color: white;
             animation: phoneRing 2s infinite;
         }
         
         @keyframes phoneRing {
             0%, 100% { transform: rotate(0deg); }
-            10%, 30% { transform: rotate(-15deg); }
-            20%, 40% { transform: rotate(15deg); }
-        }
-        
-        .phone-icon i {
-            font-size: var(--text-2xl);
-            color: var(--white);
+            10%, 30% { transform: rotate(-10deg); }
+            20%, 40% { transform: rotate(10deg); }
         }
         
         .phone-number {
-            font-family: var(--font-display);
-            font-size: var(--text-3xl);
-            font-weight: 900;
-            color: var(--white);
-            direction: ltr;
+            font-family: 'El Messiri', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
             letter-spacing: 1px;
         }
         
+        .whatsapp-action {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            width: 100%;
+            transition: all var(--transition-laser);
+        }
+        
+        .whatsapp-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+        
         /* ========================================
-           🖼️ GALLERY SECTION
+           🚀 قسم الفيديو الرئيسي
+           ======================================== */
+        
+        .video-hero {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.4) contrast(1.2);
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                rgba(26, 29, 35, 0.8) 0%,
+                rgba(26, 29, 35, 0.6) 50%,
+                rgba(26, 29, 35, 0.9) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(255, 107, 53, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 107, 53, 0.4);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: var(--laser-hot);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .hero-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-title span {
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--laser-hot), transparent);
+            animation: titleGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes titleGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .hero-description {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 300;
+        }
+        
+        /* عناصر التحكم في الفيديو */
+        .video-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all var(--transition-laser);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .control-btn:hover {
+            background: rgba(255, 107, 53, 0.2);
+            border-color: var(--laser-hot);
+            transform: translateY(-3px);
+        }
+        
+        /* ========================================
+           🖼️ معرض الصور المتكامل
            ======================================== */
         
         .gallery-section {
-            background: var(--white);
+            padding: 6rem 1rem;
+            background: linear-gradient(180deg, #15181E 0%, var(--concrete-dark) 100%);
             position: relative;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: var(--spacing-16);
+            margin-bottom: 4rem;
+            position: relative;
         }
         
-        .section-badge {
+        .section-tag {
             display: inline-block;
-            padding: var(--spacing-2) var(--spacing-6);
-            background: var(--gradient-ocean);
-            color: var(--white);
-            border-radius: var(--radius-full);
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            color: white;
+            border-radius: 50px;
             font-weight: 700;
-            font-size: var(--text-sm);
-            margin-bottom: var(--spacing-4);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
         
         .section-title {
-            font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
-            margin-bottom: var(--spacing-4);
+            font-family: 'El Messiri', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--laser-cold);
+            margin-bottom: 1rem;
         }
         
-        .section-desc {
-            font-size: var(--text-xl);
-            color: var(--gray-600);
-            max-width: 700px;
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
             margin: 0 auto;
+            line-height: 1.7;
         }
         
-        .gallery-wrapper {
-            overflow: hidden;
-            padding: var(--spacing-8) 0;
+        /* معرض الصور التفاعلي */
+        .photo-matrix {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
         }
         
-        .gallery-track {
-            display: flex;
-            gap: var(--spacing-6);
-            animation: scrollGallery 40s linear infinite;
-        }
-        
-        .gallery-track:hover {
-            animation-play-state: paused;
-        }
-        
-        @keyframes scrollGallery {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        
-        .gallery-item {
-            flex: 0 0 auto;
-            width: 380px;
-            height: 380px;
-            border-radius: var(--radius-3xl);
-            overflow: hidden;
+        .photo-card {
             position: relative;
-            box-shadow: var(--shadow-xl);
-            transition: all var(--transition-base);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            transition: all var(--transition-hologram);
+            border: 2px solid transparent;
         }
         
-        .gallery-item:hover {
-            transform: translateY(-15px) scale(1.05);
-            box-shadow: var(--shadow-2xl);
-            z-index: 10;
+        .photo-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--laser-hot);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(255, 107, 53, 0.3);
         }
         
-        .gallery-image {
+        .photo-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform var(--transition-slow);
         }
         
-        .gallery-item:hover .gallery-image {
-            transform: scale(1.15);
+        .photo-card:hover .photo-image {
+            transform: scale(1.1);
         }
         
-        .gallery-overlay {
+        .photo-overlay {
             position: absolute;
-            inset: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: var(--spacing-8);
             opacity: 0;
-            transition: opacity var(--transition-base);
+            transition: opacity var(--transition-laser);
         }
         
-        .gallery-item:hover .gallery-overlay {
+        .photo-card:hover .photo-overlay {
             opacity: 1;
         }
         
-        .overlay-title {
-            color: var(--white);
-            font-size: var(--text-2xl);
+        .photo-title {
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: var(--spacing-2);
+            color: white;
+            margin-bottom: 0.5rem;
         }
         
-        .overlay-location {
+        .photo-location {
+            font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.9);
-            font-size: var(--text-base);
             display: flex;
             align-items: center;
-            gap: var(--spacing-2);
+            gap: 0.5rem;
+        }
+        
+        /* معرض المقارنة (قبل/بعد) */
+        .comparison-gallery {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: rgba(45, 49, 56, 0.5);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        .comparison-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--laser-hot);
+            text-align: center;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .comparison-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .comparison-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .comparison-label {
+            position: absolute;
+            top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        .comparison-label.before {
+            right: 1rem;
+            background: linear-gradient(135deg, #FF2E00, #FF6B35);
+        }
+        
+        .comparison-label.after {
+            left: 1rem;
+            background: linear-gradient(135deg, #00D4FF, #0088FF);
         }
         
         /* ========================================
-           💬 TESTIMONIALS SECTION
+           ⚡ قسم الخدمات
            ======================================== */
         
-        .testimonials-section {
-            background: var(--gradient-cosmic);
+        .services-section {
+            padding: 6rem 1rem;
+            background: linear-gradient(180deg, var(--concrete-dark) 0%, #0F1116 100%);
+            position: relative;
+        }
+        
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 1rem;
+        }
+        
+        .service-card {
+            background: rgba(45, 49, 56, 0.7);
+            border-radius: 25px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            transition: all var(--transition-energy);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            border-color: var(--laser-hot);
+            transform: translateY(-15px);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 107, 53, 0.2),
+                inset 0 0 80px rgba(255, 107, 53, 0.05);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(10px);
+        }
+        
+        .service-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--laser-hot);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-desc {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* ========================================
+           📞 قسم التواصل
+           ======================================== */
+        
+        .contact-section {
+            padding: 6rem 1rem;
+            background: linear-gradient(180deg, #0F1116 0%, var(--concrete-dark) 100%);
+        }
+        
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(26, 29, 35, 0.9);
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 
+                0 40px 80px rgba(0, 0, 0, 0.3),
+                inset 0 0 100px rgba(0, 212, 255, 0.05);
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .contact-info {
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 107, 53, 0.05));
+        }
+        
+        .contact-form {
+            padding: 3rem;
+        }
+        
+        .contact-heading {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--laser-cold);
+            margin-bottom: 2.5rem;
+            font-family: 'El Messiri', sans-serif;
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.07);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
+            transition: all var(--transition-laser);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--laser-hot);
+            background: rgba(255, 107, 53, 0.07);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.2);
+        }
+        
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+            color: white;
+            border: none;
+            padding: 1.3rem;
+            border-radius: 15px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all var(--transition-energy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            margin-top: 1rem;
             position: relative;
             overflow: hidden;
         }
         
-        .testimonials-section::before {
-            content: '"';
-            position: absolute;
-            top: 50%;
-            right: 5%;
-            font-size: 35rem;
-            color: rgba(255, 255, 255, 0.05);
-            font-family: serif;
-            transform: translateY(-50%);
-            line-height: 1;
-            pointer-events: none;
-        }
-        
-        .testimonials-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .testimonial-slider {
-            position: relative;
-        }
-        
-        .testimonial-track {
-            display: flex;
-            transition: transform var(--transition-slow);
-        }
-        
-        .testimonial-slide {
-            flex: 0 0 100%;
-            padding: var(--spacing-8);
-        }
-        
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: var(--radius-3xl);
-            padding: var(--spacing-12);
-            box-shadow: var(--shadow-2xl);
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            height: 150px;
-            background: var(--gradient-sunset);
-            opacity: 0.1;
-            border-radius: 0 var(--radius-3xl) 0 100%;
-        }
-        
-        .rating {
-            display: flex;
-            gap: var(--spacing-2);
-            margin-bottom: var(--spacing-6);
-        }
-        
-        .rating i {
-            color: var(--accent-amber);
-            font-size: var(--text-2xl);
-        }
-        
-        .testimonial-text {
-            font-size: var(--text-2xl);
-            line-height: 1.9;
-            color: var(--gray-800);
-            margin-bottom: var(--spacing-8);
-            font-style: italic;
-            position: relative;
-            padding-right: var(--spacing-8);
-        }
-        
-        .testimonial-text::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            right: 0;
-            font-size: 6rem;
-            color: var(--gray-200);
-            font-family: serif;
-            line-height: 1;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-6);
-        }
-        
-        .author-avatar {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-royal);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: var(--text-3xl);
-            color: var(--white);
-            font-weight: 900;
-            box-shadow: var(--shadow-lg);
-            flex-shrink: 0;
-        }
-        
-        .author-info h4 {
-            font-size: var(--text-2xl);
-            color: var(--primary-600);
-            margin-bottom: var(--spacing-1);
-        }
-        
-        .author-info p {
-            color: var(--gray-600);
-            font-size: var(--text-base);
-            margin: 0;
-        }
-        
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-3);
-            margin-top: var(--spacing-10);
-        }
-        
-        .nav-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            border: none;
-            cursor: pointer;
-            transition: all var(--transition-base);
-            padding: 0;
-            position: relative;
-        }
-        
-        .nav-dot::before {
-            content: '';
-            position: absolute;
-            inset: -6px;
-            border: 2px solid var(--white);
-            border-radius: 50%;
-            opacity: 0;
-            transition: opacity var(--transition-base);
-        }
-        
-        .nav-dot.active {
-            background: var(--white);
-            transform: scale(1.4);
-        }
-        
-        .nav-dot.active::before {
-            opacity: 1;
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
         }
         
         /* ========================================
-           📞 CONTACT SECTION
-           ======================================== */
-        
-        .contact-section {
-            background: var(--white);
-            position: relative;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-16);
-            align-items: start;
-        }
-        
-        .contact-info {
-            background: var(--gradient-cosmic);
-            border-radius: var(--radius-3xl);
-            padding: var(--spacing-12);
-            color: var(--white);
-            box-shadow: var(--shadow-2xl);
-            position: sticky;
-            top: 120px;
-        }
-        
-        .contact-info h3 {
-            color: var(--white);
-            font-size: var(--text-4xl);
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .contact-methods {
-            list-style: none;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-6);
-            padding: var(--spacing-6) 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all var(--transition-base);
-        }
-        
-        .contact-method:last-child {
-            border-bottom: none;
-        }
-        
-        .contact-method:hover {
-            padding-right: var(--spacing-4);
-        }
-        
-        .method-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: var(--radius-xl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: var(--text-2xl);
-            color: var(--accent-amber);
-            flex-shrink: 0;
-            transition: all var(--transition-base);
-        }
-        
-        .contact-method:hover .method-icon {
-            background: rgba(255, 255, 255, 0.25);
-            transform: scale(1.1) rotate(5deg);
-        }
-        
-        .method-content h4 {
-            color: var(--white);
-            font-size: var(--text-xl);
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .method-content a,
-        .method-content p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: var(--text-lg);
-            transition: color var(--transition-base);
-        }
-        
-        .method-content a:hover {
-            color: var(--accent-amber);
-        }
-        
-        .contact-form {
-            background: var(--white);
-            border-radius: var(--radius-3xl);
-            padding: var(--spacing-12);
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--gray-200);
-        }
-        
-        .contact-form h3 {
-            font-size: var(--text-4xl);
-            color: var(--primary-600);
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .form-group {
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .form-label {
-            display: block;
-            font-weight: 600;
-            font-size: var(--text-lg);
-            color: var(--gray-800);
-            margin-bottom: var(--spacing-3);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: var(--spacing-5) var(--spacing-6);
-            font-family: var(--font-primary);
-            font-size: var(--text-lg);
-            color: var(--gray-800);
-            background: var(--gray-50);
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius-xl);
-            transition: all var(--transition-base);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-500);
-            background: var(--white);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        .form-control::placeholder {
-            color: var(--gray-400);
-        }
-        
-        select.form-control {
-            cursor: pointer;
-        }
-        
-        textarea.form-control {
-            resize: vertical;
-            min-height: 150px;
-        }
-        
-        /* ========================================
-           🎈 FLOATING ACTION BUTTONS
+           🔋 الأزرار العائمة
            ======================================== */
         
         .floating-actions {
             position: fixed;
-            left: var(--spacing-8);
-            bottom: var(--spacing-8);
-            z-index: var(--z-fixed);
+            bottom: 1.5rem;
+            left: 1.5rem;
+            z-index: 999;
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-4);
+            gap: 1rem;
         }
         
-        .fab {
-            width: 65px;
-            height: 65px;
+        .floating-btn {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: var(--text-2xl);
-            box-shadow: var(--shadow-xl);
-            transition: all var(--transition-bounce);
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
             position: relative;
+            transition: all var(--transition-energy);
+            border: none;
             cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .fab::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            left: calc(100% + 15px);
-            background: var(--gray-900);
-            color: var(--white);
-            padding: var(--spacing-3) var(--spacing-5);
-            border-radius: var(--radius-lg);
-            font-size: var(--text-sm);
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-            pointer-events: none;
-            font-weight: 600;
-        }
-        
-        .fab:hover::after {
-            opacity: 1;
-            visibility: visible;
-            left: calc(100% + 20px);
-        }
-        
-        .fab:hover {
-            transform: translateY(-8px) scale(1.15);
-            box-shadow: var(--shadow-2xl);
-        }
-        
-        .fab-whatsapp {
+        .floating-btn.whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
         }
         
-        .fab-phone {
-            background: var(--gradient-cosmic);
+        .floating-btn.phone {
+            background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
         }
         
         /* ========================================
-           🦶 FOOTER
+           🏁 الفوتر
            ======================================== */
         
         .footer {
-            background: var(--gradient-dark);
-            color: var(--white);
-            padding: var(--spacing-24) 0 var(--spacing-8);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-            animation: footerPulse 10s ease-in-out infinite;
-        }
-        
-        @keyframes footerPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+            background: linear-gradient(180deg, var(--concrete-dark) 0%, #0A0C10 100%);
+            padding: 4rem 1rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
         }
         
         .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: var(--spacing-16);
-            margin-bottom: var(--spacing-16);
-            position: relative;
-            z-index: 10;
+            gap: 3rem;
         }
         
-        .footer-about .logo-title {
-            background: linear-gradient(135deg, var(--white), var(--gray-300));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .footer-logo {
+            margin-bottom: 1.5rem;
         }
         
         .footer-desc {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: var(--text-lg);
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.8;
-            margin: var(--spacing-6) 0;
+            font-size: 1rem;
+            margin-bottom: 2rem;
         }
         
-        .footer-contact-info {
+        .footer-contact {
             display: flex;
             flex-direction: column;
-            gap: var(--spacing-4);
-            margin-top: var(--spacing-6);
+            gap: 1rem;
         }
         
-        .footer-contact-item {
+        .contact-item {
             display: flex;
             align-items: center;
-            gap: var(--spacing-4);
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .footer-contact-item i {
-            color: var(--accent-amber);
-            font-size: var(--text-xl);
+            gap: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
         }
         
         .footer-links h4 {
-            color: var(--white);
-            font-size: var(--text-2xl);
-            margin-bottom: var(--spacing-6);
+            font-size: 1.3rem;
+            color: var(--laser-hot);
+            margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: var(--spacing-3);
+            padding-bottom: 0.8rem;
         }
         
         .footer-links h4::after {
@@ -1277,10 +1069,10 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 50px;
+            width: 40px;
             height: 3px;
-            background: var(--gradient-sunset);
-            border-radius: var(--radius-full);
+            background: linear-gradient(90deg, var(--laser-hot), var(--laser-cold));
+            border-radius: 2px;
         }
         
         .footer-links ul {
@@ -1288,120 +1080,80 @@
         }
         
         .footer-links li {
-            margin-bottom: var(--spacing-4);
+            margin-bottom: 1rem;
         }
         
         .footer-links a {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: var(--text-lg);
-            transition: all var(--transition-base);
-            display: inline-block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all var(--transition-laser);
+            font-size: 1rem;
         }
         
         .footer-links a:hover {
-            color: var(--white);
-            transform: translateX(-5px);
+            color: var(--laser-hot);
+            padding-right: 10px;
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: var(--spacing-8);
+            padding-top: 3rem;
+            margin-top: 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: var(--text-base);
-            position: relative;
-            z-index: 10;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
         }
         
         /* ========================================
-           📱 RESPONSIVE DESIGN
+           📱 تصميم متجاوب كامل
            ======================================== */
         
-        @media (max-width: 1024px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-12);
-            }
-            
-            .contact-info {
-                position: static;
-            }
-            
+        @media (max-width: 992px) {
             .footer-content {
                 grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-wrapper {
+                grid-template-columns: 1fr;
             }
         }
         
         @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 90px;
-                right: -100%;
-                width: 100%;
-                height: calc(100vh - 90px);
-                background: var(--white);
-                flex-direction: column;
-                padding: var(--spacing-12) var(--spacing-6);
-                gap: var(--spacing-8);
-                transition: right var(--transition-base);
-                box-shadow: var(--shadow-xl);
-                overflow-y: auto;
+            .video-hero {
+                padding-top: 100px;
             }
             
-            .nav-menu.active {
-                right: 0;
+            .hero-title {
+                font-size: clamp(2rem, 6vw, 3rem);
             }
             
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
+            .photo-matrix {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
             
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .hero {
-                padding-top: 120px;
-            }
-            
-            .hero-features {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .phone-cta {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .gallery-item {
-                width: 300px;
-                height: 300px;
+            .comparison-grid {
+                grid-template-columns: 1fr;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: var(--spacing-12);
+                gap: 3rem;
             }
             
             .floating-actions {
-                left: var(--spacing-4);
-                bottom: var(--spacing-4);
+                bottom: 1rem;
+                left: 1rem;
             }
             
-            .fab {
+            .floating-btn {
                 width: 55px;
                 height: 55px;
-                font-size: var(--text-xl);
-            }
-            
-            .fab::after {
-                display: none;
+                font-size: 1.3rem;
             }
         }
         
@@ -1410,474 +1162,467 @@
                 font-size: 14px;
             }
             
-            .container {
-                padding: 0 var(--spacing-4);
+            .smart-header {
+                padding: 0.8rem;
             }
             
-            .section {
-                padding: var(--spacing-16) 0;
+            .video-hero {
+                padding-top: 80px;
             }
             
-            .testimonials-section::before {
-                display: none;
+            .hero-content {
+                padding: 1rem;
             }
             
-            .gallery-item {
-                width: 280px;
-                height: 280px;
+            .photo-matrix {
+                grid-template-columns: 1fr;
+                padding: 0.5rem;
             }
+            
+            .photo-card {
+                height: 250px;
+            }
+            
+            .contact-info,
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .floating-actions {
+                bottom: 0.8rem;
+                left: 0.8rem;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* ========================================
+           🎮 تأثيرات خاصة
+           ======================================== */
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .vjs-control-bar {
+            background: rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .vjs-play-progress {
+            background: var(--laser-hot) !important;
+        }
+        
+        .vjs-big-play-button {
+            background: rgba(255, 107, 53, 0.8) !important;
+            border: 2px solid var(--laser-hot) !important;
+            border-radius: 50% !important;
+            width: 80px !important;
+            height: 80px !important;
+            line-height: 80px !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
         }
     </style>
 </head>
 <body>
+    <!-- شعاع ليزر خلفي -->
+    <div class="laser-beam"></div>
     
-    <!-- NAVIGATION -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="navbar-container">
-                <a href="#home" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="logo-text">
-                        <div class="logo-title">النخبة</div>
-                        <div class="logo-subtitle">قص خرسانة بالليزر</div>
-                    </div>
-                </a>
-                
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-links">
-                        <li><a href="#home" class="nav-link">الرئيسية</a></li>
-                        <li><a href="#gallery" class="nav-link">معرض الأعمال</a></li>
-                        <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
-                        <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
-                    </ul>
-                    <a href="tel:+966542906096" class="btn btn-primary">
-                        <i class="fas fa-phone"></i>
-                        <span>0542906096</span>
-                    </a>
+    <!-- 📱 الهيدر المصمم للجوال -->
+    <header class="smart-header" id="smartHeader">
+        <div class="header-container">
+            <!-- شعار مصغر -->
+            <div class="compact-logo">
+                <div class="logo-badge">
+                    <i class="fas fa-bolt"></i>
                 </div>
-                
-                <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-award"></i>
-                    <span>المقاول الأول المعتمد في الرياض</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    قص خرسانة <span class="highlight">بالليزر</span>
-                    <br>بدقة تصل إلى 100%
-                </h1>
-                
-                <p class="hero-subtitle">
-                    نستخدم أحدث تقنيات الليزر العالمية لقص الخرسانة وفتحات الكور 
-                    مع ضمان الجودة والدقة المطلقة. خبرة 15 عاماً في خدمة الرياض.
-                </p>
-                
-                <div class="hero-features">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h4 class="feature-title">سرعة فائقة</h4>
-                        <p class="feature-desc">إنجاز العمل 3× أسرع من الطرق التقليدية</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-check"></i>
-                        </div>
-                        <h4 class="feature-title">ضمان 12 شهر</h4>
-                        <p class="feature-desc">ضمان شامل على جميع الأعمال والمشاريع</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <h4 class="feature-title">تغطية شاملة</h4>
-                        <p class="feature-desc">خدماتنا في جميع أحياء الرياض</p>
-                    </div>
-                </div>
-                
-                <div class="hero-cta">
-                    <div class="phone-cta">
-                        <div class="phone-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="phone-number">0542906096</div>
-                    </div>
-                    <a href="#contact" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>احجز استشارة مجانية</span>
-                    </a>
+                <div class="logo-text">
+                    <div class="logo-name">النخبة</div>
+                    <div class="logo-tag">ليزر | دقة</div>
                 </div>
             </div>
+            
+            <!-- زر القائمة -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </section>
+    </header>
     
-    <!-- GALLERY SECTION -->
-    <section id="gallery" class="gallery-section section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">معرض الأعمال</span>
-                <h2 class="section-title text-gradient">شاهد إبداعاتنا</h2>
-                <p class="section-desc">
-                    نفخر بتقديم أعمال عالية الجودة تعكس دقتنا واحترافيتنا في كل مشروع
-                </p>
+    <!-- القائمة المنزلقة -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    
+    <div class="slide-menu" id="slideMenu">
+        <!-- روابط القائمة -->
+        <div class="menu-nav">
+            <div class="menu-item" data-target="video-hero">
+                <div class="menu-text">
+                    <div class="menu-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <span>الرئيسية</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-target="gallery-section">
+                <div class="menu-text">
+                    <div class="menu-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <span>معرض الأعمال</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-target="comparison-gallery">
+                <div class="menu-text">
+                    <div class="menu-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <span>قبل وبعد</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-target="services-section">
+                <div class="menu-text">
+                    <div class="menu-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <span>خدماتنا</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-target="contact-section">
+                <div class="menu-text">
+                    <div class="menu-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <span>تواصل معنا</span>
+                </div>
             </div>
         </div>
         
-        <div class="gallery-wrapper">
-            <div class="gallery-track">
-                <div class="gallery-item">
-                    <img src="assets/gallery_1.webp" alt="قص خرسانة بالليزر" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">قص جدار حامل</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي النرجس - الرياض
-                        </p>
-                    </div>
+        <!-- زر الطوارئ -->
+        <button class="emergency-action" id="emergencyAction">
+            <i class="fas fa-bolt"></i>
+            <span>طلب عاجل</span>
+        </button>
+        
+        <!-- معلومات الاتصال -->
+        <div class="menu-contact">
+            <div class="contact-phone">
+                <div class="phone-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="phone-number">0542906096</div>
+            </div>
+            <a href="https://wa.me/966542906096" class="whatsapp-action" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>محادثة واتساب</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- 🚀 قسم الفيديو الرئيسي -->
+    <section class="video-hero" id="video-hero">
+        <div class="video-background">
+            <!-- الفيديو المرفق -->
+            <video id="heroVideo" playsinline muted loop>
+                <source src="assets/2026-01-25-200212691.mp4" type="video/mp4">
+                <source src="assets/2026-01-25-200212691.mp4" type="video/webm">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge scroll-reveal">
+                <i class="fas fa-award"></i>
+                <span>الرواد في تقنية الليزر</span>
+            </div>
+            
+            <h1 class="hero-title scroll-reveal">
+                قص خرسانة <span>بالليزر</span>
+                <br>بدقة تصل إلى 100%
+            </h1>
+            
+            <p class="hero-description scroll-reveal">
+                نستخدم أحدث تقنيات الليزر العالمية لقص الخرسانة وفتحات الكور 
+                مع ضمان الجودة والدقة المطلقة. خبرة 15 عاماً في خدمة الرياض.
+            </p>
+            
+            <div class="video-controls scroll-reveal">
+                <button class="control-btn" id="playBtn">
+                    <i class="fas fa-play"></i>
+                    <span>تشغيل الفيديو</span>
+                </button>
+                <a href="#contact-section" class="control-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>احجز استشارة</span>
+                </a>
+                <a href="tel:+966542906096" class="control-btn" style="background: linear-gradient(135deg, var(--laser-hot), var(--laser-cold));">
+                    <i class="fas fa-phone"></i>
+                    <span>اتصل الآن</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 🖼️ معرض الصور -->
+    <section class="gallery-section" id="gallery-section">
+        <div class="section-header scroll-reveal">
+            <span class="section-tag">إبداعاتنا</span>
+            <h2 class="section-title">معرض المشاريع الناجحة</h2>
+            <p class="section-subtitle">
+                شاهد تحفنا الهندسية التي تجمع بين الدقة والاحترافية
+            </p>
+        </div>
+        
+        <div class="photo-matrix">
+            <!-- صورة 1 -->
+            <div class="photo-card scroll-reveal">
+                <img src="assets/gallery_1.webp" alt="قص خرسانة بالليزر" class="photo-image">
+                <div class="photo-overlay">
+                    <h3 class="photo-title">قص جدار حامل</h3>
+                    <p class="photo-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        حي النرجس - الرياض
+                    </p>
+                </div>
+            </div>
+            
+            <!-- صورة 2 -->
+            <div class="photo-card scroll-reveal">
+                <img src="assets/gallery_2.jpg" alt="فتحات كور" class="photo-image">
+                <div class="photo-overlay">
+                    <h3 class="photo-title">فتحات كور للتكييف</h3>
+                    <p class="photo-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        حي العليا - الرياض
+                    </p>
+                </div>
+            </div>
+            
+            <!-- صورة 3 -->
+            <div class="photo-card scroll-reveal">
+                <img src="assets/gallery_3.jpg" alt="فتح باب جديد" class="photo-image">
+                <div class="photo-overlay">
+                    <h3 class="photo-title">فتح باب جديد</h3>
+                    <p class="photo-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        حي الربيع - الرياض
+                    </p>
+                </div>
+            </div>
+            
+            <!-- صورة 4 -->
+            <div class="photo-card scroll-reveal">
+                <img src="assets/gallery_4.jpg" alt="توسعة تجارية" class="photo-image">
+                <div class="photo-overlay">
+                    <h3 class="photo-title">توسعة مركز تجاري</h3>
+                    <p class="photo-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        حي البطحاء - الرياض
+                    </p>
+                </div>
+            </div>
+            
+            <!-- صورة 5 -->
+            <div class="photo-card scroll-reveal">
+                <img src="assets/gallery_5.webp" alt="تعديلات فيلا" class="photo-image">
+                <div class="photo-overlay">
+                    <h3 class="photo-title">تعديلات فيلا فاخرة</h3>
+                    <p class="photo-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        حي الملقا - الرياض
+                    </p>
+                </div>
+            </div>
+            
+            <!-- صورة 6 -->
+            <div class="photo-card scroll-reveal">
+                <img src="assets/gallery_6.jpg" alt="مشروع حكومي" class="photo-image">
+                <div class="photo-overlay">
+                    <h3 class="photo-title">مشروع حكومي</h3>
+                    <p class="photo-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        حي العريجاء - الرياض
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- قسم المقارنة (قبل/بعد) -->
+        <div class="comparison-gallery" id="comparison-gallery">
+            <h3 class="comparison-title">
+                <i class="fas fa-exchange-alt"></i>
+                شاهد الفرق
+            </h3>
+            
+            <div class="comparison-grid">
+                <!-- قبل وبعد 1 -->
+                <div class="comparison-item scroll-reveal">
+                    <img src="assets/before_after_1.jpg" alt="قبل وبعد 1" class="comparison-image">
+                    <div class="comparison-label before">قبل</div>
+                    <div class="comparison-label after">بعد</div>
                 </div>
                 
-                <div class="gallery-item">
-                    <img src="assets/gallery_2.jpg" alt="فتحات كور" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">فتحات كور للتكييف</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي العليا - الرياض
-                        </p>
-                    </div>
+                <!-- قبل وبعد 2 -->
+                <div class="comparison-item scroll-reveal">
+                    <img src="assets/before_after_2.webp" alt="قبل وبعد 2" class="comparison-image">
+                    <div class="comparison-label before">قبل</div>
+                    <div class="comparison-label after">بعد</div>
                 </div>
                 
-                <div class="gallery-item">
-                    <img src="assets/gallery_3.jpg" alt="فتح باب جديد" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">فتح باب جديد</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي الربيع - الرياض
-                        </p>
-                    </div>
+                <!-- قبل وبعد 3 -->
+                <div class="comparison-item scroll-reveal">
+                    <img src="assets/before_after_3.jpg" alt="قبل وبعد 3" class="comparison-image">
+                    <div class="comparison-label before">قبل</div>
+                    <div class="comparison-label after">بعد</div>
                 </div>
                 
-                <div class="gallery-item">
-                    <img src="assets/gallery_4.jpg" alt="توسعة تجارية" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">توسعة مركز تجاري</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي البطحاء - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_5.webp" alt="تعديلات فيلا" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">تعديلات فيلا فاخرة</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي الملقا - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_6.jpg" alt="مشروع حكومي" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">مشروع حكومي</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي العريجاء - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Duplicate -->
-                <div class="gallery-item">
-                    <img src="assets/gallery_1.webp" alt="قص خرسانة بالليزر" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">قص جدار حامل</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي النرجس - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_2.jpg" alt="فتحات كور" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">فتحات كور للتكييف</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي العليا - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_3.jpg" alt="فتح باب جديد" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">فتح باب جديد</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي الربيع - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_4.jpg" alt="توسعة تجارية" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">توسعة مركز تجاري</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي البطحاء - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_5.webp" alt="تعديلات فيلا" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">تعديلات فيلا فاخرة</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي الملقا - الرياض
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="assets/gallery_6.jpg" alt="مشروع حكومي" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <h4 class="overlay-title">مشروع حكومي</h4>
-                        <p class="overlay-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            حي العريجاء - الرياض
-                        </p>
-                    </div>
+                <!-- قبل وبعد 4 -->
+                <div class="comparison-item scroll-reveal">
+                    <img src="assets/before_after_4.jpg" alt="قبل وبعد 4" class="comparison-image">
+                    <div class="comparison-label before">قبل</div>
+                    <div class="comparison-label after">بعد</div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="testimonials-section section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" style="background: var(--gradient-sunset);">شهادات العملاء</span>
-                <h2 class="section-title" style="color: white;">ماذا يقول عملاؤنا</h2>
-                <p class="section-desc" style="color: rgba(255,255,255,0.9);">
-                    ثقة عملائنا هي أكبر دليل على جودة خدماتنا واحترافيتنا
+    <!-- ⚡ قسم الخدمات -->
+    <section class="services-section" id="services-section">
+        <div class="section-header scroll-reveal">
+            <span class="section-tag">خدماتنا</span>
+            <h2 class="section-title">حلول شاملة لمشاريعك</h2>
+            <p class="section-subtitle">
+                نقدم مجموعة متكاملة من الخدمات المتطورة لتلبية جميع احتياجاتك
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- خدمة 1 -->
+            <div class="service-card scroll-reveal">
+                <div class="service-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3 class="service-title">قص خرسانة بالليزر</h3>
+                <p class="service-desc">
+                    قص دقيق للخرسانة باستخدام أحدث تقنيات الليزر العالمية،
+                    مع ضمان دقة تصل إلى 0.1 ملم وسرعة فائقة في التنفيذ.
                 </p>
             </div>
             
-            <div class="testimonials-container">
-                <div class="testimonial-slider">
-                    <div class="testimonial-track" id="testimonialTrack">
-                        <div class="testimonial-slide">
-                            <div class="testimonial-card">
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">
-                                    عمل احترافي بكل معنى الكلمة. قاموا بقص الخرسانة في فيلتي بدقة متناهية وبدون أي مشاكل. 
-                                    الفريق ملتزم بالمواعيد ومحترف جداً. أنصح بهم بشدة لأي شخص يبحث عن جودة عالية.
-                                </p>
-                                <div class="testimonial-author">
-                                    <div class="author-avatar">أ</div>
-                                    <div class="author-info">
-                                        <h4>أحمد السليمان</h4>
-                                        <p>مستثمر عقاري - حي النرجس</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="testimonial-slide">
-                            <div class="testimonial-card">
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">
-                                    تجربة رائعة من البداية للنهاية. استخدموا أحدث التقنيات في عمل فتحات الكور للتكييف 
-                                    في المجمع التجاري. الدقة والنظافة في العمل كانت مذهلة. شكراً لفريق النخبة.
-                                </p>
-                                <div class="testimonial-author">
-                                    <div class="author-avatar">ف</div>
-                                    <div class="author-info">
-                                        <h4>فهد الرشيد</h4>
-                                        <p>مالك مجمع تجاري - حي البطحاء</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="testimonial-slide">
-                            <div class="testimonial-card">
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="testimonial-text">
-                                    سرعة في الإنجاز وجودة عالية. احتجت لتعديلات سريعة في الفيلا وتم العمل في وقت قياسي 
-                                    بدون أي تأخير. الأسعار مناسبة والخدمة ممتازة. بالتأكيد سأتعامل معهم مجدداً.
-                                </p>
-                                <div class="testimonial-author">
-                                    <div class="author-avatar">م</div>
-                                    <div class="author-info">
-                                        <h4>محمد العتيبي</h4>
-                                        <p>صاحب فيلا - حي الملقا</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="slider-nav">
-                        <button class="nav-dot active" data-slide="0"></button>
-                        <button class="nav-dot" data-slide="1"></button>
-                        <button class="nav-dot" data-slide="2"></button>
-                    </div>
+            <!-- خدمة 2 -->
+            <div class="service-card scroll-reveal">
+                <div class="service-icon">
+                    <i class="fas fa-expand-alt"></i>
                 </div>
+                <h3 class="service-title">فتحات كور وتوسيع</h3>
+                <p class="service-desc">
+                    عمل فتحات كور للتكييف والتهوية والسباكة والكهرباء
+                    دون إحداث أي تشققات أو أضرار في الهيكل الإنشائي.
+                </p>
+            </div>
+            
+            <!-- خدمة 3 -->
+            <div class="service-card scroll-reveal">
+                <div class="service-icon">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <h3 class="service-title">ترميم إنشائي</h3>
+                <p class="service-desc">
+                    ترميم وتقوية الهياكل الخرسانية المتضررة باستخدام
+                    تقنيات حديثة تضمن استعادة القوة الأصلية للمبنى.
+                </p>
             </div>
         </div>
     </section>
     
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">تواصل معنا</span>
-                <h2 class="section-title text-gradient">نحن هنا لخدمتك</h2>
-                <p class="section-desc">
-                    تواصل معنا الآن واحصل على استشارة مجانية وعرض سعر تنافسي
-                </p>
-            </div>
-            
-            <div class="contact-grid">
+    <!-- 📞 قسم التواصل -->
+    <section class="contact-section" id="contact-section">
+        <div class="contact-container scroll-reveal">
+            <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>معلومات التواصل</h3>
+                    <h3 class="contact-heading">تواصل معنا</h3>
                     
-                    <ul class="contact-methods">
-                        <li class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>الهاتف والواتساب</h4>
-                                <a href="tel:+966542906096" style="font-size: var(--text-2xl); font-weight: 800; direction: ltr;">0542906096</a>
-                            </div>
-                        </li>
-                        
-                        <li class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>واتساب مباشر</h4>
-                                <a href="https://wa.me/966542906096" target="_blank">اضغط للمحادثة الفورية</a>
-                            </div>
-                        </li>
-                        
-                        <li class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-map-marked-alt"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>منطقة الخدمة</h4>
-                                <p>جميع أحياء الرياض والمناطق المجاورة</p>
-                            </div>
-                        </li>
-                        
-                        <li class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="method-content">
-                                <h4>ساعات العمل</h4>
-                                <p>طوال أيام الأسبوع، 24 ساعة</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="contact-phone" style="margin-bottom: 2rem;">
+                        <div class="phone-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="phone-number">0542906096</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                        <p style="color: white; margin-bottom: 1rem; font-weight: 600;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--laser-cold); margin-left: 0.5rem;"></i>
+                            منطقة الخدمة:
+                        </p>
+                        <p style="color: rgba(255,255,255,0.9);">
+                            جميع أحياء الرياض والمناطق المجاورة
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px;">
+                        <p style="color: white; margin-bottom: 1rem; font-weight: 600;">
+                            <i class="fas fa-clock" style="color: var(--laser-hot); margin-left: 0.5rem;"></i>
+                            ساعات العمل:
+                        </p>
+                        <p style="color: rgba(255,255,255,0.9);">
+                            طوال أيام الأسبوع، 24 ساعة
+                        </p>
+                    </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>أرسل استفسارك الآن</h3>
+                    <h3 class="contact-heading">أرسل طلبك الآن</h3>
                     
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name" class="form-label">الاسم الكامل *</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                class="form-control" 
-                                placeholder="أدخل اسمك الكامل"
-                                required
-                            >
+                            <input type="text" class="form-input" placeholder="الاسم الكامل" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone" class="form-label">رقم الهاتف *</label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                class="form-control" 
-                                placeholder="05XXXXXXXX"
-                                required
-                            >
+                            <input type="tel" class="form-input" placeholder="رقم الهاتف" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="service" class="form-label">نوع الخدمة *</label>
-                            <select id="service" class="form-control" required>
+                            <select class="form-input" required>
                                 <option value="">اختر نوع الخدمة</option>
                                 <option value="قص خرسانة بالليزر">قص خرسانة بالليزر</option>
                                 <option value="فتحات كور">فتحات كور</option>
                                 <option value="ترميم إنشائي">ترميم إنشائي</option>
                                 <option value="استشارة هندسية">استشارة هندسية</option>
-                                <option value="أخرى">أخرى</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message" class="form-label">تفاصيل المشروع</label>
-                            <textarea 
-                                id="message" 
-                                class="form-control" 
-                                placeholder="أخبرنا عن تفاصيل مشروعك..."
-                            ></textarea>
+                            <textarea class="form-input" placeholder="تفاصيل المشروع..." rows="4"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--spacing-5);">
+                        <button type="submit" class="submit-button">
                             <i class="fas fa-paper-plane"></i>
-                            <span>إرسال الطلب الآن</span>
+                            <span>إرسال الطلب</span>
                         </button>
                     </form>
                 </div>
@@ -1885,201 +1630,302 @@
         </div>
     </section>
     
-    <!-- FLOATING ACTIONS -->
+    <!-- 🔋 الأزرار العائمة -->
     <div class="floating-actions">
-        <a href="https://wa.me/966542906096" class="fab fab-whatsapp" data-tooltip="تواصل عبر واتساب" target="_blank">
+        <a href="https://wa.me/966542906096" class="floating-btn whatsapp" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:+966542906096" class="fab fab-phone" data-tooltip="اتصل الآن">
+        <a href="tel:+966542906096" class="floating-btn phone">
             <i class="fas fa-phone-alt"></i>
         </a>
     </div>
     
-    <!-- FOOTER -->
+    <!-- 🏁 الفوتر -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="logo-text">
-                            <div class="logo-title">النخبة</div>
-                            <div class="logo-subtitle">قص خرسانة بالليزر</div>
-                        </div>
-                    </div>
-                    <p class="footer-desc">
-                        الرائدون في مجال قص الخرسانة بالليزر والترميم الإنشائي في الرياض. 
-                        نستخدم أحدث التقنيات العالمية لتقديم أفضل الخدمات لعملائنا.
-                    </p>
-                    <div class="footer-contact-info">
-                        <div class="footer-contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>0542906096</span>
-                        </div>
-                        <div class="footer-contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>الرياض - المملكة العربية السعودية</span>
-                        </div>
-                    </div>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <div class="logo-name" style="font-size: 2rem;">النخبة</div>
+                    <div class="logo-tag" style="font-size: 0.9rem;">قص خرسانة بالليزر</div>
                 </div>
-                
-                <div class="footer-links">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#gallery">معرض الأعمال</a></li>
-                        <li><a href="#testimonials">آراء العملاء</a></li>
-                        <li><a href="#contact">تواصل معنا</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>خدماتنا</h4>
-                    <ul>
-                        <li><a href="#contact">قص الخرسانة بالليزر</a></li>
-                        <li><a href="#contact">فتحات الكور</a></li>
-                        <li><a href="#contact">الترميم الإنشائي</a></li>
-                        <li><a href="#contact">الاستشارات الهندسية</a></li>
-                    </ul>
+                <p class="footer-desc">
+                    الرائدون في مجال قص الخرسانة بالليزر والترميم الإنشائي في الرياض. 
+                    نستخدم أحدث التقنيات العالمية لتقديم أفضل الخدمات لعملائنا.
+                </p>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0542906096</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>الرياض - المملكة العربية السعودية</span>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>© 2024 النخبة للتشطيبات - جميع الحقوق محفوظة | أفضل مقاول قص خرسانة بالليزر في الرياض</p>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#video-hero">الرئيسية</a></li>
+                    <li><a href="#gallery-section">معرض الأعمال</a></li>
+                    <li><a href="#comparison-gallery">قبل وبعد</a></li>
+                    <li><a href="#services-section">خدماتنا</a></li>
+                    <li><a href="#contact-section">تواصل معنا</a></li>
+                </ul>
             </div>
+            
+            <div class="footer-links">
+                <h4>خدماتنا</h4>
+                <ul>
+                    <li><a href="#services-section">قص الخرسانة بالليزر</a></li>
+                    <li><a href="#services-section">فتحات الكور</a></li>
+                    <li><a href="#services-section">الترميم الإنشائي</a></li>
+                    <li><a href="#services-section">الاستشارات الهندسية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 النخبة للتشطيبات - جميع الحقوق محفوظة | أفضل مقاول قص خرسانة بالليزر في الرياض</p>
         </div>
     </footer>
     
-    <!-- JAVASCRIPT -->
+    <!-- Video.js Library -->
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            initNavigation();
-            initTestimonialSlider();
-            initContactForm();
+            initMobileNavigation();
+            initVideoPlayer();
             initScrollEffects();
+            initContactForm();
+            initAnimations();
+            
             console.log('🚀 موقع النخبة جاهز للعمل!');
         });
         
-        function initNavigation() {
-            const navbar = document.getElementById('navbar');
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navMenu = document.getElementById('navMenu');
-            const navLinks = document.querySelectorAll('.nav-link');
+        // 📱 نظام التنقل للجوال
+        function initMobileNavigation() {
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            const slideMenu = document.getElementById('slideMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const header = document.getElementById('smartHeader');
+            const menuItems = document.querySelectorAll('.menu-item');
+            const emergencyAction = document.getElementById('emergencyAction');
             
-            window.addEventListener('scroll', () => {
-                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            // تبديل القائمة
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                slideMenu.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                document.body.style.overflow = slideMenu.classList.contains('active') ? 'hidden' : 'auto';
             });
             
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.className = navMenu.classList.contains('active') 
-                    ? 'fas fa-times' 
-                    : 'fas fa-bars';
+            // إغلاق القائمة بالنقر على الـ overlay
+            menuOverlay.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                slideMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
             });
             
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    mobileToggle.querySelector('i').className = 'fas fa-bars';
+            // التنقل للروابط
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const target = item.getAttribute('data-target');
+                    const targetElement = document.getElementById(target);
+                    
+                    if (targetElement) {
+                        // إغلاق القائمة
+                        menuToggle.classList.remove('active');
+                        slideMenu.classList.remove('active');
+                        menuOverlay.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                        
+                        // التمرير للقسم المطلوب
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 300);
+                    }
                 });
             });
             
+            // زر الطوارئ
+            emergencyAction.addEventListener('click', () => {
+                window.open('tel:+966542906096', '_self');
+            });
+            
+            // إظهار/إخفاء الهيدر عند التمرير
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                if (currentScroll > lastScroll && currentScroll > 200) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // إغلاق القائمة عند النقر على أي رابط خارجي
+            document.addEventListener('click', (e) => {
+                if (!slideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    if (slideMenu.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        slideMenu.classList.remove('active');
+                        menuOverlay.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            });
+        }
+        
+        // 🎬 نظام الفيديو
+        function initVideoPlayer() {
+            const video = document.getElementById('heroVideo');
+            const playBtn = document.getElementById('playBtn');
+            
+            if (video) {
+                // تشغيل/إيقاف الفيديو
+                playBtn.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i><span>إيقاف الفيديو</span>';
+                    } else {
+                        video.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i><span>تشغيل الفيديو</span>';
+                    }
+                });
+                
+                // التحكم التلقائي عند التمرير
+                window.addEventListener('scroll', () => {
+                    const videoSection = document.getElementById('video-hero');
+                    const rect = videoSection.getBoundingClientRect();
+                    
+                    // إذا كان الفيديو خارج الشاشة، أوقفه
+                    if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                        video.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i><span>تشغيل الفيديو</span>';
+                    }
+                });
+                
+                // تكرار الفيديو
+                video.addEventListener('ended', () => {
+                    video.currentTime = 0;
+                    video.play();
+                });
+            }
+        }
+        
+        // ⚡ تأثيرات التمرير
+        function initScrollEffects() {
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+            
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
+            });
+            
+            // تأثيرات التمرير السلس
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const offset = 100;
-                        const targetPosition = target.offsetTop - offset;
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
+                    const href = this.getAttribute('href');
+                    
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        
+                        if (target) {
+                            const headerHeight = document.querySelector('.smart-header').offsetHeight;
+                            const targetPosition = target.offsetTop - headerHeight;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
                     }
                 });
             });
         }
         
-        function initTestimonialSlider() {
-            const track = document.getElementById('testimonialTrack');
-            const dots = document.querySelectorAll('.nav-dot');
-            let currentSlide = 0;
-            let slideInterval;
-            
-            function updateSlider() {
-                track.style.transform = `translateX(-${currentSlide * 100}%)`;
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-            }
-            
-            dots.forEach(dot => {
-                dot.addEventListener('click', function() {
-                    clearInterval(slideInterval);
-                    currentSlide = parseInt(this.getAttribute('data-slide'));
-                    updateSlider();
-                    startAutoSlide();
-                });
-            });
-            
-            function startAutoSlide() {
-                slideInterval = setInterval(() => {
-                    currentSlide = (currentSlide + 1) % dots.length;
-                    updateSlider();
-                }, 5000);
-            }
-            
-            startAutoSlide();
-            
-            const slider = document.querySelector('.testimonial-slider');
-            slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
-            slider.addEventListener('mouseleave', startAutoSlide);
-        }
-        
+        // 📝 نموذج التواصل
         function initContactForm() {
             const form = document.getElementById('contactForm');
             
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-                const service = document.getElementById('service').value;
-                const message = document.getElementById('message').value.trim();
-                
-                if (!name || !phone || !service) {
-                    showNotification('الرجاء ملء جميع الحقول المطلوبة', 'error');
-                    return;
-                }
-                
-                const phoneRegex = /^(05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/;
-                if (!phoneRegex.test(phone)) {
-                    showNotification('الرجاء إدخال رقم هاتف سعودي صحيح', 'error');
-                    return;
-                }
-                
-                const whatsappMsg = `*🎯 طلب جديد من موقع النخبة*%0A%0A` +
-                                  `*👤 الاسم:* ${name}%0A` +
-                                  `*📞 الهاتف:* ${phone}%0A` +
-                                  `*🔧 الخدمة:* ${service}%0A` +
-                                  `*📝 التفاصيل:*%0A${message || 'لا توجد تفاصيل إضافية'}%0A%0A` +
-                                  `*⏰ التاريخ:* ${new Date().toLocaleString('ar-SA')}`;
-                
-                const whatsappURL = `https://wa.me/966542906096?text=${whatsappMsg}`;
-                window.open(whatsappURL, '_blank');
-                
-                showNotification('✅ تم فتح واتساب! يرجى إرسال الرسالة', 'success');
-                
-                setTimeout(() => form.reset(), 1000);
-            });
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // جمع البيانات
+                    const formData = {
+                        name: this.querySelector('input[type="text"]').value,
+                        phone: this.querySelector('input[type="tel"]').value,
+                        service: this.querySelector('select').value,
+                        message: this.querySelector('textarea').value
+                    };
+                    
+                    // التحقق من البيانات
+                    if (!formData.name || !formData.phone || !formData.service) {
+                        showNotification('الرجاء ملء جميع الحقول المطلوبة', 'error');
+                        return;
+                    }
+                    
+                    const phoneRegex = /^(05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/;
+                    if (!phoneRegex.test(formData.phone)) {
+                        showNotification('الرجاء إدخال رقم هاتف سعودي صحيح', 'error');
+                        return;
+                    }
+                    
+                    // إعداد رسالة واتساب
+                    const whatsappMsg = `*🎯 طلب جديد من موقع النخبة*%0A%0A` +
+                                      `*👤 الاسم:* ${formData.name}%0A` +
+                                      `*📞 الهاتف:* ${formData.phone}%0A` +
+                                      `*🔧 الخدمة:* ${formData.service}%0A` +
+                                      `*📝 التفاصيل:*%0A${formData.message || 'لا توجد تفاصيل إضافية'}%0A%0A` +
+                                      `*⏰ التاريخ:* ${new Date().toLocaleString('ar-SA')}`;
+                    
+                    // فتح واتساب
+                    const whatsappURL = `https://wa.me/966542906096?text=${whatsappMsg}`;
+                    window.open(whatsappURL, '_blank');
+                    
+                    // عرض إشعار النجاح
+                    showNotification('✅ تم فتح واتساب! يرجى إرسال الرسالة', 'success');
+                    
+                    // إعادة تعيين النموذج
+                    setTimeout(() => form.reset(), 1000);
+                });
+            }
         }
         
+        // 💫 تأثيرات الرسائل
         function showNotification(message, type = 'success') {
+            // إزالة أي إشعارات سابقة
             document.querySelectorAll('.notification').forEach(n => n.remove());
             
+            // إنشاء الإشعار
             const notification = document.createElement('div');
             notification.className = `notification ${type}`;
             notification.innerHTML = `
@@ -2092,6 +1938,7 @@
                 </button>
             `;
             
+            // تنسيق الإشعار
             notification.style.cssText = `
                 position: fixed;
                 top: 100px;
@@ -2109,8 +1956,10 @@
                 animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 max-width: 450px;
                 backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,255,255,0.1);
             `;
             
+            // إضافة أنيميشن
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes slideIn {
@@ -2124,12 +1973,14 @@
             `;
             document.head.appendChild(style);
             
+            // زر الإغلاق
             const closeBtn = notification.querySelector('.notification-close');
             closeBtn.addEventListener('click', () => {
                 notification.style.animation = 'slideOut 0.3s ease-out forwards';
                 setTimeout(() => notification.remove(), 300);
             });
             
+            // إغلاق تلقائي بعد 5 ثواني
             setTimeout(() => {
                 if (notification.parentNode) {
                     notification.style.animation = 'slideOut 0.3s ease-out forwards';
@@ -2140,26 +1991,46 @@
             document.body.appendChild(notification);
         }
         
-        function initScrollEffects() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
+        // 🎬 تأثيرات إضافية
+        function initAnimations() {
+            // تأثيرات عند التمرير على البطاقات
+            const cards = document.querySelectorAll('.photo-card, .service-card, .comparison-item');
             
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.zIndex = '100';
                 });
-            }, observerOptions);
+                
+                card.addEventListener('mouseleave', () => {
+                    setTimeout(() => {
+                        card.style.zIndex = '';
+                    }, 300);
+                });
+            });
             
-            document.querySelectorAll('.feature-card, .gallery-item, .testimonial-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                observer.observe(el);
+            // تأثيرات على الأزرار
+            const buttons = document.querySelectorAll('button, .control-btn, .floating-btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('mousedown', () => {
+                    button.style.transform = 'scale(0.95)';
+                });
+                
+                button.addEventListener('mouseup', () => {
+                    button.style.transform = '';
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = '';
+                });
+            });
+            
+            // تأثيرات الليزر عند تحريك الماوس
+            document.addEventListener('mousemove', (e) => {
+                const laserBeam = document.querySelector('.laser-beam');
+                if (laserBeam) {
+                    laserBeam.style.top = `${e.clientY}px`;
+                }
             });
         }
     </script>
