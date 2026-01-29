@@ -3,135 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>النخبة | مقاول قص خرسانة بالليزر الرياض</title>
+    <title>النخبة | مقاول قص خرسانة بالليزر الرياض - دقة 100% | 0542906096</title>
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "النخبة للتشطيبات - مقاول قص خرسانة بالليزر الرياض",
+      "description": "متخصصون في قص الخرسانة بالليزر وفتحات الكور بدقة 100%",
+      "telephone": "+966542906096",
+      "areaServed": "الرياض",
+      "serviceType": "قص الخرسانة بالليزر - فتحات الكور - الترميم الإنشائي"
+    }
+    </script>
     
     <style>
         /* ===== CSS RESET & VARIABLES ===== */
         :root {
-            /* Color Palette - Professional */
-            --primary: #0A192F;     /* Navy Blue - Professional */
-            --secondary: #2A5CAA;   /* Blue - Trust */
-            --accent: #D4AF37;      /* Gold - Luxury */
-            --light: #F8F9FA;       /* Light Gray */
-            --dark: #1A1A1A;        /* Dark Gray */
-            --white: #FFFFFF;
-            --gray: #6C757D;
+            /* Color System - Modern & Professional */
+            --primary: #0A2540;       /* Deep Navy - Trust & Professional */
+            --primary-dark: #061A2D;
+            --primary-light: #1E4A7F;
+            --secondary: #FF6B35;     /* Construction Orange - Attention */
+            --accent: #00B4D8;        /* Cyan - Technology */
+            --success: #2ECC71;       /* Success Green */
             
-            /* Spacing */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 2rem;
-            --space-lg: 3rem;
-            --space-xl: 5rem;
+            /* Neutral Scale */
+            --neutral-900: #1A1A1A;
+            --neutral-800: #2D3748;
+            --neutral-700: #4A5568;
+            --neutral-600: #718096;
+            --neutral-500: #A0AEC0;
+            --neutral-400: #CBD5E0;
+            --neutral-300: #E2E8F0;
+            --neutral-200: #EDF2F7;
+            --neutral-100: #F7FAFC;
+            --white: #FFFFFF;
             
             /* Typography */
-            --font-primary: 'Inter', -apple-system, sans-serif;
-            --font-arabic: 'Almarai', sans-serif;
+            --font-arabic: 'IBM Plex Sans Arabic', -apple-system, sans-serif;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-base: 16px;
             
-            /* Effects */
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
-            --border-radius: 8px;
+            /* Spacing System */
+            --space-3xs: 0.25rem;   /* 4px */
+            --space-2xs: 0.5rem;    /* 8px */
+            --space-xs: 0.75rem;    /* 12px */
+            --space-sm: 1rem;       /* 16px */
+            --space-md: 1.5rem;     /* 24px */
+            --space-lg: 2rem;       /* 32px */
+            --space-xl: 3rem;       /* 48px */
+            --space-2xl: 4rem;      /* 64px */
+            --space-3xl: 6rem;      /* 96px */
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-base: 300ms ease;
+            --transition-slow: 500ms ease;
+            
+            /* Container */
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
         }
         
-        * {
+        /* Reset & Base Styles */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
         html {
+            font-size: var(--font-base);
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         body {
-            font-family: var(--font-primary);
-            color: var(--dark);
+            font-family: var(--font-arabic);
+            color: var(--neutral-800);
             line-height: 1.6;
-            background: var(--white);
+            background-color: var(--white);
             overflow-x: hidden;
         }
         
+        /* Typography */
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-arabic);
+            font-family: var(--font-heading);
             font-weight: 700;
-            line-height: 1.3;
-            color: var(--primary);
+            line-height: 1.2;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-md);
         }
         
-        /* ===== CONTAINER ===== */
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h3 {
+            font-size: 2rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            color: var(--neutral-700);
+        }
+        
+        .text-lead {
+            font-size: 1.25rem;
+            color: var(--neutral-700);
+            line-height: 1.8;
+        }
+        
+        .text-small {
+            font-size: 0.875rem;
+            color: var(--neutral-600);
+        }
+        
+        /* Utility Classes */
         .container {
-            max-width: 1200px;
+            width: 100%;
+            max-width: var(--container-xl);
             margin: 0 auto;
-            padding: 0 var(--space-md);
+            padding: 0 var(--space-lg);
+        }
+        
+        .container-narrow {
+            max-width: var(--container-lg);
+        }
+        
+        .section {
+            padding: var(--space-3xl) 0;
+        }
+        
+        .section-sm {
+            padding: var(--space-xl) 0;
+        }
+        
+        .section-lg {
+            padding: var(--space-3xl) 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-0 { margin-bottom: 0; }
+        .mb-xs { margin-bottom: var(--space-xs); }
+        .mb-sm { margin-bottom: var(--space-sm); }
+        .mb-md { margin-bottom: var(--space-md); }
+        .mb-lg { margin-bottom: var(--space-lg); }
+        .mb-xl { margin-bottom: var(--space-xl); }
+        
+        .mt-0 { margin-top: 0; }
+        .mt-xs { margin-top: var(--space-xs); }
+        .mt-sm { margin-top: var(--space-sm); }
+        .mt-md { margin-top: var(--space-md); }
+        .mt-lg { margin-top: var(--space-lg); }
+        .mt-xl { margin-top: var(--space-xl); }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: #E55A28;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-lg {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
         }
         
         /* ===== NAVIGATION ===== */
-        .navbar {
+        .nav {
             position: fixed;
             top: 0;
+            right: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
             z-index: 1000;
-            padding: 1rem 0;
+            border-bottom: 1px solid var(--neutral-200);
+            transition: all var(--transition-base);
+        }
+        
+        .nav.scrolled {
+            box-shadow: var(--shadow-sm);
         }
         
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 72px;
         }
         
         .logo {
-            font-family: var(--font-arabic);
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: var(--space-sm);
+            text-decoration: none;
         }
         
-        .logo span {
-            color: var(--accent);
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--neutral-600);
+            font-weight: 500;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
         }
         
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: var(--space-xl);
             list-style: none;
         }
         
         .nav-link {
+            color: var(--neutral-800);
             text-decoration: none;
-            color: var(--dark);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: color 0.3s;
+            padding: var(--space-xs) 0;
             position: relative;
+            transition: color var(--transition-fast);
         }
         
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             right: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
+            background: var(--secondary);
+            transition: width var(--transition-base);
         }
         
         .nav-link:hover,
@@ -139,43 +374,38 @@
             color: var(--primary);
         }
         
-        .nav-cta {
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.8rem 1.8rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            border: 2px solid var(--primary);
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
         }
         
-        .nav-cta:hover {
-            background: transparent;
-            color: var(--primary);
+        .nav-cta .btn {
+            font-size: 0.875rem;
+            padding: 0.5rem 1.5rem;
         }
         
-        .mobile-menu {
+        .mobile-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
             color: var(--primary);
+            font-size: 1.5rem;
             cursor: pointer;
+            padding: var(--space-xs);
+            border-radius: var(--radius-sm);
         }
         
         /* ===== HERO SECTION ===== */
         .hero {
-            padding: 12rem 0 8rem;
-            background: linear-gradient(135deg, 
-                rgba(10, 25, 47, 0.97) 0%, 
-                rgba(10, 25, 47, 0.9) 100%),
-                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
+            padding-top: 120px;
+            padding-bottom: var(--space-3xl);
+            background: linear-gradient(
+                135deg,
+                rgba(10, 37, 64, 0.97) 0%,
+                rgba(10, 37, 64, 0.9) 100%
+            );
             position: relative;
+            overflow: hidden;
         }
         
         .hero::before {
@@ -185,304 +415,329 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), transparent);
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
         }
         
         .hero-content {
-            max-width: 800px;
             position: relative;
             z-index: 1;
+            max-width: 800px;
         }
         
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--accent);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            gap: var(--space-xs);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .hero-badge i {
+            color: var(--secondary);
+        }
+        
+        .hero-badge span {
+            color: var(--white);
+            font-size: 0.875rem;
+            font-weight: 500;
         }
         
         .hero-title {
             font-size: 3.5rem;
             color: var(--white);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: var(--space-lg);
+            line-height: 1.1;
+        }
+        
+        .hero-title span {
+            color: var(--secondary);
+            position: relative;
         }
         
         .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            font-weight: 400;
+            margin-bottom: var(--space-xl);
+            line-height: 1.7;
         }
         
         .hero-features {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-2xl);
         }
         
         .hero-feature {
             display: flex;
-            align-items: center;
-            gap: 0.8rem;
+            align-items: flex-start;
+            gap: var(--space-sm);
             color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
         }
         
-        .hero-feature i {
-            color: var(--accent);
-        }
-        
-        .hero-actions {
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
             display: flex;
-            gap: 1rem;
             align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.25rem;
+            color: var(--secondary);
         }
         
-        .btn-primary {
-            background: var(--accent);
-            color: var(--primary);
-            padding: 1rem 2.5rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        
-        .btn-primary:hover {
-            background: #E8C34A;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .btn-secondary {
-            background: transparent;
+        .feature-content h4 {
             color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s;
-            display: inline-flex;
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            margin-bottom: 0;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
             align-items: center;
-            gap: 0.8rem;
+            flex-wrap: wrap;
         }
         
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            color: var(--accent);
+        .phone-highlight {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        /* ===== SECTIONS ===== */
-        section {
-            padding: var(--space-xl) 0;
+        .phone-highlight i {
+            color: var(--secondary);
+            font-size: 1.25rem;
+        }
+        
+        .phone-number {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background: var(--neutral-100);
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-2xl);
         }
         
         .section-title {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
+            margin-bottom: var(--space-md);
         }
         
         .section-title::after {
             content: '';
-            position: absolute;
-            bottom: -10px;
-            right: 50%;
-            transform: translateX(50%);
-            width: 60px;
-            height: 3px;
-            background: var(--accent);
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin: var(--space-sm) auto;
+            border-radius: var(--radius-full);
         }
         
-        .section-subtitle {
-            color: var(--gray);
-            font-size: 1.1rem;
+        .section-description {
             max-width: 600px;
             margin: 0 auto;
-        }
-        
-        /* ===== SERVICES ===== */
-        .services {
-            background: var(--light);
+            color: var(--neutral-700);
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
         }
         
         .service-card {
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            border: 1px solid var(--neutral-200);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to left, var(--primary), var(--accent));
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--accent);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
         }
         
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(42, 92, 170, 0.1);
-            border-radius: 12px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
+            margin-bottom: var(--space-lg);
+            color: var(--white);
             font-size: 1.5rem;
         }
         
         .service-title {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: var(--space-sm);
         }
         
         .service-description {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
+            color: var(--neutral-700);
+            margin-bottom: var(--space-lg);
         }
         
         .service-features {
             list-style: none;
-            margin-top: 1.5rem;
+            margin-bottom: var(--space-lg);
         }
         
         .service-feature {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-            font-size: 0.95rem;
+            gap: var(--space-xs);
+            padding: var(--space-xs) 0;
+            color: var(--neutral-800);
         }
         
         .service-feature i {
-            color: var(--accent);
-            font-size: 0.8rem;
+            color: var(--success);
+            font-size: 0.875rem;
         }
         
-        /* ===== TECHNOLOGY ===== */
-        .technology-content {
+        /* ===== TECHNOLOGY SECTION ===== */
+        .technology {
+            background: var(--white);
+        }
+        
+        .tech-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: var(--space-2xl);
             align-items: center;
+        }
+        
+        .tech-visual {
+            position: relative;
         }
         
         .tech-image {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .tech-image img {
             width: 100%;
             height: 400px;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .tech-image:hover img {
-            transform: scale(1.05);
-        }
-        
-        .tech-details h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .tech-list {
-            list-style: none;
-        }
-        
-        .tech-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .tech-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .tech-number {
-            background: var(--primary);
-            color: var(--white);
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius-xl);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
-            font-weight: 600;
-            flex-shrink: 0;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
         }
         
-        /* ===== PORTFOLIO ===== */
+        .tech-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .tech-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .stat-label {
+            color: var(--neutral-700);
+            font-size: 0.875rem;
+        }
+        
+        /* ===== PORTFOLIO SECTION ===== */
         .portfolio {
-            background: var(--light);
+            background: var(--neutral-100);
         }
         
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: var(--space-lg);
         }
         
         .portfolio-item {
             position: relative;
-            border-radius: var(--border-radius);
+            border-radius: var(--radius-lg);
             overflow: hidden;
             height: 300px;
-            box-shadow: var(--shadow-sm);
+            background: var(--neutral-200);
         }
         
-        .portfolio-item img {
+        .portfolio-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform var(--transition-slow);
         }
         
-        .portfolio-item:hover img {
+        .portfolio-item:hover .portfolio-image {
             transform: scale(1.1);
         }
         
@@ -491,89 +746,143 @@
             bottom: 0;
             right: 0;
             width: 100%;
-            padding: 2rem;
-            background: linear-gradient(to top, rgba(10, 25, 47, 0.9), transparent);
+            padding: var(--space-xl);
+            background: linear-gradient(to top, rgba(10, 37, 64, 0.95), transparent);
             color: var(--white);
             transform: translateY(100%);
-            transition: transform 0.3s;
+            transition: transform var(--transition-base);
         }
         
         .portfolio-item:hover .portfolio-overlay {
             transform: translateY(0);
         }
         
-        .portfolio-overlay h4 {
+        .portfolio-title {
             color: var(--white);
-            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            margin-bottom: var(--space-xs);
         }
         
-        .portfolio-overlay p {
+        .portfolio-location {
             color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
+            font-size: 0.875rem;
         }
         
-        /* ===== TESTIMONIALS ===== */
-        .testimonials-slider {
-            position: relative;
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background: var(--white);
+        }
+        
+        .testimonials-container {
             max-width: 800px;
             margin: 0 auto;
         }
         
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform var(--transition-base);
+        }
+        
+        .testimonial-slide {
+            flex: 0 0 100%;
+            padding: var(--space-xl);
+        }
+        
         .testimonial-card {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0,0,0,0.05);
-            text-align: center;
+            background: var(--neutral-100);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--neutral-200);
         }
         
         .testimonial-rating {
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: var(--space-lg);
+            font-size: 1.25rem;
         }
         
         .testimonial-text {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             line-height: 1.8;
-            color: var(--dark);
-            margin-bottom: 2rem;
-            font-style: italic;
+            color: var(--neutral-800);
+            margin-bottom: var(--space-xl);
+            position: relative;
+            padding-right: var(--space-lg);
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            right: 0;
+            font-size: 4rem;
+            color: var(--neutral-300);
+            font-family: Georgia, serif;
+            line-height: 1;
         }
         
         .testimonial-author {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 1rem;
+            gap: var(--space-md);
         }
         
         .author-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.25rem;
         }
         
         .author-info h4 {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             margin-bottom: 0.25rem;
         }
         
         .author-info p {
-            color: var(--gray);
-            font-size: 0.9rem;
+            color: var(--neutral-600);
+            margin-bottom: 0;
+            font-size: 0.875rem;
         }
         
-        /* ===== CONTACT ===== */
-        .contact {
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-xl);
+        }
+        
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--neutral-300);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            padding: 0;
+        }
+        
+        .nav-dot.active {
             background: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
         }
         
@@ -581,179 +890,222 @@
             color: var(--white);
         }
         
-        .contact .section-subtitle {
-            color: rgba(255, 255, 255, 0.8);
+        .contact .section-description {
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: var(--space-2xl);
         }
         
         .contact-info {
-            padding: 2rem;
+            padding: var(--space-xl);
             background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--border-radius);
+            border-radius: var(--radius-xl);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
         
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-        }
-        
-        .contact-list {
+        .contact-methods {
             list-style: none;
         }
         
-        .contact-item {
+        .contact-method {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
+            gap: var(--space-lg);
+            padding: var(--space-lg) 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .contact-item:last-child {
+        .contact-method:last-child {
             border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
         
-        .contact-icon {
-            width: 40px;
-            height: 40px;
+        .method-icon {
+            width: 56px;
+            height: 56px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent);
+            font-size: 1.5rem;
+            color: var(--secondary);
+            flex-shrink: 0;
         }
         
-        .contact-text h4 {
-            font-size: 1rem;
+        .method-content h4 {
             color: var(--white);
+            font-size: 1.125rem;
             margin-bottom: 0.25rem;
         }
         
-        .contact-text a,
-        .contact-text p {
-            color: rgba(255, 255, 255, 0.8);
+        .method-content a,
+        .method-content p {
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color var(--transition-fast);
         }
         
-        .contact-text a:hover {
-            color: var(--accent);
+        .method-content a:hover {
+            color: var(--secondary);
         }
         
         .contact-form {
             background: var(--white);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: var(--space-lg);
         }
         
         .form-label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--space-xs);
             font-weight: 600;
-            color: var(--dark);
+            color: var(--neutral-800);
+            font-size: 0.875rem;
         }
         
         .form-control {
             width: 100%;
-            padding: 1rem;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: var(--border-radius);
-            font-family: var(--font-primary);
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--neutral-300);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-arabic);
             font-size: 1rem;
-            transition: all 0.3s;
+            transition: all var(--transition-fast);
+            background: var(--white);
+            color: var(--neutral-800);
         }
         
         .form-control:focus {
             outline: none;
-            border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(42, 92, 170, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.1);
         }
         
-        /* ===== FLOATING BUTTONS ===== */
-        .floating-buttons {
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A5568' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 1rem center;
+            background-size: 16px;
+            padding-left: 3rem;
+        }
+        
+        /* ===== FLOATING ACTION ===== */
+        .floating-action {
             position: fixed;
-            left: 2rem;
-            bottom: 2rem;
+            left: var(--space-xl);
+            bottom: var(--space-xl);
             z-index: 999;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: var(--space-sm);
         }
         
-        .floating-btn {
+        .fab {
             width: 56px;
             height: 56px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--primary);
             color: var(--white);
             text-decoration: none;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-base);
             position: relative;
+            overflow: hidden;
         }
         
-        .floating-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
+        .fab::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            left: calc(100% + 12px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--neutral-900);
+            color: var(--white);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-md);
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            pointer-events: none;
         }
         
-        .floating-btn.whatsapp {
-            background: #25D366;
+        .fab:hover::after {
+            opacity: 1;
+            visibility: visible;
+            left: calc(100% + 16px);
         }
         
-        .floating-btn.phone {
-            background: var(--secondary);
+        .fab:hover {
+            transform: translateY(-4px);
+        }
+        
+        .fab-phone {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        }
+        
+        .fab-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
         }
         
         /* ===== FOOTER ===== */
         .footer {
-            background: var(--dark);
+            background: var(--neutral-900);
             color: var(--white);
-            padding: 4rem 0 2rem;
+            padding: var(--space-3xl) 0 var(--space-xl);
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
         }
         
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
+        .footer-about .logo-title {
             color: var(--white);
-            margin-bottom: 1rem;
         }
         
         .footer-description {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
+            color: var(--neutral-400);
+            margin: var(--space-md) 0;
+        }
+        
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--neutral-400);
+        }
+        
+        .footer-contact-item i {
+            color: var(--secondary);
         }
         
         .footer-links h4 {
             color: var(--white);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.125rem;
+            margin-bottom: var(--space-lg);
         }
         
         .footer-links ul {
@@ -761,46 +1113,61 @@
         }
         
         .footer-links li {
-            margin-bottom: 0.8rem;
+            margin-bottom: var(--space-sm);
         }
         
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--neutral-400);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color var(--transition-fast);
         }
         
         .footer-links a:hover {
-            color: var(--accent);
+            color: var(--white);
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--neutral-800);
+            color: var(--neutral-500);
+            font-size: 0.875rem;
         }
         
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 2.8rem;
-            }
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.25rem; }
             
-            .technology-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
+            .hero-title { font-size: 2.5rem; }
+            .tech-content { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .nav-menu {
+                position: fixed;
+                top: 72px;
+                right: -100%;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--space-xl);
+                gap: var(--space-lg);
+                transition: right var(--transition-base);
+                box-shadow: var(--shadow-lg);
             }
             
-            .mobile-menu {
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            
+            .mobile-toggle {
                 display: block;
             }
             
@@ -809,144 +1176,188 @@
             }
             
             .hero {
-                padding: 8rem 0 4rem;
+                padding-top: 100px;
+                padding-bottom: var(--space-2xl);
             }
             
             .hero-title {
-                font-size: 2.2rem;
+                font-size: 2.25rem;
             }
             
-            .hero-subtitle {
-                font-size: 1.1rem;
+            .hero-features {
+                grid-template-columns: 1fr;
             }
             
-            .hero-actions {
+            .hero-cta {
                 flex-direction: column;
                 align-items: stretch;
             }
             
-            .btn-primary,
-            .btn-secondary {
-                text-align: center;
-                justify-content: center;
+            .floating-action {
+                left: var(--space-md);
+                bottom: var(--space-md);
             }
             
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .floating-buttons {
-                left: 1rem;
-                bottom: 1rem;
-            }
-            
-            .floating-btn {
-                width: 48px;
-                height: 48px;
-                font-size: 1.1rem;
+            .fab::after {
+                display: none;
             }
         }
         
-        @media (max-width: 576px) {
+        @media (max-width: 640px) {
             .container {
-                padding: 0 var(--space-sm);
+                padding: 0 var(--space-md);
+            }
+            
+            .section {
+                padding: var(--space-2xl) 0;
+            }
+            
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.75rem; }
+            
+            .btn-lg {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
             }
             
             .service-card,
             .testimonial-card,
             .contact-form {
-                padding: 1.5rem;
+                padding: var(--space-lg);
             }
             
-            .hero-features {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .services-grid {
+            .tech-stats {
                 grid-template-columns: 1fr;
+                gap: var(--space-md);
             }
         }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
+    <!-- Floating Action -->
+    <div class="floating-action">
+        <a href="https://wa.me/966542906096" class="fab fab-whatsapp" data-tooltip="تواصل عبر واتساب" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+966542906096" class="fab fab-phone" data-tooltip="اتصل الآن">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="nav" id="navbar">
         <div class="container">
             <div class="nav-container">
                 <a href="#" class="logo">
-                    النخبة<span>.</span>
+                    <div class="logo-icon">ن</div>
+                    <div class="logo-text">
+                        <span class="logo-title">النخبة</span>
+                        <span class="logo-subtitle">مقاول قص خرسانة بالليزر</span>
+                    </div>
                 </a>
-                
-                <ul class="nav-links">
-                    <li><a href="#services" class="nav-link">الخدمات</a></li>
-                    <li><a href="#technology" class="nav-link">التقنية</a></li>
-                    <li><a href="#portfolio" class="nav-link">الأعمال</a></li>
-                    <li><a href="#testimonials" class="nav-link">الشهادات</a></li>
-                    <li><a href="#contact" class="nav-link">التواصل</a></li>
-                </ul>
-                
-                <a href="tel:+966542906096" class="nav-cta">
-                    <i class="fas fa-phone"></i>
-                    0542906096
-                </a>
-                
-                <button class="mobile-menu">
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                        <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                        <li><a href="#technology" class="nav-link">تقنيتنا</a></li>
+                        <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
+                        <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="tel:+966542906096" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            0542906096
+                        </a>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle" id="mobileToggle">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Floating Buttons -->
-    <div class="floating-buttons">
-        <a href="https://wa.me/966542906096" class="floating-btn whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+966542906096" class="floating-btn phone">
-            <i class="fas fa-phone"></i>
-        </a>
-    </div>
-
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content animate-in">
                 <div class="hero-badge">
-                    <i class="fas fa-star"></i>
-                    <span>مقاول معتمد منذ 2010</span>
+                    <i class="fas fa-award"></i>
+                    <span>مقاول معتمد في الرياض</span>
                 </div>
                 
                 <h1 class="hero-title">
-                    مقاول قص خرسانة<br>بالليزر في الرياض
+                    قص خرسانة <span>بالليزر</span>
+                    <br>بدقة تصل إلى 100%
                 </h1>
                 
                 <p class="hero-subtitle">
-                    نقدم خدمات قص الخرسانة بالليزر وفتحات الكور بدقة متناهية وجودة عالية، 
-                    باستخدام أحدث التقنيات العالمية.
+                    نستخدم أحدث تقنيات الليزر العالمية لقص الخرسانة وفتحات الكور 
+                    مع ضمان الجودة والدقة في جميع أحياء الرياض.
                 </p>
                 
                 <div class="hero-features">
-                    <div class="hero-feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>دقة قص تصل إلى 100%</span>
+                    <div class="hero-feature animate-in delay-1">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>أسرع 3 مرات</h4>
+                            <p>إنجاز العمل بسرعة وجودة عالية</p>
+                        </div>
                     </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ضمان 12 شهر على جميع الأعمال</span>
+                    
+                    <div class="hero-feature animate-in delay-2">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>ضمان 12 شهر</h4>
+                            <p>ضمان شامل على جميع الأعمال</p>
+                        </div>
                     </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>خدمة جميع أحياء الرياض</span>
+                    
+                    <div class="hero-feature animate-in delay-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>جميع أحياء الرياض</h4>
+                            <p>خدمتنا تغطي كل مناطق الرياض</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="hero-actions">
-                    <a href="tel:+966542906096" class="btn-primary">
+                <div class="hero-cta">
+                    <div class="phone-highlight animate-in delay-4">
                         <i class="fas fa-phone"></i>
-                        اتصل الآن: 0542906096
-                    </a>
-                    <a href="#contact" class="btn-secondary">
+                        <span class="phone-number">0542906096</span>
+                    </div>
+                    <a href="#contact" class="btn btn-secondary btn-lg animate-in delay-4">
                         <i class="fas fa-file-alt"></i>
                         طلب استشارة مجانية
                     </a>
@@ -955,18 +1366,18 @@
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="services">
+    <!-- Services Section -->
+    <section id="services" class="services section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">خدماتنا المتخصصة</h2>
-                <p class="section-subtitle">
-                    نقدم مجموعة متكاملة من خدمات قص الخرسانة والبناء بأعلى معايير الجودة
+                <p class="section-description">
+                    نقدم مجموعة متكاملة من خدمات قص الخرسانة والبناء بأحدث التقنيات العالمية
                 </p>
             </div>
             
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card animate-in">
                     <div class="service-icon">
                         <i class="fas fa-laser"></i>
                     </div>
@@ -986,16 +1397,20 @@
                         </li>
                         <li class="service-feature">
                             <i class="fas fa-check"></i>
-                            توسيع المساحات
+                            توسيع المساحات الداخلية
                         </li>
                     </ul>
+                    <a href="tel:+966542906096" class="btn btn-outline">
+                        <i class="fas fa-phone"></i>
+                        استفسر الآن
+                    </a>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card animate-in delay-1">
                     <div class="service-icon">
                         <i class="fas fa-toolbox"></i>
                     </div>
-                    <h3 class="service-title">فتحات الكور</h3>
+                    <h3 class="service-title">فتحات الكور المتخصصة</h3>
                     <p class="service-description">
                         تنفيذ فتحات الكور الدقيقة للتمديدات الكهربائية والسباكة 
                         والتكييف بأحدث المعدات.
@@ -1007,16 +1422,20 @@
                         </li>
                         <li class="service-feature">
                             <i class="fas fa-check"></i>
-                            تمديدات الكهرباء
+                            تمديدات الكهرباء الرئيسية
                         </li>
                         <li class="service-feature">
                             <i class="fas fa-check"></i>
                             شبكات الصرف الصحي
                         </li>
                     </ul>
+                    <a href="tel:+966542906096" class="btn btn-outline">
+                        <i class="fas fa-phone"></i>
+                        استفسر الآن
+                    </a>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card animate-in delay-2">
                     <div class="service-icon">
                         <i class="fas fa-hard-hat"></i>
                     </div>
@@ -1028,7 +1447,7 @@
                     <ul class="service-features">
                         <li class="service-feature">
                             <i class="fas fa-check"></i>
-                            ترميم الشقوق
+                            ترميم الشقوق الهيكلية
                         </li>
                         <li class="service-feature">
                             <i class="fas fa-check"></i>
@@ -1036,123 +1455,62 @@
                         </li>
                         <li class="service-feature">
                             <i class="fas fa-check"></i>
-                            معالجة التشققات
+                            معالجة التشققات السطحية
                         </li>
                     </ul>
+                    <a href="tel:+966542906096" class="btn btn-outline">
+                        <i class="fas fa-phone"></i>
+                        استفسر الآن
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technology -->
-    <section id="technology" class="technology">
+    <!-- Technology Section -->
+    <section id="technology" class="technology section">
         <div class="container">
-            <div class="technology-content">
-                <div class="tech-image">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تقنية الليزر">
-                </div>
-                
-                <div class="tech-details">
-                    <h3>تقنية الليزر المتطورة</h3>
-                    
-                    <ul class="tech-list">
-                        <li class="tech-item">
-                            <div class="tech-number">1</div>
-                            <div>
-                                <h4>دقة قص عالية</h4>
-                                <p>دقة قص تصل إلى 100% مع تقنية الليزر المتطورة</p>
-                            </div>
-                        </li>
-                        
-                        <li class="tech-item">
-                            <div class="tech-number">2</div>
-                            <div>
-                                <h4>سرعة في التنفيذ</h4>
-                                <p>إنجاز العمل بسرعة تصل إلى 3 أضعاف الطرق التقليدية</p>
-                            </div>
-                        </li>
-                        
-                        <li class="tech-item">
-                            <div class="tech-number">3</div>
-                            <div>
-                                <h4>بدون فوضى</h4>
-                                <p>نظافة تامة في موقع العمل بدون غبار أو شظايا</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">أعمالنا السابقة</h2>
-                <p class="section-subtitle">
-                    بعض المشاريع التي نفخر بتنفيذها في مختلف أنحاء الرياض
-                </p>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="قص خرسانة">
-                    <div class="portfolio-overlay">
-                        <h4>قص خرسانة بالليزر</h4>
-                        <p>حي النرجس - الرياض</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1503387769-00d112b87532?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="فتحات كور">
-                    <div class="portfolio-overlay">
-                        <h4>فتحات كور متخصصة</h4>
-                        <p>حي العليا - الرياض</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ترميم">
-                    <div class="portfolio-overlay">
-                        <h4>ترميم إنشائي</h4>
-                        <p>حي الربيع - الرياض</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">آراء عملائنا</h2>
-                <p class="section-subtitle">
-                    شهادات عملائنا الكرام هي دليل نجاحنا وسبب فخرنا
-                </p>
-            </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="tech-content">
+                <div class="tech-visual animate-in">
+                    <div class="tech-image">
+                        <div class="text-center">
+                            <i class="fas fa-laser" style="font-size: 4rem; opacity: 0.8;"></i>
+                            <h3 style="color: var(--white); margin-top: var(--space-md);">تقنية الليزر</h3>
+                        </div>
                     </div>
                     
-                    <p class="testimonial-text">
-                        "ما شاء الله شغل متقن جداً. سووا لي قص خرسانة بالليزر للفيلا في النرجس 
-                        وكانت النتيجة ممتازة. الدقة والسرعة والإتقان كانت فوق التوقعات."
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">دقة قص</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3x</div>
+                            <div class="stat-label">أسرع من التقليدي</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">شهر ضمان</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-info animate-in delay-1">
+                    <h2>لماذا تقنية الليزر؟</h2>
+                    <p class="text-lead mb-lg">
+                        تقنية الليزر تغير طريقة قص الخرسانة بشكل كامل، 
+                        توفر دقة غير مسبوقة وسرعة كبيرة في التنفيذ.
                     </p>
                     
-                    <div class="testimonial-author">
-                        <div class="author-avatar">أ</div>
-                        <div class="author-info">
-                            <h4>أحمد السليمان</h4>
-                            <p>مستثمر عقاري - حي النرجس</p>
+                    <div class="comparison">
+                        <div class="comparison-item mb-lg">
+                            <h4 class="mb-xs">✅ مع الليزر</h4>
+                            <p>قص مستقيم تماماً بدون أخطاء، نظافة تامة، وقت تنفيذ قصير.</p>
+                        </div>
+                        
+                        <div class="comparison-item">
+                            <h4 class="mb-xs">❌ بدون الليزر</h4>
+                            <p>أخطاء في القص، فوضى وغبار، وقت تنفيذ طويل.</p>
                         </div>
                     </div>
                 </div>
@@ -1160,56 +1518,172 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">معرض أعمالنا</h2>
+                <p class="section-description">
+                    بعض المشاريع التي نفخر بتنفيذها في مختلف أنحاء الرياض
+                </p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate-in">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="قص خرسانة بالليزر" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4 class="portfolio-title">قص خرسانة بالليزر</h4>
+                        <p class="portfolio-location">حي النرجس - الرياض</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item animate-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="فتحات كور" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4 class="portfolio-title">فتحات كور متخصصة</h4>
+                        <p class="portfolio-location">حي العليا - الرياض</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item animate-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="ترميم إنشائي" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4 class="portfolio-title">ترميم إنشائي</h4>
+                        <p class="portfolio-location">حي الربيع - الرياض</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آراء عملائنا</h2>
+                <p class="section-description">
+                    شهادات عملائنا الكرام هي دليل نجاحنا وسبب فخرنا
+                </p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-track" id="testimonialTrack">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                
+                                <p class="testimonial-text">
+                                    "ما شاء الله شغل متقن جداً. سووا لي قص خرسانة بالليزر للفيلا في النرجس 
+                                    وكانت النتيجة ممتازة. الدقة والسرعة والإتقان كانت فوق التوقعات. 
+                                    أنصح الجميع بالتعامل معهم."
+                                </p>
+                                
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">أ</div>
+                                    <div class="author-info">
+                                        <h4>أحمد السليمان</h4>
+                                        <p>مستثمر عقاري - حي النرجس</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                
+                                <p class="testimonial-text">
+                                    "من أتقن الفرق الهندسية اللي تعاملت معها. سووا لي فتحات كور للتكييف 
+                                    في مجمع تجاري والعمل كان دقيق جداً بدون أي أخطاء. 
+                                    التواصل المهني والالتزام بالمواعيد شيء مميز."
+                                </p>
+                                
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">ف</div>
+                                    <div class="author-info">
+                                        <h4>فهد الرشيد</h4>
+                                        <p>مالك مجمع تجاري - حي البطحاء</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-nav">
+                        <button class="nav-dot active" data-slide="0"></button>
+                        <button class="nav-dot" data-slide="1"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">تواصل معنا</h2>
-                <p class="section-subtitle">
+                <p class="section-description">
                     نحن جاهزون للإجابة على استفساراتك وتقديم أفضل الحلول لمشروعك
                 </p>
             </div>
             
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>معلومات التواصل</h3>
+                <div class="contact-info animate-in">
+                    <h3 class="mb-lg">معلومات التواصل</h3>
                     
-                    <ul class="contact-list">
-                        <li class="contact-item">
-                            <div class="contact-icon">
+                    <ul class="contact-methods">
+                        <li class="contact-method">
+                            <div class="method-icon">
                                 <i class="fas fa-phone"></i>
                             </div>
-                            <div class="contact-text">
-                                <h4>الهاتف</h4>
+                            <div class="method-content">
+                                <h4>الهاتف والواتساب</h4>
                                 <a href="tel:+966542906096">+966 54 290 6096</a>
                             </div>
                         </li>
                         
-                        <li class="contact-item">
-                            <div class="contact-icon">
+                        <li class="contact-method">
+                            <div class="method-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
-                            <div class="contact-text">
-                                <h4>الواتساب</h4>
-                                <a href="https://wa.me/966542906096" target="_blank">تواصل مباشر</a>
+                            <div class="method-content">
+                                <h4>الواتساب المباشر</h4>
+                                <a href="https://wa.me/966542906096" target="_blank">اضغط للتواصل فوراً</a>
                             </div>
                         </li>
                         
-                        <li class="contact-item">
-                            <div class="contact-icon">
+                        <li class="contact-method">
+                            <div class="method-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="contact-text">
-                                <h4>موقع الخدمة</h4>
+                            <div class="method-content">
+                                <h4>منطقة الخدمة</h4>
                                 <p>جميع أحياء الرياض</p>
                             </div>
                         </li>
                         
-                        <li class="contact-item">
-                            <div class="contact-icon">
+                        <li class="contact-method">
+                            <div class="method-icon">
                                 <i class="fas fa-clock"></i>
                             </div>
-                            <div class="contact-text">
+                            <div class="method-content">
                                 <h4>ساعات العمل</h4>
                                 <p>كل أيام الأسبوع 8 ص - 10 م</p>
                             </div>
@@ -1217,8 +1691,8 @@
                     </ul>
                 </div>
                 
-                <div class="contact-form">
-                    <h3 style="color: var(--primary); margin-bottom: 2rem;">أرسل استفسارك</h3>
+                <div class="contact-form animate-in delay-1">
+                    <h3 style="color: var(--primary); margin-bottom: var(--space-lg);">أرسل استفسارك</h3>
                     
                     <form id="contactForm">
                         <div class="form-group">
@@ -1232,12 +1706,13 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="service" class="form-label">نوع الخدمة</label>
-                            <select id="service" class="form-control">
+                            <label for="service" class="form-label">نوع الخدمة المطلوبة</label>
+                            <select id="service" class="form-control form-select">
                                 <option value="">اختر الخدمة المطلوبة</option>
                                 <option value="laser">قص خرسانة بالليزر</option>
                                 <option value="drilling">فتحات كور</option>
                                 <option value="restoration">ترميم إنشائي</option>
+                                <option value="consultation">استشارة هندسية</option>
                             </select>
                         </div>
                         
@@ -1246,7 +1721,7 @@
                             <textarea id="message" class="form-control" rows="4" placeholder="أدخل تفاصيل المشروع المطلوب"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-primary" style="width: 100%;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
                             <i class="fas fa-paper-plane"></i>
                             إرسال الاستفسار
                         </button>
@@ -1261,20 +1736,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">النخبة</div>
+                    <div class="logo">
+                        <div class="logo-icon">ن</div>
+                        <div class="logo-text">
+                            <span class="logo-title">النخبة</span>
+                            <span class="logo-subtitle">مقاول قص خرسانة بالليزر</span>
+                        </div>
+                    </div>
                     <p class="footer-description">
                         متخصصون في أعمال قص الخرسانة بالليزر والترميم الإنشائي 
                         بأحدث التقنيات العالمية في الرياض.
                     </p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0542906096</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>جميع أحياء الرياض</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
                     <h4>روابط سريعة</h4>
                     <ul>
-                        <li><a href="#services">الخدمات</a></li>
-                        <li><a href="#technology">التقنية</a></li>
-                        <li><a href="#portfolio">الأعمال</a></li>
-                        <li><a href="#contact">التواصل</a></li>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#technology">تقنيتنا</a></li>
+                        <li><a href="#portfolio">أعمالنا</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
                     </ul>
                 </div>
                 
@@ -1284,29 +1776,53 @@
                         <li><a href="#">قص الخرسانة بالليزر</a></li>
                         <li><a href="#">فتحات الكور</a></li>
                         <li><a href="#">الترميم الإنشائي</a></li>
+                        <li><a href="#">التشطيبات الداخلية</a></li>
                         <li><a href="#">الاستشارات الهندسية</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة © 2024 النخبة للتشطيبات</p>
+                <p>جميع الحقوق محفوظة © 2024 النخبة للتشطيبات | أفضل مقاول قص خرسانة بالليزر في الرياض</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
         
-        // Smooth Scroll
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
@@ -1322,7 +1838,33 @@
             });
         });
         
-        // Form Submission
+        // Testimonial slider
+        const testimonialTrack = document.getElementById('testimonialTrack');
+        const navDots = document.querySelectorAll('.nav-dot');
+        let currentSlide = 0;
+        
+        function updateTestimonialSlider() {
+            testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            navDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        navDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                currentSlide = parseInt(this.getAttribute('data-slide'));
+                updateTestimonialSlider();
+            });
+        });
+        
+        // Auto slide testimonials
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 2;
+            updateTestimonialSlider();
+        }, 5000);
+        
+        // Form submission
         const contactForm = document.getElementById('contactForm');
         
         contactForm.addEventListener('submit', function(e) {
@@ -1334,21 +1876,52 @@
                 return;
             }
             
-            // In a real application, you would send this data to a server
-            alert('تم إرسال استفسارك بنجاح! سنتصل بك خلال 24 ساعة.');
-            contactForm.reset();
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                alert('تم إرسال استفسارك بنجاح! سنتصل بك خلال 24 ساعة.');
+                contactForm.reset();
+            }, 1500);
         });
         
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
+        // Track phone calls
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Track conversion here
+                console.log('Phone call tracked:', this.href);
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all animate elements
+        document.querySelectorAll('.service-card, .tech-visual, .tech-info, .portfolio-item').forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Initialize
+        window.addEventListener('load', () => {
+            console.log('موقع النخبة للتشطيبات - تصميم UX/UI محسّن');
         });
     </script>
 </body>
