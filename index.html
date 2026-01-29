@@ -19,7 +19,7 @@
       "telephone": "+966542906096",
       "areaServed": "الرياض",
       "serviceType": "قص الخرسانة بالليزر - فتحات الكور - الترميم الإنشائي",
-      "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5",
+      "image": "assets/hero.jpeg",
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "الرياض"
@@ -232,33 +232,9 @@
             transition: width 0.6s, height 0.6s;
         }
         
-        .btn::after {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            border-radius: var(--radius-full);
-            background: linear-gradient(45deg, 
-                var(--precision-blue), 
-                var(--neon-cyan), 
-                var(--electric-purple));
-            opacity: 0;
-            z-index: -1;
-            transition: opacity var(--transition-base);
-        }
-        
         .btn:hover::before {
             width: 300px;
             height: 300px;
-        }
-        
-        .btn:hover::after {
-            opacity: 1;
-            animation: rotate 2s linear infinite;
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
         
         .btn-primary {
@@ -452,15 +428,18 @@
             background: var(--neutral-100);
         }
         
-        /* ===== ENHANCED HERO SECTION ===== */
+        /* ===== ENHANCED HERO SECTION WITH CUSTOM IMAGE ===== */
         .hero {
             padding-top: 140px;
             padding-bottom: var(--space-3xl);
             background: linear-gradient(
-                135deg,
-                rgba(10, 54, 157, 0.97) 0%,
-                rgba(0, 27, 72, 0.95) 100%
-            );
+                to left,
+                rgba(10, 54, 157, 0.85),
+                rgba(0, 27, 72, 0.9)
+            ), url('assets/hero.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
             overflow: hidden;
             min-height: 100vh;
@@ -490,6 +469,11 @@
             position: relative;
             z-index: 2;
             max-width: 900px;
+            background: rgba(10, 54, 157, 0.3);
+            backdrop-filter: blur(10px);
+            padding: var(--space-2xl);
+            border-radius: var(--radius-2xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .hero-badge {
@@ -520,6 +504,7 @@
             color: var(--white);
             margin-bottom: var(--space-lg);
             line-height: 1.1;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
         }
         
         .hero-title span {
@@ -548,6 +533,7 @@
             margin-bottom: var(--space-2xl);
             line-height: 1.7;
             max-width: 700px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         }
         
         .hero-features {
@@ -648,13 +634,14 @@
             direction: ltr;
         }
         
-        /* ===== ENHANCED SERVICES SECTION ===== */
-        .services {
-            background: var(--neutral-100);
+        /* ===== VIDEO DEMO SECTION ===== */
+        .video-demo {
+            background: var(--deep-navy);
             position: relative;
+            overflow: hidden;
         }
         
-        .services::before {
+        .video-demo::before {
             content: '';
             position: absolute;
             top: 0;
@@ -662,271 +649,148 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 80% 20%, rgba(10, 54, 157, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.1) 0%, transparent 50%);
         }
         
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-2xl);
-            position: relative;
-        }
-        
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            margin-bottom: var(--space-md);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(to right, var(--precision-blue), var(--laser-orange));
-            margin: var(--space-md) auto;
-            border-radius: var(--radius-full);
-        }
-        
-        .section-description {
-            max-width: 700px;
+        .video-container {
+            max-width: 900px;
             margin: 0 auto;
-            color: var(--neutral-700);
-            font-size: clamp(1rem, 2vw, 1.25rem);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-2xl);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .service-card {
-            background: var(--white);
             border-radius: var(--radius-2xl);
-            padding: var(--space-2xl);
-            box-shadow: var(--shadow-md);
-            transition: all var(--transition-bounce);
-            border: 1px solid var(--neutral-200);
-            height: 100%;
-            position: relative;
             overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(to left, var(--precision-blue), var(--neon-cyan));
-        }
-        
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                transparent 30%, 
-                rgba(0, 245, 255, 0.05) 50%, 
-                transparent 70%);
-            z-index: 0;
-            opacity: 0;
-            transition: opacity var(--transition-base);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-15px);
             box-shadow: var(--shadow-xl);
-        }
-        
-        .service-card:hover::after {
-            opacity: 1;
-            animation: shimmer 2s infinite;
-        }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--precision-blue), var(--electric-purple));
-            border-radius: var(--radius-xl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--space-lg);
-            color: var(--white);
-            font-size: 2rem;
-            box-shadow: var(--shadow-lg);
             position: relative;
             z-index: 1;
         }
         
-        .service-title {
-            font-size: 1.75rem;
-            margin-bottom: var(--space-md);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .service-description {
-            color: var(--neutral-700);
-            margin-bottom: var(--space-lg);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .service-features {
-            list-style: none;
-            margin-bottom: var(--space-lg);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .service-feature {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-xs) 0;
-            color: var(--neutral-800);
-            font-weight: 500;
-        }
-        
-        .service-feature i {
-            color: var(--success-green);
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        
-        /* ===== ENHANCED TECHNOLOGY SECTION ===== */
-        .technology {
-            background: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .technology::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 245, 255, 0.05) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-        
-        .tech-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-2xl);
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .tech-visual {
-            position: relative;
-        }
-        
-        .tech-visual::before {
-            content: '';
-            position: absolute;
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120%;
-            height: 120%;
-            background: conic-gradient(
-                from 0deg,
-                var(--precision-blue),
-                var(--neon-cyan),
-                var(--electric-purple),
-                var(--precision-blue)
-            );
-            border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.3;
-            animation: rotate 10s linear infinite;
-        }
-        
-        .tech-image {
+        .video-player {
             width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--deep-navy), var(--precision-blue));
-            border-radius: var(--radius-2xl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(0, 245, 255, 0.3);
+            height: 500px;
+            object-fit: cover;
+            display: block;
         }
         
-        .tech-image::before {
-            content: '';
+        .video-overlay {
             position: absolute;
             top: 0;
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, transparent 30%, rgba(0, 245, 255, 0.1) 50%, transparent 70%);
-            animation: shimmer 3s infinite;
-        }
-        
-        .tech-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .stat {
+            background: rgba(0, 27, 72, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
             text-align: center;
-            padding: var(--space-lg);
-            background: var(--white);
-            border-radius: var(--radius-xl);
-            border: 1px solid var(--neutral-200);
-            box-shadow: var(--shadow-sm);
+            padding: var(--space-2xl);
+            cursor: pointer;
             transition: all var(--transition-base);
         }
         
-        .stat:hover {
-            transform: translateY(-5px);
+        .video-overlay:hover {
+            background: rgba(0, 27, 72, 0.5);
+        }
+        
+        .video-overlay i {
+            font-size: 4rem;
+            color: var(--safety-yellow);
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 0 10px rgba(255, 193, 7, 0.3));
+        }
+        
+        .video-overlay h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .video-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+        }
+        
+        /* ===== BEFORE & AFTER SECTION ===== */
+        .before-after {
+            background: var(--white);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-2xl);
+        }
+        
+        .comparison-card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
             box-shadow: var(--shadow-md);
-            border-color: var(--precision-blue);
+            transition: all var(--transition-base);
         }
         
-        .stat-number {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--precision-blue);
-            line-height: 1;
-            margin-bottom: var(--space-xs);
-            background: linear-gradient(135deg, var(--precision-blue), var(--electric-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .comparison-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
         }
         
-        .stat-label {
-            color: var(--neutral-700);
+        .comparison-images {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .before-image, .after-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity var(--transition-slow);
+        }
+        
+        .after-image {
+            opacity: 0;
+        }
+        
+        .comparison-card:hover .after-image {
+            opacity: 1;
+        }
+        
+        .comparison-card:hover .before-image {
+            opacity: 0;
+        }
+        
+        .comparison-label {
+            position: absolute;
+            bottom: var(--space-md);
+            right: var(--space-md);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-transform: uppercase;
             font-size: 0.875rem;
-            font-weight: 500;
+            letter-spacing: 1px;
         }
         
-        /* ===== ENHANCED PORTFOLIO SECTION ===== */
+        .before-label {
+            background: var(--laser-orange);
+            color: var(--white);
+        }
+        
+        .after-label {
+            background: var(--success-green);
+            color: var(--white);
+        }
+        
+        .comparison-content {
+            padding: var(--space-xl);
+        }
+        
+        .comparison-content h4 {
+            color: var(--precision-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* ===== ENHANCED PORTFOLIO WITH CUSTOM IMAGES ===== */
         .portfolio {
             background: var(--neutral-100);
             position: relative;
@@ -944,7 +808,7 @@
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: var(--space-xl);
         }
         
@@ -952,7 +816,7 @@
             position: relative;
             border-radius: var(--radius-xl);
             overflow: hidden;
-            height: 320px;
+            height: 300px;
             background: var(--neutral-200);
             cursor: pointer;
         }
@@ -988,7 +852,7 @@
         
         .portfolio-title {
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: var(--space-xs);
         }
         
@@ -1005,634 +869,62 @@
             font-size: 1rem;
         }
         
-        /* ===== ENHANCED TESTIMONIALS SECTION ===== */
-        .testimonials {
-            background: var(--white);
-            position: relative;
-        }
-        
-        .testimonials::before {
-            content: '❝';
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            font-size: 20rem;
-            color: var(--neutral-100);
-            transform: translateY(-50%);
-            z-index: 0;
-            font-family: serif;
-        }
-        
-        .testimonials-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .testimonial-slider {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .testimonial-track {
-            display: flex;
-            transition: transform var(--transition-slow);
-        }
-        
-        .testimonial-slide {
-            flex: 0 0 100%;
-            padding: var(--space-xl);
-        }
-        
-        .testimonial-card {
-            background: var(--white);
-            border-radius: var(--radius-2xl);
-            padding: var(--space-2xl);
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--neutral-200);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--precision-blue), transparent);
-            border-radius: 0 0 0 100px;
-        }
-        
-        .testimonial-rating {
-            color: var(--safety-yellow);
-            margin-bottom: var(--space-lg);
-            font-size: 1.5rem;
-            display: flex;
-            gap: var(--space-xs);
-        }
-        
-        .testimonial-text {
-            font-size: 1.125rem;
-            line-height: 1.9;
-            color: var(--neutral-800);
-            margin-bottom: var(--space-xl);
-            position: relative;
-            padding-right: var(--space-lg);
-            font-weight: 500;
-        }
-        
-        .testimonial-text::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            right: 0;
-            font-size: 6rem;
-            color: var(--neutral-200);
-            font-family: Georgia, serif;
-            line-height: 1;
-            opacity: 0.5;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-        }
-        
-        .author-avatar {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, var(--precision-blue), var(--electric-purple));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow-md);
-            flex-shrink: 0;
-        }
-        
-        .author-info h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        .author-info p {
-            color: var(--neutral-600);
-            margin-bottom: 0;
-            font-size: 0.875rem;
-        }
-        
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-sm);
-            margin-top: var(--space-xl);
-        }
-        
-        .nav-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--neutral-300);
-            border: 2px solid transparent;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            padding: 0;
-            position: relative;
-        }
-        
-        .nav-dot::before {
-            content: '';
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            bottom: -4px;
-            left: -4px;
-            border-radius: 50%;
-            border: 1px solid var(--precision-blue);
-            opacity: 0;
-            transition: opacity var(--transition-base);
-        }
-        
-        .nav-dot.active {
-            background: var(--precision-blue);
-            transform: scale(1.2);
-        }
-        
-        .nav-dot.active::before {
-            opacity: 1;
-            animation: pulse-dot 2s infinite;
-        }
-        
-        @keyframes pulse-dot {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.5; }
-        }
-        
-        /* ===== ENHANCED CONTACT SECTION ===== */
-        .contact {
-            background: linear-gradient(135deg, var(--deep-navy), var(--precision-blue));
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%);
-        }
-        
-        .contact .section-title {
-            color: var(--white);
-        }
-        
-        .contact .section-title::after {
-            background: linear-gradient(to right, var(--laser-orange), var(--safety-yellow));
-        }
-        
-        .contact .section-description {
-            color: rgba(255, 255, 255, 0.95);
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-2xl);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .contact-info {
-            padding: var(--space-2xl);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-2xl);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-        }
-        
-        .contact-methods {
-            list-style: none;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: var(--space-lg);
-            padding: var(--space-lg) 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all var(--transition-fast);
-        }
-        
-        .contact-method:hover {
-            padding-right: var(--space-sm);
-        }
-        
-        .contact-method:last-child {
-            border-bottom: none;
-        }
-        
-        .method-icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            color: var(--laser-orange);
-            flex-shrink: 0;
-            transition: all var(--transition-base);
-        }
-        
-        .contact-method:hover .method-icon {
-            background: rgba(255, 107, 53, 0.2);
-            transform: scale(1.1);
-        }
-        
-        .method-content h4 {
-            color: var(--white);
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        .method-content a,
-        .method-content p {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            transition: color var(--transition-fast);
-            font-size: 1.125rem;
-        }
-        
-        .method-content a:hover {
-            color: var(--safety-yellow);
-        }
-        
-        .contact-form {
-            background: var(--white);
-            padding: var(--space-2xl);
-            border-radius: var(--radius-2xl);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .form-group {
-            margin-bottom: var(--space-lg);
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: var(--space-xs);
-            font-weight: 600;
-            color: var(--neutral-800);
-            font-size: 0.875rem;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 1rem 1.25rem;
-            border: 2px solid var(--neutral-300);
-            border-radius: var(--radius-lg);
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: all var(--transition-fast);
-            background: var(--white);
-            color: var(--neutral-800);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--precision-blue);
-            box-shadow: 0 0 0 4px rgba(10, 54, 157, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        .form-select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234A5568' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: left 1rem center;
-            background-size: 16px;
-            padding-left: 3rem;
-        }
-        
-        /* ===== ENHANCED FLOATING ACTION ===== */
-        .floating-action {
-            position: fixed;
-            left: var(--space-xl);
-            bottom: var(--space-xl);
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
-        }
-        
-        .fab {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            box-shadow: var(--shadow-xl);
-            transition: all var(--transition-bounce);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .fab::after {
-            content: attr(data-tooltip);
-            position: absolute;
-            left: calc(100% + 12px);
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--steel-charcoal);
-            color: var(--white);
-            padding: var(--space-sm) var(--space-md);
-            border-radius: var(--radius-md);
-            font-size: 0.875rem;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-            pointer-events: none;
-            font-weight: 600;
-        }
-        
-        .fab:hover::after {
-            opacity: 1;
-            visibility: visible;
-            left: calc(100% + 16px);
-        }
-        
-        .fab:hover {
-            transform: translateY(-8px) scale(1.1);
-        }
-        
-        .fab-phone {
-            background: linear-gradient(135deg, var(--precision-blue), var(--electric-purple));
-        }
-        
-        .fab-phone:hover {
-            box-shadow: var(--shadow-lg), 0 0 30px rgba(10, 54, 157, 0.4);
-        }
-        
-        .fab-whatsapp {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-        }
-        
-        .fab-whatsapp:hover {
-            box-shadow: var(--shadow-lg), 0 0 30px rgba(37, 211, 102, 0.4);
-        }
-        
-        /* ===== ENHANCED FOOTER ===== */
-        .footer {
-            background: var(--steel-charcoal);
-            color: var(--white);
-            padding: var(--space-3xl) 0 var(--space-xl);
-            position: relative;
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(to left, transparent, var(--laser-orange), transparent);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-2xl);
-            margin-bottom: var(--space-2xl);
-        }
-        
-        .footer-about .logo-title {
-            color: var(--white);
-            background: linear-gradient(135deg, var(--white), var(--neutral-300));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .footer-description {
-            color: var(--neutral-400);
-            margin: var(--space-lg) 0;
-            font-size: 1.125rem;
-        }
-        
-        .footer-contact {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
-        }
-        
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            color: var(--neutral-400);
-            padding: var(--space-xs) 0;
-        }
-        
-        .footer-contact-item i {
-            color: var(--laser-orange);
-            font-size: 1.25rem;
-        }
-        
-        .footer-links h4 {
-            color: var(--white);
-            font-size: 1.25rem;
-            margin-bottom: var(--space-lg);
-            position: relative;
-            padding-bottom: var(--space-sm);
-        }
-        
-        .footer-links h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--laser-orange);
-            border-radius: var(--radius-full);
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: var(--space-sm);
-        }
-        
-        .footer-links a {
-            color: var(--neutral-400);
-            text-decoration: none;
-            transition: all var(--transition-fast);
-            display: inline-block;
-            padding: var(--space-2xs) 0;
-        }
-        
-        .footer-links a:hover {
-            color: var(--white);
-            transform: translateX(-5px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: var(--space-xl);
-            border-top: 1px solid var(--neutral-800);
-            color: var(--neutral-500);
-            font-size: 0.875rem;
-        }
-        
         /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 1280px) {
-            .container {
-                padding: 0 var(--space-xl);
-            }
-        }
-        
         @media (max-width: 1024px) {
-            .tech-content,
-            .contact-content {
-                grid-template-columns: 1fr;
+            .video-player {
+                height: 400px;
             }
             
-            .tech-visual {
-                order: 2;
-            }
-            
-            .tech-info {
-                order: 1;
+            .comparison-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
         @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                right: -100%;
-                width: 100%;
-                background: var(--white);
-                flex-direction: column;
-                padding: var(--space-xl);
-                gap: var(--space-lg);
-                transition: right var(--transition-base);
-                box-shadow: var(--shadow-lg);
-                height: calc(100vh - 80px);
-                overflow-y: auto;
-            }
-            
-            .nav-menu.active {
-                right: 0;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: var(--space-lg);
-                width: 100%;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .nav-cta {
-                display: none;
-            }
-            
             .hero {
-                padding-top: 120px;
-                min-height: auto;
+                background-position: 60% center;
             }
             
-            .hero-title {
-                font-size: clamp(2rem, 5vw, 3rem);
+            .hero-content {
+                padding: var(--space-xl);
             }
             
-            .hero-features {
+            .video-player {
+                height: 300px;
+            }
+            
+            .video-overlay h3 {
+                font-size: 1.5rem;
+            }
+            
+            .comparison-grid {
                 grid-template-columns: 1fr;
             }
             
-            .hero-cta {
-                flex-direction: column;
-                align-items: stretch;
-                gap: var(--space-lg);
-            }
-            
-            .phone-highlight {
-                justify-content: center;
-            }
-            
-            .floating-action {
-                left: var(--space-md);
-                bottom: var(--space-md);
-            }
-            
-            .fab::after {
-                display: none;
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
         @media (max-width: 640px) {
-            .container {
-                padding: 0 var(--space-md);
-            }
-            
-            .section {
-                padding: var(--space-xl) 0;
-            }
-            
-            .section-lg {
-                padding: var(--space-2xl) 0;
-            }
-            
-            .btn-lg {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-            
-            .service-card,
-            .testimonial-card,
-            .contact-form,
-            .contact-info {
-                padding: var(--space-xl);
-            }
-            
-            .tech-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-md);
-            }
-            
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
             
-            .testimonials::before {
-                display: none;
+            .video-player {
+                height: 250px;
+            }
+            
+            .video-overlay i {
+                font-size: 3rem;
+            }
+            
+            .video-overlay h3 {
+                font-size: 1.25rem;
             }
         }
         
-        /* ===== ENHANCED ANIMATIONS ===== */
+        /* ===== ANIMATIONS ===== */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1655,11 +947,6 @@
             }
         }
         
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
         .animate-in {
             opacity: 0;
             animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -1669,7 +956,6 @@
         .delay-2 { animation-delay: 0.2s; }
         .delay-3 { animation-delay: 0.3s; }
         .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
         
         /* Scroll Progress Indicator */
         .scroll-progress {
@@ -1715,9 +1001,9 @@
                     <ul class="nav-links">
                         <li><a href="#home" class="nav-link active">الرئيسية</a></li>
                         <li><a href="#services" class="nav-link">خدماتنا</a></li>
-                        <li><a href="#technology" class="nav-link">تقنيتنا</a></li>
-                        <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
-                        <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+                        <li><a href="#video" class="nav-link">فيديو توضيحي</a></li>
+                        <li><a href="#comparison" class="nav-link">قبل وبعد</a></li>
+                        <li><a href="#portfolio" class="nav-link">معرض الأعمال</a></li>
                         <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
                     </ul>
                     <div class="nav-cta">
@@ -1735,7 +1021,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Custom Image -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content animate-in">
@@ -1834,7 +1120,7 @@
                             <span>توسيع المساحات الداخلية</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline" style="margin-top: auto;">
+                    <a href="#contact" class="btn btn-outline">
                         <i class="fas fa-arrow-left"></i>
                         اطلب الخدمة
                     </a>
@@ -1863,7 +1149,7 @@
                             <span>شبكات الصرف الصحي</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline" style="margin-top: auto;">
+                    <a href="#contact" class="btn btn-outline">
                         <i class="fas fa-arrow-left"></i>
                         اطلب الخدمة
                     </a>
@@ -1892,7 +1178,7 @@
                             <span>تقوية الأعمدة والأسقف</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline" style="margin-top: auto;">
+                    <a href="#contact" class="btn btn-outline">
                         <i class="fas fa-arrow-left"></i>
                         اطلب الخدمة
                     </a>
@@ -1901,67 +1187,71 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
-    <section id="technology" class="technology section">
+    <!-- Video Demo Section -->
+    <section id="video" class="video-demo section">
         <div class="container">
-            <div class="tech-content">
-                <div class="tech-visual animate-in">
-                    <div class="tech-image">
-                        <div class="text-center">
-                            <i class="fas fa-crosshairs" style="font-size: 5rem; opacity: 0.8;"></i>
-                            <h3 style="color: var(--white); margin-top: var(--space-md);">تقنية الليزر الألمانية</h3>
-                            <p style="color: rgba(255, 255, 255, 0.9); margin-top: var(--space-sm);">
-                                أحدث أجهزة HILTI و Weka
-                            </p>
-                        </div>
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--white);">فيديو توضيحي عن التقنية</h2>
+                <p class="section-description" style="color: rgba(255, 255, 255, 0.9);">
+                    شاهد كيف تعمل تقنية الليزر في قص الخرسانة بدقة متناهية
+                </p>
+            </div>
+            
+            <div class="video-container animate-in">
+                <video class="video-player" id="demoVideo" preload="metadata">
+                    <source src="assets/2026-01-25-200212691.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>شاهد تقنية الليزر في العمل</h3>
+                    <p>انقر لتشغيل الفيديو التوضيحي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section id="comparison" class="before-after section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">قبل وبعد</h2>
+                <p class="section-description">
+                    شاهد الفرق الكبير بين الطرق التقليدية وتقنية الليزر
+                </p>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card animate-in">
+                    <div class="comparison-images">
+                        <img src="assets/before_after_1.jpg" alt="قبل قص الليزر" class="before-image">
+                        <img src="assets/before_after_2.webp" alt="بعد قص الليزر" class="after-image">
+                        <div class="comparison-label before-label">قبل</div>
+                        <div class="comparison-label after-label">بعد</div>
                     </div>
-                    
-                    <div class="tech-stats">
-                        <div class="stat">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">دقة القص</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">3x</div>
-                            <div class="stat-label">أسرع من التقليدي</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">0</div>
-                            <div class="stat-label">اهتزاز أو شروخ</div>
-                        </div>
+                    <div class="comparison-content">
+                        <h4>قص جدار حامل</h4>
+                        <p>تحويل جدار خرساني إلى فتحة بدون أي اهتزازات</p>
                     </div>
                 </div>
                 
-                <div class="tech-info animate-in delay-1">
-                    <h2 class="section-title">لماذا تقنية الليزر؟</h2>
-                    <p class="text-lead" style="margin-bottom: var(--space-lg);">
-                        تقنية القص بالليزر (باستخدام منشار الألماس) هي ثورة في عالم الإنشاءات. إنها توفر دقة غير مسبوقة وسرعة فائقة في التنفيذ مع الحفاظ على سلامة المبنى.
-                    </p>
-                    
-                    <div class="comparison" style="border-right: 3px solid var(--neutral-200); padding-right: var(--space-lg);">
-                        <div class="comparison-item" style="margin-bottom: var(--space-lg);">
-                            <h4 style="color: var(--success-green); margin-bottom: var(--space-xs); display: flex; align-items: center; gap: var(--space-sm);"><i class="fas fa-check-circle"></i> مع الليزر (موصى به)</h4>
-                            <p style="margin:0;">قص مستقيم تماماً، نظافة تامة للموقع، وقت تنفيذ قصير، وبدون أي تأثير على هيكل المبنى.</p>
-                        </div>
-                        
-                        <div class="comparison-item">
-                            <h4 style="color: var(--laser-orange); margin-bottom: var(--space-xs); display: flex; align-items: center; gap: var(--space-sm);"><i class="fas fa-times-circle"></i> بالطرق التقليدية</h4>
-                            <p style="margin:0;">تكسير عشوائي، فوضى وغبار، وقت طويل، ضوضاء عالية، واحتمالية حدوث شروخ وتصدعات في المبنى.</p>
-                        </div>
+                <div class="comparison-card animate-in delay-1">
+                    <div class="comparison-images">
+                        <img src="assets/before_after_3.jpg" alt="قبل فتحات كور" class="before-image">
+                        <img src="assets/before_after_4.jpg" alt="بعد فتحات كور" class="after-image">
+                        <div class="comparison-label before-label">قبل</div>
+                        <div class="comparison-label after-label">بعد</div>
                     </div>
-                    
-                    <div style="margin-top: var(--space-xl);">
-                        <a href="#contact" class="btn btn-primary btn-lg">
-                            <i class="fas fa-file-alt"></i>
-                            اطلب استشارة مجانية الآن
-                        </a>
+                    <div class="comparison-content">
+                        <h4>فتحات كور للتكييف</h4>
+                        <p>فتحات دائرية مثالية لتمديدات التكييف المركزي</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section with Custom Gallery -->
     <section id="portfolio" class="portfolio section">
         <div class="container">
             <div class="section-header">
@@ -1973,8 +1263,7 @@
             
             <div class="portfolio-grid">
                 <div class="portfolio-item animate-in">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="قص خرسانة بالليزر" class="portfolio-image">
+                    <img src="assets/gallery_1.webp" alt="قص خرسانة بالليزر" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h4 class="portfolio-title">قص جدار حامل</h4>
                         <p class="portfolio-location">حي النرجس - الرياض</p>
@@ -1982,8 +1271,7 @@
                 </div>
                 
                 <div class="portfolio-item animate-in delay-1">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="فتحات كور" class="portfolio-image">
+                    <img src="assets/gallery_2.jpg" alt="فتحات كور" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h4 class="portfolio-title">فتحات كور للتكييف</h4>
                         <p class="portfolio-location">حي العليا - الرياض</p>
@@ -1991,74 +1279,34 @@
                 </div>
                 
                 <div class="portfolio-item animate-in delay-2">
-                    <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="ترميم إنشائي" class="portfolio-image">
+                    <img src="assets/gallery_3.jpg" alt="ترميم إنشائي" class="portfolio-image">
                     <div class="portfolio-overlay">
                         <h4 class="portfolio-title">فتح باب جديد</h4>
                         <p class="portfolio-location">حي الربيع - الرياض</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">آراء عملائنا</h2>
-                <p class="section-description">
-                    شهادات عملائنا الكرام هي دليل نجاحنا وسبب فخرنا
-                </p>
-            </div>
-            
-            <div class="testimonials-container">
-                <div class="testimonial-slider">
-                    <div class="testimonial-track" id="testimonialTrack">
-                        <div class="testimonial-slide">
-                            <div class="testimonial-card">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                
-                                <p class="testimonial-text">
-                                    "ما شاء الله شغل متقن جداً. سووا لي قص خرسانة بالليزر للفيلا في النرجس وكانت النتيجة ممتازة. الدقة والسرعة والإتقان كانت فوق التوقعات. أنصح الجميع بالتعامل معهم."
-                                </p>
-                                
-                                <div class="testimonial-author">
-                                    <div class="author-avatar">أ</div>
-                                    <div class="author-info">
-                                        <h4>أحمد السليمان</h4>
-                                        <p>مستثمر عقاري - حي النرجس</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="testimonial-slide">
-                            <div class="testimonial-card">
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                
-                                <p class="testimonial-text">
-                                    "من أفضل الفرق الهندسية اللي تعاملت معها. سووا لي فتحات كور للتكييف في مجمع تجاري والعمل كان دقيق جداً بدون أي أخطاء. التواصل المهني والالتزام بالمواعيد شيء مميز."
-                                </p>
-                                
-                                <div class="testimonial-author">
-                                    <div class="author-avatar">ف</div>
-                                    <div class="author-info">
-                                        <h4>فهد الرشيد</h4>
-                                        <p>مالك مجمع تجاري - حي البطحاء</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
+                <div class="portfolio-item animate-in delay-3">
+                    <img src="assets/gallery_4.jpg" alt="مشروع تجاري" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4 class="portfolio-title">توسعة مركز تجاري</h4>
+                        <p class="portfolio-location">حي البطحاء - الرياض</p>
                     </div>
-                    
-                    <div class="testimonial-nav">
-                        <button class="nav-dot active" data-slide="0"></button>
-                        <button class="nav-dot" data-slide="1"></button>
+                </div>
+                
+                <div class="portfolio-item animate-in delay-4">
+                    <img src="assets/gallery_5.webp" alt="مشروع سكني" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4 class="portfolio-title">تعديلات فيلا</h4>
+                        <p class="portfolio-location">حي الملقا - الرياض</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="assets/gallery_6.jpg" alt="مشروع حكومي" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h4 class="portfolio-title">مشروع حكومي</h4>
+                        <p class="portfolio-location">حي العريجاء - الرياض</p>
                     </div>
                 </div>
             </div>
@@ -2176,8 +1424,9 @@
                     <ul>
                         <li><a href="#home">الرئيسية</a></li>
                         <li><a href="#services">خدماتنا</a></li>
-                        <li><a href="#technology">تقنيتنا</a></li>
-                        <li><a href="#portfolio">أعمالنا</a></li>
+                        <li><a href="#video">فيديو توضيحي</a></li>
+                        <li><a href="#comparison">قبل وبعد</a></li>
+                        <li><a href="#portfolio">معرض الأعمال</a></li>
                         <li><a href="#contact">اتصل بنا</a></li>
                     </ul>
                 </div>
@@ -2202,7 +1451,7 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
+            // Mobile Navigation
             const mobileToggle = document.getElementById('mobileToggle');
             const navMenu = document.getElementById('navMenu');
             
@@ -2222,94 +1471,80 @@
                 });
             });
             
-            // Navbar scroll effect & Scroll progress
-            const navbar = document.getElementById('navbar');
+            // Scroll Progress
             const scrollProgress = document.getElementById('scrollProgress');
-            
             window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY > 50;
-                navbar.classList.toggle('scrolled', scrolled);
-                
                 const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrollPercent = (window.scrollY / windowHeight) * 100;
                 scrollProgress.style.transform = `scaleX(${scrollPercent / 100})`;
                 
-                updateActiveNavLink();
+                // Update active nav
+                updateActiveNav();
             });
             
-            // Update active nav link on scroll
-            const sections = document.querySelectorAll('section[id]');
-            function updateActiveNavLink() {
-                let current = '';
-                const scrollPos = window.scrollY + navbar.offsetHeight;
+            function updateActiveNav() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPos = window.scrollY + 100;
 
                 sections.forEach(section => {
-                    if (section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
                     }
                 });
             }
             
-            // Smooth scroll for anchor links
+            // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
-                            top: targetElement.offsetTop - (navbar.offsetHeight - 20),
+                            top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
             
-            // Testimonial slider
-            const testimonialTrack = document.getElementById('testimonialTrack');
-            const navDots = document.querySelectorAll('.nav-dot');
-            let currentSlide = 0;
-            let slideInterval;
-
-            if (testimonialTrack && navDots.length > 0) {
-                function updateTestimonialSlider() {
-                    testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-                    navDots.forEach((dot, index) => {
-                        dot.classList.toggle('active', index === currentSlide);
-                    });
-                }
-
-                navDots.forEach(dot => {
-                    dot.addEventListener('click', function() {
-                        clearInterval(slideInterval);
-                        currentSlide = parseInt(this.getAttribute('data-slide'));
-                        updateTestimonialSlider();
-                        startAutoSlide();
-                    });
+            // Video Player
+            const demoVideo = document.getElementById('demoVideo');
+            const videoOverlay = document.getElementById('videoOverlay');
+            
+            if (demoVideo && videoOverlay) {
+                videoOverlay.addEventListener('click', () => {
+                    demoVideo.play();
+                    videoOverlay.style.opacity = '0';
+                    videoOverlay.style.pointerEvents = 'none';
                 });
-
-                function startAutoSlide() {
-                    slideInterval = setInterval(() => {
-                        currentSlide = (currentSlide + 1) % navDots.length;
-                        updateTestimonialSlider();
-                    }, 5000);
-                }
                 
-                startAutoSlide();
-
-                const testimonialSlider = document.querySelector('.testimonial-slider');
-                testimonialSlider.addEventListener('mouseenter', () => clearInterval(slideInterval));
-                testimonialSlider.addEventListener('mouseleave', startAutoSlide);
+                demoVideo.addEventListener('click', () => {
+                    if (demoVideo.paused) {
+                        demoVideo.play();
+                    } else {
+                        demoVideo.pause();
+                    }
+                });
+                
+                demoVideo.addEventListener('ended', () => {
+                    videoOverlay.style.opacity = '1';
+                    videoOverlay.style.pointerEvents = 'auto';
+                });
             }
-
-            // Form submission
+            
+            // Form Submission
             const contactForm = document.getElementById('contactForm');
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -2323,62 +1558,70 @@
                 }
                 
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
                 submitBtn.disabled = true;
                 
                 setTimeout(() => {
-                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الاستفسار الآن';
+                    submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
                     showNotification('تم إرسال استفسارك بنجاح! سنتواصل معك قريباً.', 'success');
                     
-                    // Optional: Construct and open WhatsApp message
+                    // Optional WhatsApp integration
                     const name = document.getElementById('name').value;
                     const service = document.getElementById('service').value;
                     const message = document.getElementById('message').value;
-                    const whatsappMessage = encodeURIComponent(`*استفسار جديد من الموقع*\n\n*الاسم:* ${name}\n*الهاتف:* ${phone}\n*الخدمة:* ${service}\n*التفاصيل:* ${message}`);
-                    // window.open(`https://wa.me/966542906096?text=${whatsappMessage}`, '_blank');
-
+                    
+                    // Uncomment to enable WhatsApp auto-message
+                    // const whatsappMsg = `*استفسار جديد من الموقع*%0A%0A*الاسم:* ${name}%0A*الهاتف:* ${phone}%0A*الخدمة:* ${service}%0A%0A*التفاصيل:*%0A${message}`;
+                    // window.open(`https://wa.me/966542906096?text=${whatsappMsg}`, '_blank');
+                    
                     contactForm.reset();
                 }, 1500);
             });
             
-            // Notification function
+            // Notification System
             function showNotification(message, type) {
                 const notification = document.createElement('div');
-                notification.className = `notification ${type}`;
-                notification.textContent = message;
-                document.body.appendChild(notification);
-                
-                setTimeout(() => {
-                    notification.classList.add('hide');
-                    setTimeout(() => notification.remove(), 500);
-                }, 4000);
-            }
-            
-            // Add CSS for notification
-            const style = document.createElement('style');
-            style.textContent = `
-                .notification {
+                notification.style.cssText = `
                     position: fixed;
                     bottom: 20px;
                     left: 20px;
                     padding: 1rem 1.5rem;
                     border-radius: var(--radius-lg);
+                    background: ${type === 'success' ? 'var(--success-green)' : 'var(--laser-orange)'};
                     color: white;
                     font-weight: 600;
                     z-index: 9999;
                     box-shadow: var(--shadow-lg);
                     transform: translateX(-120%);
                     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                }
-                .notification.success { background: var(--success-green); }
-                .notification.error { background: var(--laser-orange); }
-                .notification:not(.hide) { transform: translateX(0); }
-                .notification.hide { transform: translateX(-120%); }
-            `;
-            document.head.appendChild(style);
+                `;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(0)';
+                }, 100);
+                
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(-120%)';
+                    setTimeout(() => notification.remove(), 500);
+                }, 4000);
+            }
             
-            // Animation on scroll
+            // Before/After Image Hover
+            document.querySelectorAll('.comparison-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.classList.add('active');
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('active');
+                });
+            });
+            
+            // Initialize animations
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -2388,7 +1631,8 @@
             }, { threshold: 0.1 });
             
             document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
-
+            
+            // Add CSS for animations
             const animationStyle = document.createElement('style');
             animationStyle.textContent = `
                 .animate-in {
@@ -2400,7 +1644,10 @@
                     opacity: 1;
                     transform: translateY(0);
                 }
-                ${[...Array(5).keys()].map(i => `.delay-${i+1}.in-view { transition-delay: ${ (i+1) * 0.1}s; }`).join('\n')}
+                .delay-1.in-view { transition-delay: 0.1s; }
+                .delay-2.in-view { transition-delay: 0.2s; }
+                .delay-3.in-view { transition-delay: 0.3s; }
+                .delay-4.in-view { transition-delay: 0.4s; }
             `;
             document.head.appendChild(animationStyle);
         });
